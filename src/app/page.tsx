@@ -21,6 +21,11 @@ const apps = [
     slug: "watery",
     desc: "Smart hydration tracking",
   },
+  {
+    name: "Screenaway",
+    slug: "screenaway",
+    desc: "Screen time control for iPhone & Apple Watch",
+  },
 ];
 
 export default function Home() {
