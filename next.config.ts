@@ -4,11 +4,11 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return {
       beforeFiles: [
-        // screenaway.heywrist.com → /screenaway
+        // screenaway.heywrist.com → /screenaway (skip static assets)
         {
-          source: "/:path*",
+          source: "/:path((?!_next|favicon\\.ico).*)",
           has: [{ type: "host", value: "screenaway.heywrist.com" }],
-          destination: "/screenaway/:path*",
+          destination: "/screenaway/:path",
         },
       ],
     };
