@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: {
-    default: "Screenaway - Take Control of Your Screen Time",
-    template: "%s | Screenaway",
+    default: "AutoSleepy - Automatic Sleep Tracking",
+    template: "%s | AutoSleepy",
   },
   description:
-    "Screen time control app for iPhone and Apple Watch. Track usage, block distracting apps, build healthier digital habits.",
+    "Privacy-first sleep tracking for iPhone and Apple Watch. Automatic detection, sleep stages, AI insights, smart alarm, and HomeKit — all without accounts or cloud uploads.",
 };
 
 function NavLink({
@@ -20,14 +20,14 @@ function NavLink({
   return (
     <Link
       href={href}
-      className="text-sm text-indigo-100/70 hover:text-white transition-colors"
+      className="text-sm text-purple-100/70 hover:text-white transition-colors"
     >
       {children}
     </Link>
   );
 }
 
-export default function ScreenawayLayout({
+export default function AutoSleepyLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -36,8 +36,8 @@ export default function ScreenawayLayout({
     <div className="min-h-screen bg-slate-950 text-white">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Link href="/screenaway" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600">
+          <Link href="/autosleepy" className="flex items-center gap-2">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-indigo-600">
               <svg
                 className="h-4 w-4 text-white"
                 fill="none"
@@ -48,19 +48,19 @@ export default function ScreenawayLayout({
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
                 />
               </svg>
             </div>
-            <span className="text-lg font-bold">Screenaway</span>
+            <span className="text-lg font-bold">AutoSleepy</span>
           </Link>
           <nav className="hidden items-center gap-6 sm:flex">
-            <NavLink href="/screenaway#features">Features</NavLink>
-            <NavLink href="/screenaway#pricing">Pricing</NavLink>
-            <NavLink href="/screenaway/support">Support</NavLink>
+            <NavLink href="/autosleepy#features">Features</NavLink>
+            <NavLink href="/autosleepy#pricing">Pricing</NavLink>
+            <NavLink href="/autosleepy/support">Support</NavLink>
             <a
-              href="https://apps.apple.com/app/screenaway"
-              className="rounded-full bg-indigo-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-indigo-500 transition-colors"
+              href="https://apps.apple.com/app/autosleepy"
+              className="rounded-full bg-purple-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-purple-500 transition-colors"
             >
               Download
             </a>
@@ -75,7 +75,7 @@ export default function ScreenawayLayout({
           <div className="grid gap-8 sm:grid-cols-3">
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600">
+                <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-indigo-600">
                   <svg
                     className="h-3.5 w-3.5 text-white"
                     fill="none"
@@ -86,19 +86,19 @@ export default function ScreenawayLayout({
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                      d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
                     />
                   </svg>
                 </div>
-                <span className="font-bold">Screenaway</span>
+                <span className="font-bold">AutoSleepy</span>
               </div>
               <p className="text-sm text-slate-400">
-                Take control of your screen time.
+                Automatic sleep tracking, reimagined.
                 <br />
                 Built by{" "}
                 <a
                   href="https://heywrist.com"
-                  className="text-indigo-400 hover:text-indigo-300"
+                  className="text-purple-400 hover:text-purple-300"
                 >
                   Hey Wrist
                 </a>
@@ -110,13 +110,13 @@ export default function ScreenawayLayout({
               </h4>
               <div className="flex flex-col gap-2">
                 <Link
-                  href="/screenaway/privacy"
+                  href="/autosleepy/privacy"
                   className="text-sm text-slate-400 hover:text-white transition-colors"
                 >
                   Privacy Policy
                 </Link>
                 <Link
-                  href="/screenaway/terms"
+                  href="/autosleepy/terms"
                   className="text-sm text-slate-400 hover:text-white transition-colors"
                 >
                   Terms of Use
@@ -129,7 +129,7 @@ export default function ScreenawayLayout({
               </h4>
               <div className="flex flex-col gap-2">
                 <Link
-                  href="/screenaway/support"
+                  href="/autosleepy/support"
                   className="text-sm text-slate-400 hover:text-white transition-colors"
                 >
                   FAQ &amp; Help
@@ -149,7 +149,7 @@ export default function ScreenawayLayout({
               <p className="mt-1 text-xs text-slate-600">Apple Watch, iPhone, and App Store are trademarks of Apple Inc.</p>
             </div>
             <a
-              href="https://apps.apple.com/app/screenaway"
+              href="https://apps.apple.com/app/autosleepy"
               className="inline-block"
             >
               <img

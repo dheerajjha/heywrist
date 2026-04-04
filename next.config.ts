@@ -2,15 +2,24 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   async rewrites() {
+    const subdomainApps = [
+      "screenaway",
+      "autosleepy",
+      "recordy",
+      "streaky",
+      "watery",
+      "chatty",
+      "notes",
+      "chronofit",
+      "lumina",
+    ];
+
     return {
-      beforeFiles: [
-        // screenaway.heywrist.com → /screenaway (skip static assets)
-        {
-          source: "/:path((?!_next|favicon\\.ico).*)",
-          has: [{ type: "host", value: "screenaway.heywrist.com" }],
-          destination: "/screenaway/:path",
-        },
-      ],
+      beforeFiles: subdomainApps.map((app) => ({
+        source: "/:path((?!_next|favicon\\.ico).*)",
+        has: [{ type: "host" as const, value: `${app}.heywrist.com` }],
+        destination: `/${app}/:path`,
+      })),
     };
   },
 };

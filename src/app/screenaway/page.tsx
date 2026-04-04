@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Screenaway - Take Control of Your Screen Time",
   description:
-    "Screen time control app for iPhone & Apple Watch. Track usage, block distracting apps, focus timers, and build healthier digital habits.",
+    "Screen time control app for iPhone and Apple Watch. Track usage, block distracting apps, focus timers, and build healthier digital habits.",
 };
 
 const features = [
@@ -173,7 +173,7 @@ export default function ScreenawayHome() {
         <div className="relative mx-auto max-w-6xl px-6 pt-24 pb-20 text-center sm:pt-32 sm:pb-28">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-sm text-indigo-300">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Available on iPhone &amp; Apple Watch
+            For iPhone and Apple Watch
           </div>
           <h1 className="text-5xl font-bold tracking-tight sm:text-7xl">
             Take control of your{" "}

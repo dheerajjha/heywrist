@@ -1,0 +1,94 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Streaky - Build Habits That Stick",
+    template: "%s | Streaky",
+  },
+  description:
+    "Premium habit tracking for iPhone and Apple Watch. Unlimited habits, streaks, gamification, HealthKit auto-completion, and a narrative system that keeps you going.",
+};
+
+function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <Link href={href} className="text-sm text-orange-100/70 hover:text-white transition-colors">
+      {children}
+    </Link>
+  );
+}
+
+export default function StreakyLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <Link href="/streaky" className="flex items-center gap-2">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-orange-500 to-amber-600">
+              <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" />
+              </svg>
+            </div>
+            <span className="text-lg font-bold">Streaky</span>
+          </Link>
+          <nav className="hidden items-center gap-6 sm:flex">
+            <NavLink href="/streaky#features">Features</NavLink>
+            <NavLink href="/streaky#pricing">Pricing</NavLink>
+            <NavLink href="/streaky/support">Support</NavLink>
+            <a href="https://apps.apple.com/app/streaky" className="rounded-full bg-orange-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-orange-500 transition-colors">
+              Download
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      {children}
+
+      <footer className="border-t border-white/10 bg-slate-950">
+        <div className="mx-auto max-w-6xl px-6 py-12">
+          <div className="grid gap-8 sm:grid-cols-3">
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-orange-500 to-amber-600">
+                  <svg className="h-3.5 w-3.5 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" />
+                  </svg>
+                </div>
+                <span className="font-bold">Streaky</span>
+              </div>
+              <p className="text-sm text-slate-400">
+                Build habits that stick.
+                <br />
+                Built by{" "}
+                <a href="https://heywrist.com" className="text-orange-400 hover:text-orange-300">Hey Wrist</a>
+              </p>
+            </div>
+            <div>
+              <h4 className="mb-3 text-sm font-semibold text-slate-300">Legal</h4>
+              <div className="flex flex-col gap-2">
+                <Link href="/streaky/privacy" className="text-sm text-slate-400 hover:text-white transition-colors">Privacy Policy</Link>
+                <Link href="/streaky/terms" className="text-sm text-slate-400 hover:text-white transition-colors">Terms of Use</Link>
+              </div>
+            </div>
+            <div>
+              <h4 className="mb-3 text-sm font-semibold text-slate-300">Support</h4>
+              <div className="flex flex-col gap-2">
+                <Link href="/streaky/support" className="text-sm text-slate-400 hover:text-white transition-colors">FAQ &amp; Help</Link>
+                <a href="mailto:support@heywrist.com" className="text-sm text-slate-400 hover:text-white transition-colors">support@heywrist.com</a>
+              </div>
+            </div>
+          </div>
+          <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
+            <div className="text-sm text-slate-500">
+              <p>&copy; {new Date().getFullYear()} Ranju Jha. All rights reserved.</p>
+              <p className="mt-1 text-xs text-slate-600">Apple Watch, iPhone, and App Store are trademarks of Apple Inc.</p>
+            </div>
+            <a href="https://apps.apple.com/app/streaky" className="inline-block">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-10" />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
