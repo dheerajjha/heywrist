@@ -9,43 +9,47 @@ export default function PolicyLayout({
   title: string;
   children: React.ReactNode;
 }) {
-  const slug = appName.toLowerCase();
+  const slug = appName.toLowerCase().replace(/\s+/g, "");
   return (
-    <main className="flex-1 max-w-3xl mx-auto px-6 py-12 w-full">
-      <nav className="mb-8 text-sm text-gray-500 flex gap-2">
-        <Link href="/" className="hover:text-gray-900">
-          HeyWrist
+    <main className="mx-auto max-w-3xl px-6 py-16">
+      <nav className="mb-8 text-sm text-slate-500 flex gap-2">
+        <Link href={`/${slug}`} className="hover:text-white transition-colors">
+          {appName}
         </Link>
         <span>/</span>
-        <span className="capitalize">{appName}</span>
-        <span>/</span>
-        <span className="text-gray-900">{title}</span>
+        <span className="text-white">{title}</span>
       </nav>
+
       <h1 className="text-3xl font-bold mb-2">{title}</h1>
-      <p className="text-sm text-gray-500 mb-8">
+      <p className="text-slate-400 mb-12">
         For {appName} &mdash;{" "}
         <Link
           href={`/${slug}/${title === "Privacy Policy" ? "terms" : "privacy"}`}
-          className="underline hover:text-gray-900"
+          className="text-blue-400 hover:text-blue-300 transition-colors"
         >
           {title === "Privacy Policy"
             ? "Terms & Conditions"
             : "Privacy Policy"}
         </Link>
       </p>
-      <article className="prose prose-gray max-w-none">{children}</article>
-      <footer className="mt-16 pt-8 border-t border-gray-200 text-sm text-gray-500">
-        <p>
-          &copy; {new Date().getFullYear()} Ranju Jha. All rights reserved.
-        </p>
+
+      <article className="prose prose-invert prose-sm max-w-none [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:mt-10 [&_h2]:mb-4 [&_h3]:text-lg [&_h3]:font-medium [&_h3]:mt-6 [&_h3]:mb-3 [&_p]:text-slate-300 [&_p]:leading-relaxed [&_p]:mb-4 [&_ul]:text-slate-300 [&_li]:mb-1 [&_a]:text-blue-400 [&_a:hover]:text-blue-300 [&_strong]:text-white">
+        {children}
+      </article>
+
+      <footer className="mt-16 pt-8 border-t border-white/10 text-sm text-slate-500">
+        <p>&copy; {new Date().getFullYear()} Ranju Jha. All rights reserved.</p>
         <p className="mt-1">
           Contact:{" "}
           <a
             href="mailto:support@heywrist.com"
-            className="underline hover:text-gray-900"
+            className="text-blue-400 hover:text-blue-300 transition-colors"
           >
             support@heywrist.com
           </a>
+        </p>
+        <p className="mt-2 text-xs text-slate-600">
+          Apple, Apple Watch, iPhone, and App Store are trademarks of Apple Inc.
         </p>
       </footer>
     </main>
