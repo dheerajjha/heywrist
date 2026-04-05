@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
       "chronofit",
       "lumina",
       "structured",
+      "betterchannels",
     ];
 
     return {
