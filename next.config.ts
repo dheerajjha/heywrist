@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
       "notes",
       "chronofit",
       "lumina",
+      "structured",
     ];
 
     return {
