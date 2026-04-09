@@ -20,10 +20,13 @@ export function middleware(request: NextRequest) {
 
   for (const app of subdomainApps) {
     if (hostname === `${app}.heywrist.com`) {
-      // Already has the app prefix (e.g. notes.heywrist.com/notes/privacy)
-      // → serve as-is, no rewrite needed
+      // Redirect double-prefix to clean URL
+      // e.g. notes.heywrist.com/notes/privacy → notes.heywrist.com/privacy
       if (pathname.startsWith(`/${app}`)) {
-        return NextResponse.next();
+        const clean = pathname.slice(`/${app}`.length) || "/";
+        const url = request.nextUrl.clone();
+        url.pathname = clean;
+        return NextResponse.redirect(url, 308);
       }
 
       // Add the app prefix (e.g. notes.heywrist.com/privacy → /notes/privacy)
