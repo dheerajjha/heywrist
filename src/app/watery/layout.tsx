@@ -24,11 +24,7 @@ export default function WateryLayout({ children }: { children: React.ReactNode }
       <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link href="/watery" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-cyan-600">
-              <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 3.75c-4.97 4.97-7.5 8.03-7.5 11.25a7.5 7.5 0 0 0 15 0c0-3.22-2.53-6.28-7.5-11.25Z" />
-              </svg>
-            </div>
+            <img src="/icons/watery.png" alt="watery icon" width={32} height={32} className="rounded-lg" />
             <span className="text-lg font-bold">Watery</span>
           </Link>
           <nav className="hidden items-center gap-6 sm:flex">
@@ -49,11 +45,7 @@ export default function WateryLayout({ children }: { children: React.ReactNode }
           <div className="grid gap-8 sm:grid-cols-3">
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-cyan-600">
-                  <svg className="h-3.5 w-3.5 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3.75c-4.97 4.97-7.5 8.03-7.5 11.25a7.5 7.5 0 0 0 15 0c0-3.22-2.53-6.28-7.5-11.25Z" />
-                  </svg>
-                </div>
+                <img src="/icons/watery.png" alt="watery icon" width={28} height={28} className="rounded-lg" />
                 <span className="font-bold">Watery</span>
               </div>
               <p className="text-sm text-slate-400">

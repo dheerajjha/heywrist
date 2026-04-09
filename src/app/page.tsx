@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 const apps = [
   { name: "Screenaway", slug: "screenaway", desc: "Screen time control for iPhone and Apple Watch" },
@@ -36,7 +35,7 @@ export default function Home() {
               className="group rounded-2xl border border-white/5 bg-slate-900/50 p-5 hover:border-white/20 hover:bg-slate-900/80 transition-all"
             >
               <div className="flex items-center gap-3 mb-3">
-                <Image
+                <img
                   src={`/icons/${app.slug}.png`}
                   alt={`${app.name} icon`}
                   width={40}
