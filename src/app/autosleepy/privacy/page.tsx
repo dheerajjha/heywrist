@@ -13,7 +13,7 @@ export default function AutoSleepyPrivacy() {
       <p><strong>Last Updated:</strong> April 1, 2026</p>
 
       <p>
-        Ranju Jha (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built AutoSleepy as a
+        Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built AutoSleepy as a
         privacy-first sleep tracking application for iPhone and Apple Watch.
         This Privacy Policy describes what information AutoSleepy accesses, how
         it is processed, and what rights you have regarding your data.
@@ -193,7 +193,7 @@ export default function AutoSleepyPrivacy() {
         <a href="mailto:support@heywrist.com">support@heywrist.com</a>
       </p>
       <p>
-        <strong>Developer:</strong> Ranju Jha
+        <strong>Developer:</strong> Hey Wrist
       </p>
     </PolicyLayout>
   );

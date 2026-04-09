@@ -34,7 +34,7 @@ export default function ScreenawayPrivacy() {
 
       <article className="prose prose-invert prose-slate max-w-none prose-headings:text-white prose-a:text-indigo-400 hover:prose-a:text-indigo-300 prose-strong:text-white">
         <p>
-          Ranju Jha, operating as Hey Wrist (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), built
+          Hey Wrist (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), built
           Screenaway as a screen time control app for iPhone and Apple Watch.
           This Privacy Policy explains how Screenaway handles your information
           and is designed to meet Apple&rsquo;s App Store requirements.
@@ -222,12 +222,12 @@ export default function ScreenawayPrivacy() {
           <a href="mailto:support@heywrist.com">support@heywrist.com</a>.
         </p>
         <p>
-          <strong>Developer:</strong> Hey Wrist / Ranju Jha
+          <strong>Developer:</strong> Hey Wrist
         </p>
       </article>
 
       <footer className="mt-16 pt-8 border-t border-white/10 text-sm text-slate-500">
-        <p>&copy; {new Date().getFullYear()} Ranju Jha. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Hey Wrist. All rights reserved.</p>
         <p className="mt-1">
           Contact:{" "}
           <a

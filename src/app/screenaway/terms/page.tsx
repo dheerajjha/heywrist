@@ -150,7 +150,7 @@ export default function ScreenawayTerms() {
         <h2>Intellectual Property</h2>
         <p>
           All content, design, code, and branding in Screenaway are the
-          intellectual property of Ranju Jha. You may not copy, modify,
+          intellectual property of Hey Wrist. You may not copy, modify,
           distribute, decompile, or reverse engineer any part of the App.
         </p>
 
@@ -178,7 +178,7 @@ export default function ScreenawayTerms() {
 
         <h2>Limitation of Liability</h2>
         <p>
-          To the maximum extent permitted by applicable law, Ranju Jha shall
+          To the maximum extent permitted by applicable law, Hey Wrist shall
           not be liable for any indirect, incidental, special, consequential,
           or punitive damages arising from your use of or inability to use the
           App, including but not limited to:
@@ -223,12 +223,12 @@ export default function ScreenawayTerms() {
           <a href="mailto:support@heywrist.com">support@heywrist.com</a>.
         </p>
         <p>
-          <strong>Developer:</strong> Hey Wrist / Ranju Jha
+          <strong>Developer:</strong> Hey Wrist
         </p>
       </article>
 
       <footer className="mt-16 pt-8 border-t border-white/10 text-sm text-slate-500">
-        <p>&copy; {new Date().getFullYear()} Ranju Jha. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Hey Wrist. All rights reserved.</p>
         <p className="mt-1">
           Contact:{" "}
           <a

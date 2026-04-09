@@ -14,7 +14,7 @@ export default function ChronoFitTerms() {
 
       <p>
         These Terms &amp; Conditions (&quot;Terms&quot;) govern your use of the ChronoFit
-        application (&quot;the App&quot;) developed by Ranju Jha (&quot;we,&quot; &quot;us,&quot; or
+        application (&quot;the App&quot;) developed by Hey Wrist (&quot;we,&quot; &quot;us,&quot; or
         &quot;our&quot;). By downloading, installing, or using ChronoFit, you agree to
         be bound by these Terms.
       </p>
@@ -104,7 +104,7 @@ export default function ChronoFitTerms() {
 
       <h2>10. Limitation of Liability</h2>
       <p>
-        To the maximum extent permitted by law, Ranju Jha shall not be liable
+        To the maximum extent permitted by law, Hey Wrist shall not be liable
         for any indirect, incidental, special, consequential, or punitive
         damages arising from your use of the App, including:
       </p>
@@ -116,7 +116,7 @@ export default function ChronoFitTerms() {
 
       <h2>11. Indemnification</h2>
       <p>
-        You agree to indemnify and hold harmless Ranju Jha from any claims
+        You agree to indemnify and hold harmless Hey Wrist from any claims
         arising from your use of the App, including injury claims, or
         violation of these Terms.
       </p>
@@ -144,7 +144,7 @@ export default function ChronoFitTerms() {
         <strong>Email:</strong>{" "}
         <a href="mailto:support@heywrist.com">support@heywrist.com</a>
       </p>
-      <p><strong>Developer:</strong> Ranju Jha</p>
+      <p><strong>Developer:</strong> Hey Wrist</p>
     </PolicyLayout>
   );
 }

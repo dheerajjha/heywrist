@@ -13,7 +13,7 @@ export default function RecordyPrivacy() {
       <p><strong>Last Updated:</strong> April 1, 2026</p>
 
       <p>
-        Ranju Jha (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Recordy as a premium
+        Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Recordy as a premium
         voice recording application for iPhone and Apple Watch. This Privacy
         Policy describes what information Recordy accesses, how it is processed,
         and what rights you have regarding your data.
@@ -175,7 +175,7 @@ export default function RecordyPrivacy() {
         <strong>Email:</strong>{" "}
         <a href="mailto:support@heywrist.com">support@heywrist.com</a>
       </p>
-      <p><strong>Developer:</strong> Ranju Jha</p>
+      <p><strong>Developer:</strong> Hey Wrist</p>
     </PolicyLayout>
   );
 }

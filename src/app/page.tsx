@@ -81,7 +81,7 @@ export default function Home() {
               className="rounded-lg opacity-40"
             />
             <p className="text-sm text-slate-500">
-              &copy; {new Date().getFullYear()} Ranju Jha. All rights reserved.
+              &copy; {new Date().getFullYear()} Hey Wrist. All rights reserved.
             </p>
             <a
               href="mailto:support@heywrist.com"

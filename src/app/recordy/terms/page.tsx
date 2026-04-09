@@ -14,7 +14,7 @@ export default function RecordyTerms() {
 
       <p>
         These Terms &amp; Conditions (&quot;Terms&quot;) govern your use of the Recordy
-        application (&quot;the App&quot;) developed by Ranju Jha (&quot;we,&quot; &quot;us,&quot; or
+        application (&quot;the App&quot;) developed by Hey Wrist (&quot;we,&quot; &quot;us,&quot; or
         &quot;our&quot;). By downloading, installing, or using Recordy, you agree to be
         bound by these Terms. If you do not agree, please do not use the App.
       </p>
@@ -95,7 +95,7 @@ export default function RecordyTerms() {
       <h2>8. Intellectual Property</h2>
       <p>
         All design, graphics, interfaces, code, and other elements of Recordy
-        are the intellectual property of Ranju Jha. You are granted a limited,
+        are the intellectual property of Hey Wrist. You are granted a limited,
         non-exclusive, non-transferable license to use the App for personal
         purposes.
       </p>
@@ -110,7 +110,7 @@ export default function RecordyTerms() {
 
       <h2>10. Limitation of Liability</h2>
       <p>
-        To the maximum extent permitted by law, Ranju Jha shall not be liable
+        To the maximum extent permitted by law, Hey Wrist shall not be liable
         for any indirect, incidental, special, consequential, or punitive
         damages arising from your use of the App, including but not limited to:
       </p>
@@ -123,7 +123,7 @@ export default function RecordyTerms() {
 
       <h2>11. Indemnification</h2>
       <p>
-        You agree to indemnify and hold harmless Ranju Jha from any claims,
+        You agree to indemnify and hold harmless Hey Wrist from any claims,
         damages, or expenses arising from your use of the App, your content, or
         violation of these Terms or applicable laws.
       </p>
@@ -154,7 +154,7 @@ export default function RecordyTerms() {
         <strong>Email:</strong>{" "}
         <a href="mailto:support@heywrist.com">support@heywrist.com</a>
       </p>
-      <p><strong>Developer:</strong> Ranju Jha</p>
+      <p><strong>Developer:</strong> Hey Wrist</p>
     </PolicyLayout>
   );
 }

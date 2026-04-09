@@ -13,7 +13,7 @@ export default function StructuredPrivacy() {
       <p><strong>Last Updated:</strong> April 5, 2026</p>
 
       <p>
-        Ranju Jha (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Structured as a visual
+        Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Structured as a visual
         daily planner application for iPhone and Apple Watch. This Privacy
         Policy describes what information Structured accesses, how it is
         processed, and what rights you have regarding your data.
@@ -184,7 +184,7 @@ export default function StructuredPrivacy() {
         <strong>Email:</strong>{" "}
         <a href="mailto:support@heywrist.com">support@heywrist.com</a>
       </p>
-      <p><strong>Developer:</strong> Ranju Jha</p>
+      <p><strong>Developer:</strong> Hey Wrist</p>
     </PolicyLayout>
   );
 }

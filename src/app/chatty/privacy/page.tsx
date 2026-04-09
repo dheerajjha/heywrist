@@ -13,7 +13,7 @@ export default function ChattyPrivacy() {
       <p><strong>Last Updated:</strong> April 1, 2026</p>
 
       <p>
-        Ranju Jha (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Chatty as an AI chatbot
+        Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Chatty as an AI chatbot
         application for Apple Watch and iPhone. This Privacy Policy describes
         what information Chatty accesses, how it is processed, and what rights
         you have regarding your data.
@@ -157,7 +157,7 @@ export default function ChattyPrivacy() {
         <strong>Email:</strong>{" "}
         <a href="mailto:support@heywrist.com">support@heywrist.com</a>
       </p>
-      <p><strong>Developer:</strong> Ranju Jha</p>
+      <p><strong>Developer:</strong> Hey Wrist</p>
     </PolicyLayout>
   );
 }

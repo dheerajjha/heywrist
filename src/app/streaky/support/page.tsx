@@ -78,7 +78,7 @@ export default function StreakySupport() {
       </section>
 
       <footer className="mt-16 pt-8 border-t border-white/10 text-sm text-slate-500">
-        <p>&copy; {new Date().getFullYear()} Ranju Jha. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Hey Wrist. All rights reserved.</p>
         <p className="mt-1">Contact: <a href="mailto:support@heywrist.com" className="text-orange-400 hover:text-orange-300">support@heywrist.com</a></p>
       </footer>
     </main>

@@ -72,7 +72,7 @@ export default function BetterChannelsLayout({ children }: { children: React.Rea
           </div>
           <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
             <div className="text-sm text-slate-500">
-              <p>&copy; {new Date().getFullYear()} Ranju Jha. All rights reserved.</p>
+              <p>&copy; {new Date().getFullYear()} Hey Wrist. All rights reserved.</p>
               <p className="mt-1 text-xs text-slate-600">Apple Watch, iPhone, and App Store are trademarks of Apple Inc. Claude is a trademark of Anthropic.</p>
             </div>
             <a href="https://apps.apple.com/app/betterchannels" className="inline-block">

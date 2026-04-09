@@ -14,7 +14,7 @@ export default function StreakyTerms() {
 
       <p>
         These Terms &amp; Conditions (&quot;Terms&quot;) govern your use of the Streaky
-        application (&quot;the App&quot;) developed by Ranju Jha (&quot;we,&quot; &quot;us,&quot; or
+        application (&quot;the App&quot;) developed by Hey Wrist (&quot;we,&quot; &quot;us,&quot; or
         &quot;our&quot;). By downloading, installing, or using Streaky, you agree to be
         bound by these Terms.
       </p>
@@ -77,7 +77,7 @@ export default function StreakyTerms() {
       <h2>7. Intellectual Property</h2>
       <p>
         All content, design, graphics, narrative elements, code, and other
-        elements of Streaky are the intellectual property of Ranju Jha. You are
+        elements of Streaky are the intellectual property of Hey Wrist. You are
         granted a limited, non-exclusive, non-transferable license to use the
         App for personal purposes.
       </p>
@@ -92,7 +92,7 @@ export default function StreakyTerms() {
 
       <h2>9. Limitation of Liability</h2>
       <p>
-        To the maximum extent permitted by law, Ranju Jha shall not be liable
+        To the maximum extent permitted by law, Hey Wrist shall not be liable
         for any indirect, incidental, special, consequential, or punitive
         damages arising from your use of the App, including loss of habit data,
         streak resets, or iCloud sync failures.
@@ -100,7 +100,7 @@ export default function StreakyTerms() {
 
       <h2>10. Indemnification</h2>
       <p>
-        You agree to indemnify and hold harmless Ranju Jha from any claims
+        You agree to indemnify and hold harmless Hey Wrist from any claims
         arising from your use of the App or violation of these Terms.
       </p>
 
@@ -127,7 +127,7 @@ export default function StreakyTerms() {
         <strong>Email:</strong>{" "}
         <a href="mailto:support@heywrist.com">support@heywrist.com</a>
       </p>
-      <p><strong>Developer:</strong> Ranju Jha</p>
+      <p><strong>Developer:</strong> Hey Wrist</p>
     </PolicyLayout>
   );
 }

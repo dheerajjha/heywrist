@@ -14,7 +14,7 @@ export default function AutoSleepyTerms() {
 
       <p>
         These Terms &amp; Conditions (&quot;Terms&quot;) govern your use of the AutoSleepy
-        application (&quot;the App&quot;) developed by Ranju Jha (&quot;we,&quot; &quot;us,&quot; or
+        application (&quot;the App&quot;) developed by Hey Wrist (&quot;we,&quot; &quot;us,&quot; or
         &quot;our&quot;). By downloading, installing, or using AutoSleepy, you agree to
         be bound by these Terms. If you do not agree, please do not use the App.
       </p>
@@ -92,7 +92,7 @@ export default function AutoSleepyTerms() {
       <h2>7. Intellectual Property</h2>
       <p>
         All content, design, graphics, interfaces, code, and other elements of
-        AutoSleepy are the intellectual property of Ranju Jha and are protected
+        AutoSleepy are the intellectual property of Hey Wrist and are protected
         by copyright, trademark, and other intellectual property laws. You are
         granted a limited, non-exclusive, non-transferable, revocable license
         to use the App for personal, non-commercial purposes.
@@ -110,7 +110,7 @@ export default function AutoSleepyTerms() {
 
       <h2>9. Limitation of Liability</h2>
       <p>
-        To the maximum extent permitted by applicable law, Ranju Jha shall not
+        To the maximum extent permitted by applicable law, Hey Wrist shall not
         be liable for any indirect, incidental, special, consequential, or
         punitive damages, including but not limited to loss of profits, data,
         use, goodwill, or other intangible losses, arising from:
@@ -125,7 +125,7 @@ export default function AutoSleepyTerms() {
 
       <h2>10. Indemnification</h2>
       <p>
-        You agree to indemnify and hold harmless Ranju Jha from any claims,
+        You agree to indemnify and hold harmless Hey Wrist from any claims,
         damages, losses, liabilities, and expenses (including attorneys&apos; fees)
         arising from your use of the App or violation of these Terms.
       </p>
@@ -167,7 +167,7 @@ export default function AutoSleepyTerms() {
         <a href="mailto:support@heywrist.com">support@heywrist.com</a>
       </p>
       <p>
-        <strong>Developer:</strong> Ranju Jha
+        <strong>Developer:</strong> Hey Wrist
       </p>
     </PolicyLayout>
   );

@@ -14,7 +14,7 @@ export default function StructuredTerms() {
 
       <p>
         These Terms &amp; Conditions (&quot;Terms&quot;) govern your use of the
-        Structured application (&quot;the App&quot;) developed by Ranju Jha
+        Structured application (&quot;the App&quot;) developed by Hey Wrist
         (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). By downloading,
         installing, or using Structured, you agree to be bound by these Terms.
       </p>
@@ -98,7 +98,7 @@ export default function StructuredTerms() {
       <h2>9. Intellectual Property</h2>
       <p>
         All design, code, graphics, icons, animations, and other elements of
-        Structured are the intellectual property of Ranju Jha. You are granted
+        Structured are the intellectual property of Hey Wrist. You are granted
         a limited, non-exclusive, non-transferable license for personal use.
       </p>
 
@@ -112,7 +112,7 @@ export default function StructuredTerms() {
 
       <h2>11. Limitation of Liability</h2>
       <p>
-        To the maximum extent permitted by law, Ranju Jha shall not be liable
+        To the maximum extent permitted by law, Hey Wrist shall not be liable
         for any indirect, incidental, special, consequential, or punitive
         damages arising from your use of the App, including:
       </p>
@@ -125,7 +125,7 @@ export default function StructuredTerms() {
 
       <h2>12. Indemnification</h2>
       <p>
-        You agree to indemnify and hold harmless Ranju Jha from any claims
+        You agree to indemnify and hold harmless Hey Wrist from any claims
         arising from your use of the App or violation of these Terms.
       </p>
 
@@ -152,7 +152,7 @@ export default function StructuredTerms() {
         <strong>Email:</strong>{" "}
         <a href="mailto:support@heywrist.com">support@heywrist.com</a>
       </p>
-      <p><strong>Developer:</strong> Ranju Jha</p>
+      <p><strong>Developer:</strong> Hey Wrist</p>
     </PolicyLayout>
   );
 }
