@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Support",
-  description: "Get help with the Notes app",
+  description: "Get help with the Dexter Notes app",
 };
 
 const faqs = [
@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: "How does Gmail integration work?",
-    a: "Go to the Inbox tab and sign in with your Google account via OAuth2. Notes fetches your unread/starred emails, provides AI-powered summaries, and lets you process them into notes and tasks. You can reply to emails directly from the app.",
+    a: "Go to the Inbox tab and sign in with your Google account via OAuth2. Dexter Notes fetches your unread/starred emails, provides AI-powered summaries, and lets you process them into notes and tasks. You can reply to emails directly from the app.",
   },
   {
     q: "What can I do with Ask AI?",
@@ -28,12 +28,12 @@ const faqs = [
     a: "The Watch app provides a morning digest with task counts and top priorities, one-tap voice recording, task management with haptic feedback, and quick capture via dictation. Data syncs bidirectionally with your iPhone via WatchConnectivity.",
   },
   {
-    q: "Does Notes sync across devices?",
-    a: "Yes. Notes uses SwiftData with CloudKit for seamless sync across your iPhone and Apple Watch. All data syncs through your personal iCloud account.",
+    q: "Does Dexter Notes sync across devices?",
+    a: "Yes. Dexter Notes uses SwiftData with CloudKit for seamless sync across your iPhone and Apple Watch. All data syncs through your personal iCloud account.",
   },
   {
-    q: "What AI service does Notes use?",
-    a: "Notes uses Azure OpenAI (GPT-4.1-nano) through a secure proxy for AI features like Ask AI, categorization, and email processing. A heuristic fallback engine works when the AI service is unavailable.",
+    q: "What AI service does Dexter Notes use?",
+    a: "Dexter Notes uses Azure OpenAI (GPT-4.1-nano) through a secure proxy for AI features like Ask AI, categorization, and email processing. A heuristic fallback engine works when the AI service is unavailable.",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function NotesSupport() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16">
       <nav className="mb-8 text-sm text-slate-500 flex gap-2">
-        <Link href="/notes" className="hover:text-white transition-colors">Notes</Link>
+        <Link href="/notes" className="hover:text-white transition-colors">Dexter Notes</Link>
         <span>/</span>
         <span className="text-white">Support</span>
       </nav>

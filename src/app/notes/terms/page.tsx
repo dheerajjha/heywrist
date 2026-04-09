@@ -2,26 +2,26 @@ import { Metadata } from "next";
 import PolicyLayout from "../../components/PolicyLayout";
 
 export const metadata: Metadata = {
-  title: "Notes - Terms & Conditions",
-  description: "Terms and conditions for the Notes app by HeyWrist",
+  title: "Dexter Notes - Terms & Conditions",
+  description: "Terms and conditions for the Dexter Notes app by HeyWrist",
 };
 
 export default function NotesTerms() {
   return (
-    <PolicyLayout appName="Notes" title="Terms & Conditions">
+    <PolicyLayout appName="Dexter Notes" title="Terms & Conditions">
       <p><strong>Effective Date:</strong> April 1, 2026</p>
       <p><strong>Last Updated:</strong> April 1, 2026</p>
 
       <p>
-        These Terms &amp; Conditions (&quot;Terms&quot;) govern your use of the Notes
+        These Terms &amp; Conditions (&quot;Terms&quot;) govern your use of the Dexter Notes
         application (&quot;the App&quot;) developed by Ranju Jha (&quot;we,&quot; &quot;us,&quot; or
-        &quot;our&quot;). By downloading, installing, or using Notes, you agree to be
+        &quot;our&quot;). By downloading, installing, or using Dexter Notes, you agree to be
         bound by these Terms.
       </p>
 
       <h2>1. Description of Service</h2>
       <p>
-        Notes is an AI-powered notes, tasks, and personal CRM application for
+        Dexter Notes is an AI-powered notes, tasks, and personal CRM application for
         iPhone and Apple Watch. Features include voice recording, AI
         categorization and summarization, Gmail integration, contact linking,
         and iCloud sync.
@@ -29,7 +29,7 @@ export default function NotesTerms() {
 
       <h2>2. Eligibility</h2>
       <p>
-        You must be at least 13 years of age to use the App. By using Notes,
+        You must be at least 13 years of age to use the App. By using Dexter Notes,
         you represent that you meet this requirement.
       </p>
 
@@ -50,10 +50,10 @@ export default function NotesTerms() {
       <h2>4. Gmail Integration</h2>
       <p>
         The optional Gmail integration accesses your email with your explicit
-        consent via Google OAuth 2.0. By connecting Gmail, you agree that:
+        consent via Google OAuth 2.0. By connecting Gmail to Dexter Notes, you agree that:
       </p>
       <ul>
-        <li>Notes will access your emails in read-only mode</li>
+        <li>Dexter Notes will access your emails in read-only mode</li>
         <li>Email content may be sent to our AI service for summarization (not stored)</li>
         <li>You may revoke access at any time from Google Account settings or from within the app</li>
         <li>We are not responsible for the content, accuracy, or availability of your emails</li>
@@ -74,7 +74,7 @@ export default function NotesTerms() {
 
       <h2>6. In-App Purchases</h2>
       <p>
-        Notes may offer premium features through in-app purchases. All
+        Dexter Notes may offer premium features through in-app purchases. All
         purchases are processed by Apple and subject to Apple&apos;s{" "}
         <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">
           Standard EULA
@@ -96,7 +96,7 @@ export default function NotesTerms() {
 
       <h2>8. Intellectual Property</h2>
       <p>
-        All design, code, AI integrations, and other elements of Notes are
+        All design, code, AI integrations, and other elements of Dexter Notes are
         the intellectual property of Ranju Jha. You are granted a limited,
         non-exclusive, non-transferable license for personal use.
       </p>

@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: {
-    default: "Notes - AI-Powered Notes & Tasks",
-    template: "%s | Notes",
+    default: "Dexter Notes - AI-Powered Notes & Tasks",
+    template: "%s | Dexter Notes",
   },
   description:
     "AI-powered notes, tasks, voice recording with transcription, Gmail integration, and a first-class Apple Watch experience.",
@@ -29,7 +29,7 @@ export default function NotesLayout({ children }: { children: React.ReactNode })
                 <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
               </svg>
             </div>
-            <span className="text-lg font-bold">Notes</span>
+            <span className="text-lg font-bold">Dexter Notes</span>
           </Link>
           <nav className="hidden items-center gap-6 sm:flex">
             <NavLink href="/notes#features">Features</NavLink>
@@ -53,7 +53,7 @@ export default function NotesLayout({ children }: { children: React.ReactNode })
                     <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
                   </svg>
                 </div>
-                <span className="font-bold">Notes</span>
+                <span className="font-bold">Dexter Notes</span>
               </div>
               <p className="text-sm text-slate-400">
                 Your AI-powered second brain.

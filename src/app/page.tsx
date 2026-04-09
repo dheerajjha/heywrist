@@ -68,7 +68,7 @@ const apps = [
     ),
   },
   {
-    name: "Notes",
+    name: "Dexter Notes",
     slug: "notes",
     desc: "AI-powered notes and tasks for iPhone and Apple Watch",
     color: "from-amber-500 to-yellow-600",

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Notes - AI-Powered Notes & Tasks",
+  title: "Dexter Notes - AI-Powered Notes & Tasks",
   description:
-    "AI-powered notes, tasks, voice recording with transcription, Gmail integration, and Apple Watch experience.",
+    "Dexter Notes — AI-powered notes, tasks, voice recording with transcription, Gmail integration, and Apple Watch experience.",
 };
 
 const features = [
@@ -159,7 +159,7 @@ export default function NotesHome() {
               <span className="text-amber-400">act</span>
             </h2>
             <p className="mt-4 text-lg text-slate-400">
-              Notes that think for you — powered by AI and deeply integrated with Apple ecosystem.
+              Dexter Notes thinks for you — powered by AI and deeply integrated with Apple ecosystem.
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -200,7 +200,7 @@ export default function NotesHome() {
         <div className="mx-auto max-w-3xl px-6 text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">Think less about organizing. Think more.</h2>
           <p className="mt-4 text-lg text-slate-400">
-            Notes captures your thoughts, AI organizes them, and you focus on what matters.
+            Dexter Notes captures your thoughts, AI organizes them, and you focus on what matters.
           </p>
           <div className="mt-10">
             <a href="https://apps.apple.com/app/notes-heywrist" className="inline-block">

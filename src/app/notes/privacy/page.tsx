@@ -2,18 +2,18 @@ import { Metadata } from "next";
 import PolicyLayout from "../../components/PolicyLayout";
 
 export const metadata: Metadata = {
-  title: "Notes - Privacy Policy",
-  description: "Privacy policy for the Notes app by HeyWrist",
+  title: "Dexter Notes - Privacy Policy",
+  description: "Privacy policy for the Dexter Notes app by HeyWrist",
 };
 
 export default function NotesPrivacy() {
   return (
-    <PolicyLayout appName="Notes" title="Privacy Policy">
+    <PolicyLayout appName="Dexter Notes" title="Privacy Policy">
       <p><strong>Effective Date:</strong> April 1, 2026</p>
       <p><strong>Last Updated:</strong> April 1, 2026</p>
 
       <p>
-        Ranju Jha (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Notes as an AI-powered
+        Ranju Jha (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Dexter Notes as an AI-powered
         notes, tasks, and personal CRM application for iPhone and Apple Watch.
         This Privacy Policy describes what information Notes accesses, how it
         is processed, and what rights you have regarding your data.
@@ -21,14 +21,15 @@ export default function NotesPrivacy() {
       <p>
         <strong>In short:</strong> Your notes sync via your private iCloud
         account. AI features use a secure cloud service but do not store your
-        content. Gmail access is read-only and revocable at any time.
+        content. Gmail access is read-only and revocable at any time. Dexter Notes
+        complies with the Google API Services User Data Policy.
       </p>
 
       <h2>1. Information We Access</h2>
 
       <h3>1.1 Microphone &amp; Speech Recognition</h3>
       <p>
-        Notes may request microphone access for voice note recording on iPhone
+        Dexter Notes may request microphone access for voice note recording on iPhone
         and Apple Watch. Voice recordings are stored locally on your device.
         Transcription is performed on-device using Apple&apos;s speech recognition
         framework — no audio data is sent to external servers for transcription.
@@ -36,7 +37,7 @@ export default function NotesPrivacy() {
 
       <h3>1.2 Gmail Integration (Optional)</h3>
       <p>
-        If you choose to connect your Gmail account, Notes accesses your email
+        If you choose to connect your Gmail account, Dexter Notes accesses your email
         via Google OAuth 2.0 with <strong>read-only</strong> permissions. We
         request only the minimum scopes necessary:
       </p>
@@ -59,7 +60,7 @@ export default function NotesPrivacy() {
 
       <h3>1.3 Contacts (Optional)</h3>
       <p>
-        Notes may request access to your device contacts for the People/CRM
+        Dexter Notes may request access to your device contacts for the People/CRM
         feature. Contact data is used locally to link notes and tasks to people.
         Contact information is stored in your private iCloud container and is
         not transmitted to external servers.
@@ -67,14 +68,14 @@ export default function NotesPrivacy() {
 
       <h3>1.4 Calendar (Optional)</h3>
       <p>
-        Notes may request access to your calendar for event-related task
+        Dexter Notes may request access to your calendar for event-related task
         creation. Calendar data is read locally and is not transmitted
         externally.
       </p>
 
       <h3>1.5 iCloud Sync (CloudKit)</h3>
       <p>
-        Notes uses Apple&apos;s CloudKit (via SwiftData) to sync your notes, tasks,
+        Dexter Notes uses Apple&apos;s CloudKit (via SwiftData) to sync your notes, tasks,
         folders, and tags across your Apple devices. This data is stored in
         your <strong>private iCloud container</strong> and is accessible only
         to you through your Apple ID. We do not have access to your iCloud
@@ -83,13 +84,13 @@ export default function NotesPrivacy() {
 
       <h3>1.6 Notifications</h3>
       <p>
-        Notes may request permission to send local notifications for task
+        Dexter Notes may request permission to send local notifications for task
         reminders and due dates. Notifications are scheduled on-device and
         do not involve external servers.
       </p>
 
       <h3>1.7 Information We Do NOT Collect</h3>
-      <p>Notes does not collect or request:</p>
+      <p>Dexter Notes does not collect or request:</p>
       <ul>
         <li>Your name or email address (beyond optional Gmail OAuth)</li>
         <li>Location data</li>
@@ -101,7 +102,7 @@ export default function NotesPrivacy() {
 
       <h2>2. AI Processing</h2>
       <p>
-        Notes uses Azure OpenAI (GPT-4.1-nano) through a secure proxy for AI
+        Dexter Notes uses Azure OpenAI (GPT-4.1-nano) through a secure proxy for AI
         features including:
       </p>
       <ul>
@@ -124,7 +125,7 @@ export default function NotesPrivacy() {
       </p>
 
       <h2>3. Data Stored on Your Device</h2>
-      <p>Notes stores the following data locally (synced via iCloud):</p>
+      <p>Dexter Notes stores the following data locally (synced via iCloud):</p>
       <ul>
         <li><strong>Notes</strong> — text, voice recordings, transcriptions</li>
         <li><strong>Tasks</strong> — title, due date, priority, completion status</li>
@@ -141,13 +142,13 @@ export default function NotesPrivacy() {
       </p>
 
       <h2>5. Third-Party Services</h2>
-      <p>Notes integrates with the following services:</p>
+      <p>Dexter Notes integrates with the following services:</p>
       <ul>
         <li><strong>Azure OpenAI</strong> — for AI-powered features (text processing only, no data retention)</li>
         <li><strong>Google Gmail API</strong> — for optional email integration (read-only, user-authorized via OAuth 2.0)</li>
         <li><strong>Apple CloudKit</strong> — for iCloud sync (your private container)</li>
       </ul>
-      <p>Notes does not include any:</p>
+      <p>Dexter Notes does not include any:</p>
       <ul>
         <li>Analytics or telemetry SDKs</li>
         <li>Advertising or ad-tracking frameworks</li>
@@ -156,7 +157,7 @@ export default function NotesPrivacy() {
 
       <h2>6. Apple Watch Integration</h2>
       <p>
-        Notes&apos; Apple Watch app allows you to create quick notes, view tasks,
+        Dexter Notes&apos; Apple Watch app allows you to create quick notes, view tasks,
         and record voice memos from your wrist. Watch data syncs via iCloud or
         WatchConnectivity — no data passes through external servers.
       </p>
@@ -171,14 +172,14 @@ export default function NotesPrivacy() {
         <li>Delete all app data by uninstalling the app</li>
       </ul>
       <p>
-        When you uninstall Notes, all locally stored data is permanently
+        When you uninstall Dexter Notes, all locally stored data is permanently
         removed. iCloud data can be removed from Settings → [your name] →
         iCloud → Manage Storage.
       </p>
 
       <h2>8. Google API Services Disclosure</h2>
       <p>
-        Notes&apos; use and transfer of information received from Google APIs
+        Dexter Notes&apos; use and transfer of information received from Google APIs
         adheres to the{" "}
         <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">
           Google API Services User Data Policy
@@ -188,7 +189,7 @@ export default function NotesPrivacy() {
 
       <h2>9. Children&apos;s Privacy</h2>
       <p>
-        Notes is not directed at children under the age of 13. We do not
+        Dexter Notes is not directed at children under the age of 13. We do not
         knowingly collect personal information from children.
       </p>
 
@@ -203,7 +204,7 @@ export default function NotesPrivacy() {
       <p>
         We may update this Privacy Policy from time to time. Changes will be
         posted on this page with an updated effective date. Continued use of
-        Notes after changes constitutes acceptance.
+        Dexter Notes after changes constitutes acceptance.
       </p>
 
       <h2>12. Contact Us</h2>
