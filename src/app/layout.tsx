@@ -10,8 +10,16 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "HeyWrist - App Policies",
-  description: "Privacy policies and terms of service for HeyWrist apps",
+  title: {
+    default: "HeyWrist - Beautiful Apps for iPhone & Apple Watch",
+    template: "%s | HeyWrist",
+  },
+  description:
+    "Beautiful, privacy-first apps for iPhone and Apple Watch. Screen time, sleep tracking, voice recording, habit tracking, hydration, AI notes, fitness timers, and more.",
+  icons: {
+    icon: "/icons/heywrist.png",
+    apple: "/icons/heywrist.png",
+  },
 };
 
 export default function RootLayout({

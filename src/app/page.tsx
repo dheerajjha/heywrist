@@ -17,54 +17,79 @@ const apps = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      <main className="mx-auto max-w-5xl px-6 py-20">
-        <div className="text-center mb-16">
+      {/* Subtle gradient backdrop */}
+      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.08),transparent_60%)]" />
+
+      <main className="relative mx-auto max-w-5xl px-6 py-16 sm:py-24">
+        {/* Hero */}
+        <div className="flex flex-col items-center text-center mb-20">
+          <img
+            src="/icons/heywrist.png"
+            alt="HeyWrist"
+            width={80}
+            height={80}
+            className="rounded-2xl shadow-lg shadow-indigo-500/20 mb-6"
+          />
           <h1 className="text-5xl font-bold tracking-tight sm:text-6xl">
             Hey<span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">Wrist</span>
           </h1>
-          <p className="mt-4 text-lg text-slate-400">
-            Beautiful apps for iPhone and Apple Watch
+          <p className="mt-4 max-w-md text-lg text-slate-400">
+            Beautiful, privacy-first apps for iPhone &amp; Apple&nbsp;Watch
           </p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {/* App grid */}
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {apps.map((app) => (
             <Link
               key={app.slug}
               href={`/${app.slug}`}
-              className="group rounded-2xl border border-white/5 bg-slate-900/50 p-5 hover:border-white/20 hover:bg-slate-900/80 transition-all"
+              className="group relative rounded-2xl border border-white/[0.06] bg-white/[0.03] p-5 backdrop-blur-sm hover:border-white/15 hover:bg-white/[0.06] transition-all duration-200"
             >
-              <div className="flex items-center gap-3 mb-3">
+              <div className="flex items-center gap-3.5 mb-3">
                 <img
                   src={`/icons/${app.slug}.png`}
                   alt={`${app.name} icon`}
-                  width={40}
-                  height={40}
-                  className="rounded-xl"
+                  width={48}
+                  height={48}
+                  className="rounded-[12px] shadow-md shadow-black/30"
                 />
-                <h2 className="text-lg font-semibold group-hover:text-white transition-colors">{app.name}</h2>
+                <h2 className="text-lg font-semibold text-slate-200 group-hover:text-white transition-colors">
+                  {app.name}
+                </h2>
               </div>
               <p className="text-sm text-slate-400 leading-relaxed">{app.desc}</p>
-              <div className="mt-4 flex gap-3 text-xs text-slate-500">
-                <span className="hover:text-white transition-colors">Privacy</span>
-                <span>&middot;</span>
-                <span className="hover:text-white transition-colors">Terms</span>
-                <span>&middot;</span>
-                <span className="hover:text-white transition-colors">Support</span>
+              <div className="mt-4 flex items-center gap-3 text-xs text-slate-500">
+                <span className="group-hover:text-slate-400 transition-colors">Privacy</span>
+                <span className="text-slate-700">&middot;</span>
+                <span className="group-hover:text-slate-400 transition-colors">Terms</span>
+                <span className="text-slate-700">&middot;</span>
+                <span className="group-hover:text-slate-400 transition-colors">Support</span>
               </div>
             </Link>
           ))}
         </div>
 
-        <footer className="mt-20 pt-8 border-t border-white/10 text-center">
-          <div className="text-sm text-slate-500">
-            <p>&copy; {new Date().getFullYear()} Ranju Jha. All rights reserved.</p>
-            <p className="mt-2">
-              <a href="mailto:support@heywrist.com" className="text-slate-400 hover:text-white transition-colors">
-                support@heywrist.com
-              </a>
+        {/* Footer */}
+        <footer className="mt-24 pt-8 border-t border-white/[0.06] text-center">
+          <div className="flex flex-col items-center gap-3">
+            <img
+              src="/icons/heywrist.png"
+              alt="HeyWrist"
+              width={28}
+              height={28}
+              className="rounded-lg opacity-40"
+            />
+            <p className="text-sm text-slate-500">
+              &copy; {new Date().getFullYear()} Ranju Jha. All rights reserved.
             </p>
-            <p className="mt-3 text-xs text-slate-600">
+            <a
+              href="mailto:support@heywrist.com"
+              className="text-sm text-slate-500 hover:text-slate-300 transition-colors"
+            >
+              support@heywrist.com
+            </a>
+            <p className="mt-1 text-xs text-slate-600">
               Apple Watch, iPhone, and App Store are trademarks of Apple Inc.
             </p>
           </div>
