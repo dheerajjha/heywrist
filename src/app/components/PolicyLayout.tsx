@@ -2,14 +2,16 @@ import Link from "next/link";
 
 export default function PolicyLayout({
   appName,
+  slug: slugProp,
   title,
   children,
 }: {
   appName: string;
+  slug?: string;
   title: string;
   children: React.ReactNode;
 }) {
-  const slug = appName.toLowerCase().replace(/\s+/g, "");
+  const slug = slugProp || appName.toLowerCase().replace(/\s+/g, "");
   return (
     <main className="mx-auto max-w-3xl px-6 py-16">
       <nav className="mb-8 text-sm text-slate-500 flex gap-2">

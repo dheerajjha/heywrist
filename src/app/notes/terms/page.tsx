@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function NotesTerms() {
   return (
-    <PolicyLayout appName="Dexter Notes" title="Terms & Conditions">
+    <PolicyLayout appName="Dexter Notes" slug="notes" title="Terms & Conditions">
       <p><strong>Effective Date:</strong> April 1, 2026</p>
       <p><strong>Last Updated:</strong> April 1, 2026</p>
 
