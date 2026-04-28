@@ -12,6 +12,7 @@ const subdomainApps = [
   "lumina",
   "structured",
   "betterchannels",
+  "pdf",
 ];
 
 export function middleware(request: NextRequest) {
