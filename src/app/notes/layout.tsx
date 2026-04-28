@@ -30,7 +30,7 @@ export default function NotesLayout({ children }: { children: React.ReactNode })
           <nav className="hidden items-center gap-6 sm:flex">
             <NavLink href="/notes#features">Features</NavLink>
             <NavLink href="/notes/support">Support</NavLink>
-            <a href="https://apps.apple.com/app/notes-heywrist" className="rounded-full bg-amber-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-amber-500 transition-colors">
+            <a href="https://apps.apple.com/us/app/dexter-notes/id6761487065" className="rounded-full bg-amber-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-amber-500 transition-colors">
               Download
             </a>
           </nav>
@@ -74,7 +74,7 @@ export default function NotesLayout({ children }: { children: React.ReactNode })
               <p>&copy; {new Date().getFullYear()} Hey Wrist. All rights reserved.</p>
               <p className="mt-1 text-xs text-slate-600">Apple Watch, iPhone, and App Store are trademarks of Apple Inc.</p>
             </div>
-            <a href="https://apps.apple.com/app/notes-heywrist" className="inline-block">
+            <a href="https://apps.apple.com/us/app/dexter-notes/id6761487065" className="inline-block">
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-10" />
             </a>
           </div>

@@ -31,7 +31,7 @@ export default function RecordyLayout({ children }: { children: React.ReactNode 
             <NavLink href="/recordy#features">Features</NavLink>
             <NavLink href="/recordy#pricing">Pricing</NavLink>
             <NavLink href="/recordy/support">Support</NavLink>
-            <a href="https://apps.apple.com/app/recordy" className="rounded-full bg-red-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-red-500 transition-colors">
+            <a href="https://apps.apple.com/us/app/record-audio-voice-smart/id6760845363" className="rounded-full bg-red-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-red-500 transition-colors">
               Download
             </a>
           </nav>
@@ -75,7 +75,7 @@ export default function RecordyLayout({ children }: { children: React.ReactNode 
               <p>&copy; {new Date().getFullYear()} Hey Wrist. All rights reserved.</p>
               <p className="mt-1 text-xs text-slate-600">Apple Watch, iPhone, and App Store are trademarks of Apple Inc.</p>
             </div>
-            <a href="https://apps.apple.com/app/recordy" className="inline-block">
+            <a href="https://apps.apple.com/us/app/record-audio-voice-smart/id6760845363" className="inline-block">
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-10" />
             </a>
           </div>

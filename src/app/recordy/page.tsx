@@ -98,7 +98,7 @@ export default function RecordyHome() {
             and a standalone Apple Watch experience &mdash; synced everywhere via iCloud.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a href="https://apps.apple.com/app/recordy" className="inline-block">
+            <a href="https://apps.apple.com/us/app/record-audio-voice-smart/id6760845363" className="inline-block">
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-14" />
             </a>
             <span className="text-sm text-slate-500">Free to start &middot; iCloud sync included</span>
@@ -207,7 +207,7 @@ export default function RecordyHome() {
             Recordy captures every detail — from meetings to ideas — on your iPhone and Apple Watch.
           </p>
           <div className="mt-10">
-            <a href="https://apps.apple.com/app/recordy" className="inline-block">
+            <a href="https://apps.apple.com/us/app/record-audio-voice-smart/id6760845363" className="inline-block">
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-14" />
             </a>
           </div>

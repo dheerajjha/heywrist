@@ -99,7 +99,7 @@ export default function NotesHome() {
             anywhere including your Apple Watch.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a href="https://apps.apple.com/app/notes-heywrist" className="inline-block">
+            <a href="https://apps.apple.com/us/app/dexter-notes/id6761487065" className="inline-block">
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-14" />
             </a>
             <span className="text-sm text-slate-500">Free to start &middot; CloudKit sync</span>
@@ -203,7 +203,7 @@ export default function NotesHome() {
             Dexter Notes captures your thoughts, AI organizes them, and you focus on what matters.
           </p>
           <div className="mt-10">
-            <a href="https://apps.apple.com/app/notes-heywrist" className="inline-block">
+            <a href="https://apps.apple.com/us/app/dexter-notes/id6761487065" className="inline-block">
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-14" />
             </a>
           </div>
