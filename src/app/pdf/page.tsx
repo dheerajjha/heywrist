@@ -37,52 +37,90 @@ export const metadata: Metadata = {
     "30 PDF tools, unlimited use of every non-AI tool for $1/month. Clean, fast, Apple-native — built to replace the $10–20/month utility apps cluttering the App Store.",
 };
 
-type Tool = { name: string; desc: string; tier: "Free" | "Pro" | "AI"; Icon: LucideIcon };
+type Tier = "Free" | "Pro" | "AI";
+type Category =
+  | "Organize"
+  | "Optimize"
+  | "ConvertTo"
+  | "ConvertFrom"
+  | "Edit"
+  | "Security"
+  | "AI";
+
+type Tool = {
+  name: string;
+  desc: string;
+  tier: Tier;
+  category: Category;
+  Icon: LucideIcon;
+};
 
 const tools: Tool[] = [
-  { name: "Merge PDFs", desc: "Combine any number of PDFs into one.", tier: "Free", Icon: Combine },
-  { name: "Split PDF", desc: "Pull pages or ranges into separate files.", tier: "Free", Icon: Scissors },
-  { name: "Edit PDF", desc: "Annotate, draw, add text and shapes.", tier: "Free", Icon: PenLine },
-  { name: "PDF → JPG", desc: "Export every page as a sharp image.", tier: "Free", Icon: ImageIcon },
-  { name: "JPG → PDF", desc: "Photos and screenshots into one PDF.", tier: "Free", Icon: FilePlus },
-  { name: "Sign PDF", desc: "Pencil-perfect signatures, flattened.", tier: "Free", Icon: FileSignature },
-  { name: "Watermark", desc: "Stamp text or images on every page.", tier: "Free", Icon: Stamp },
-  { name: "Rotate", desc: "Fix sideways or upside-down pages.", tier: "Free", Icon: RotateCw },
-  { name: "HTML → PDF", desc: "Save any webpage as Safari would.", tier: "Free", Icon: Globe },
-  { name: "Unlock PDF", desc: "Remove the password you already know.", tier: "Free", Icon: Unlock },
-  { name: "Protect PDF", desc: "Password-protect any document.", tier: "Free", Icon: Lock },
-  { name: "Organize", desc: "Reorder, delete, insert pages by drag.", tier: "Free", Icon: LayoutGrid },
-  { name: "Page numbers", desc: "Add numbers, custom format and position.", tier: "Free", Icon: Hash },
-  { name: "Scan to PDF", desc: "Apple's gold-standard document scanner.", tier: "Free", Icon: ScanLine },
-  { name: "Crop PDF", desc: "Trim margins, set crop boxes per page.", tier: "Free", Icon: Crop },
-  { name: "Compress PDF", desc: "Native compress free; server-grade Pro for the smallest file.", tier: "Pro", Icon: Minimize2 },
-  { name: "OCR PDF", desc: "On-device free; server OCR for batches and rare scripts.", tier: "Pro", Icon: ScanText },
-  { name: "Compare PDFs", desc: "Text diff free; visual + layout-aware diff Pro.", tier: "Pro", Icon: Diff },
-  { name: "Redact PDF", desc: "Flatten free; compliance-grade content-stream redaction Pro.", tier: "Pro", Icon: EyeOff },
-  { name: "PDF → Word", desc: "Layout and tables reconstructed properly.", tier: "Pro", Icon: FileType2 },
-  { name: "PDF → PowerPoint", desc: "Slides back to editable PPTX.", tier: "Pro", Icon: Presentation },
-  { name: "PDF → Excel", desc: "Tables extracted into real cells.", tier: "Pro", Icon: FileSpreadsheet },
-  { name: "Word → PDF", desc: "Pixel-faithful via headless LibreOffice.", tier: "Pro", Icon: FileType2 },
-  { name: "PowerPoint → PDF", desc: "Animations flattened, fonts preserved.", tier: "Pro", Icon: Presentation },
-  { name: "Excel → PDF", desc: "Sheets paginated cleanly.", tier: "Pro", Icon: FileSpreadsheet },
-  { name: "PDF → PDF/A", desc: "Long-term archival format, compliance-ready.", tier: "Pro", Icon: Archive },
-  { name: "Repair PDF", desc: "Fix broken xref tables and recover damaged files.", tier: "Pro", Icon: Wrench },
-  { name: "Request signatures", desc: "Send for e-signature via DocuSign / Adobe Sign.", tier: "Pro", Icon: Send },
-  { name: "Summarize", desc: "Key points and action items from any PDF.", tier: "AI", Icon: Sparkles },
-  { name: "Translate", desc: "Layout-preserving translation in 30+ languages.", tier: "AI", Icon: Languages },
+  // Organize
+  { name: "Merge PDFs", desc: "Combine any number of PDFs into one.", tier: "Free", category: "Organize", Icon: Combine },
+  { name: "Split PDF", desc: "Pull pages or ranges into separate files.", tier: "Free", category: "Organize", Icon: Scissors },
+  { name: "Organize", desc: "Reorder, delete, insert pages by drag.", tier: "Free", category: "Organize", Icon: LayoutGrid },
+  { name: "Scan to PDF", desc: "Apple's gold-standard document scanner.", tier: "Free", category: "Organize", Icon: ScanLine },
+  // Optimize
+  { name: "Compress PDF", desc: "Native compress free; server-grade Pro for the smallest file.", tier: "Pro", category: "Optimize", Icon: Minimize2 },
+  { name: "OCR PDF", desc: "On-device free; server OCR for batches and rare scripts.", tier: "Pro", category: "Optimize", Icon: ScanText },
+  { name: "Repair PDF", desc: "Fix broken xref tables and recover damaged files.", tier: "Pro", category: "Optimize", Icon: Wrench },
+  // Convert TO PDF
+  { name: "JPG → PDF", desc: "Photos and screenshots into one PDF.", tier: "Free", category: "ConvertTo", Icon: FilePlus },
+  { name: "Word → PDF", desc: "Pixel-faithful via headless LibreOffice.", tier: "Pro", category: "ConvertTo", Icon: FileType2 },
+  { name: "PowerPoint → PDF", desc: "Animations flattened, fonts preserved.", tier: "Pro", category: "ConvertTo", Icon: Presentation },
+  { name: "Excel → PDF", desc: "Sheets paginated cleanly.", tier: "Pro", category: "ConvertTo", Icon: FileSpreadsheet },
+  { name: "HTML → PDF", desc: "Save any webpage as Safari would.", tier: "Free", category: "ConvertTo", Icon: Globe },
+  // Convert FROM PDF
+  { name: "PDF → JPG", desc: "Export every page as a sharp image.", tier: "Free", category: "ConvertFrom", Icon: ImageIcon },
+  { name: "PDF → Word", desc: "Layout and tables reconstructed properly.", tier: "Pro", category: "ConvertFrom", Icon: FileType2 },
+  { name: "PDF → PowerPoint", desc: "Slides back to editable PPTX.", tier: "Pro", category: "ConvertFrom", Icon: Presentation },
+  { name: "PDF → Excel", desc: "Tables extracted into real cells.", tier: "Pro", category: "ConvertFrom", Icon: FileSpreadsheet },
+  { name: "PDF → PDF/A", desc: "Long-term archival format, compliance-ready.", tier: "Pro", category: "ConvertFrom", Icon: Archive },
+  // Edit
+  { name: "Edit PDF", desc: "Annotate, draw, add text and shapes.", tier: "Free", category: "Edit", Icon: PenLine },
+  { name: "Rotate", desc: "Fix sideways or upside-down pages.", tier: "Free", category: "Edit", Icon: RotateCw },
+  { name: "Page numbers", desc: "Add numbers, custom format and position.", tier: "Free", category: "Edit", Icon: Hash },
+  { name: "Watermark", desc: "Stamp text or images on every page.", tier: "Free", category: "Edit", Icon: Stamp },
+  { name: "Crop PDF", desc: "Trim margins, set crop boxes per page.", tier: "Free", category: "Edit", Icon: Crop },
+  // Security
+  { name: "Unlock PDF", desc: "Remove the password you already know.", tier: "Free", category: "Security", Icon: Unlock },
+  { name: "Protect PDF", desc: "Password-protect any document.", tier: "Free", category: "Security", Icon: Lock },
+  { name: "Sign PDF", desc: "Pencil-perfect signatures, flattened.", tier: "Free", category: "Security", Icon: FileSignature },
+  { name: "Redact PDF", desc: "Flatten free; compliance-grade content-stream redaction Pro.", tier: "Pro", category: "Security", Icon: EyeOff },
+  { name: "Compare PDFs", desc: "Text diff free; visual + layout-aware diff Pro.", tier: "Pro", category: "Security", Icon: Diff },
+  { name: "Request signatures", desc: "Send for e-signature via DocuSign / Adobe Sign.", tier: "Pro", category: "Security", Icon: Send },
+  // Intelligence
+  { name: "Summarize", desc: "Key points and action items from any PDF.", tier: "AI", category: "AI", Icon: Sparkles },
+  { name: "Translate", desc: "Layout-preserving translation in 30+ languages.", tier: "AI", category: "AI", Icon: Languages },
 ];
 
-const tierStyles: Record<Tool["tier"], string> = {
-  Free: "bg-emerald-500/15 text-emerald-300 border-emerald-500/30",
-  Pro: "bg-rose-500/15 text-rose-300 border-rose-500/30",
-  AI: "bg-violet-500/15 text-violet-300 border-violet-500/30",
+// Tier pill (only shown for Pro / AI — Free is the default and stays implicit).
+const tierStyles: Record<Exclude<Tier, "Free">, string> = {
+  Pro: "bg-white/5 text-slate-200 border-white/15",
+  AI: "bg-pink-500/15 text-pink-200 border-pink-500/30",
 };
 
-const tierIconStyles: Record<Tool["tier"], string> = {
-  Free: "from-emerald-500/30 to-emerald-500/5 text-emerald-300 ring-emerald-500/20",
-  Pro: "from-rose-500/30 to-rose-500/5 text-rose-300 ring-rose-500/20",
-  AI: "from-violet-500/30 to-violet-500/5 text-violet-300 ring-violet-500/20",
+// Category-tinted icon tile, ilovepdf-style: red / purple / amber / green / blue / teal / pink.
+const categoryIconStyles: Record<Category, string> = {
+  Organize: "from-red-500/30 to-red-500/5 text-red-200 ring-red-500/30",
+  Optimize: "from-purple-500/30 to-purple-500/5 text-purple-200 ring-purple-500/30",
+  ConvertTo: "from-amber-500/30 to-amber-500/5 text-amber-200 ring-amber-500/30",
+  ConvertFrom: "from-green-500/30 to-green-500/5 text-green-200 ring-green-500/30",
+  Edit: "from-blue-500/30 to-blue-500/5 text-blue-200 ring-blue-500/30",
+  Security: "from-teal-500/30 to-teal-500/5 text-teal-200 ring-teal-500/30",
+  AI: "from-pink-500/30 to-pink-500/5 text-pink-200 ring-pink-500/30",
 };
+
+const categoryLegend: { key: Category; label: string; dot: string }[] = [
+  { key: "Organize", label: "Organize", dot: "bg-red-400" },
+  { key: "Optimize", label: "Optimize", dot: "bg-purple-400" },
+  { key: "ConvertTo", label: "Convert to PDF", dot: "bg-amber-400" },
+  { key: "ConvertFrom", label: "Convert from PDF", dot: "bg-green-400" },
+  { key: "Edit", label: "Edit", dot: "bg-blue-400" },
+  { key: "Security", label: "Security", dot: "bg-teal-400" },
+  { key: "AI", label: "AI", dot: "bg-pink-400" },
+];
 
 export default function PdfHome() {
   return (
@@ -126,20 +164,27 @@ export default function PdfHome() {
               30 tools. <span className="text-rose-400">One dollar.</span>
             </h2>
             <p className="mt-4 text-slate-400">
-              <span className="text-emerald-300">Free</span> = always on, fully on-device. {" "}
-              <span className="text-rose-300">Pro</span> = unlocked with $1/month. {" "}
-              <span className="text-violet-300">AI</span> = optional add-on.
+              Color-coded by category. <span className="text-slate-300">Pro</span> tools are unlocked with $1/month;{" "}
+              <span className="text-pink-300">AI</span> is an optional add-on. Everything else is free, on-device.
             </p>
+            <div className="mt-6 flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs text-slate-300">
+              {categoryLegend.map(({ key, label, dot }) => (
+                <span key={key} className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                  <span className={`h-1.5 w-1.5 rounded-full ${dot}`} />
+                  {label}
+                </span>
+              ))}
+            </div>
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {tools.map(({ name, desc, tier, Icon }) => (
+            {tools.map(({ name, desc, tier, category, Icon }) => (
               <div
                 key={name}
                 className="group rounded-2xl border border-white/5 bg-slate-900/50 p-5 hover:border-rose-500/30 hover:bg-slate-900/80 transition-all"
               >
                 <div className="flex items-start gap-4">
                   <span
-                    className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ring-1 group-hover:scale-105 transition-transform ${tierIconStyles[tier]}`}
+                    className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ring-1 group-hover:scale-105 transition-transform ${categoryIconStyles[category]}`}
                     aria-hidden
                   >
                     <Icon className="h-5 w-5" strokeWidth={1.75} />
@@ -147,9 +192,11 @@ export default function PdfHome() {
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center justify-between gap-3 mb-1.5">
                       <h3 className="font-semibold leading-none">{name}</h3>
-                      <span className={`shrink-0 rounded-full border px-2 py-0.5 text-[10px] font-medium ${tierStyles[tier]}`}>
-                        {tier}
-                      </span>
+                      {tier !== "Free" && (
+                        <span className={`shrink-0 rounded-full border px-2 py-0.5 text-[10px] font-medium ${tierStyles[tier]}`}>
+                          {tier}
+                        </span>
+                      )}
                     </div>
                     <p className="text-sm text-slate-400 leading-relaxed">{desc}</p>
                   </div>
