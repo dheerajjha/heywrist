@@ -19,6 +19,11 @@ export function middleware(request: NextRequest) {
   const hostname = request.headers.get("host") || "";
   const { pathname } = request.nextUrl;
 
+  // API routes are global — never rewrite them per-subdomain.
+  if (pathname.startsWith("/api")) {
+    return NextResponse.next();
+  }
+
   for (const app of subdomainApps) {
     if (hostname === `${app}.heywrist.com`) {
       // Redirect double-prefix to clean URL
