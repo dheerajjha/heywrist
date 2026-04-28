@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import WaitlistForm from "../components/WaitlistForm";
 
 export const metadata: Metadata = {
-  title: "Hey Wrist PDF — every PDF tool you need for $1/year",
+  title: "Hey Wrist PDF — every PDF tool you need for $1/month",
   description:
-    "30 PDF tools, unlimited use of every non-AI tool for $1/year. Merge, split, compress, edit, sign, OCR, scan, watermark, convert — on iPhone first.",
+    "30 PDF tools, unlimited use of every non-AI tool for $1/month. Clean, fast, Apple-native — built to replace the $10–20/month utility apps cluttering the App Store.",
 };
 
 type Tool = { name: string; desc: string; tier: "Free" | "Pro" | "AI" };
@@ -62,7 +62,7 @@ export default function PdfHome() {
           </div>
           <h1 className="text-5xl font-bold tracking-tight sm:text-7xl">
             Stop paying{" "}
-            <span className="text-slate-500 line-through decoration-rose-500/60 decoration-4">$80/year</span>
+            <span className="text-slate-500 line-through decoration-rose-500/60 decoration-4">$10–20/month</span>
             <br className="hidden sm:block" /> for PDF tools.{" "}
             <span className="bg-gradient-to-r from-rose-400 via-red-400 to-orange-400 bg-clip-text text-transparent">
               Pay $1.
@@ -70,8 +70,8 @@ export default function PdfHome() {
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-400 sm:text-xl">
             Every PDF tool you actually use — merge, split, compress, edit, sign, OCR, watermark, convert,
-            scan — unlimited, on your iPhone, for one dollar a year. No per-file limits. No watermarks.
-            No upsells.
+            scan — unlimited, on your iPhone, for one dollar a month. Clean, fast, Apple-native.
+            No per-file limits. No watermarks. No sketchy privacy.
           </p>
           <div id="waitlist" className="mx-auto mt-10 max-w-md">
             <WaitlistForm source="pdf" />
@@ -88,16 +88,17 @@ export default function PdfHome() {
           <h2 className="text-3xl font-bold sm:text-4xl">Why this exists</h2>
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-slate-300">
             <p>
-              I got fed up. Every PDF tool on the web wants{" "}
-              <span className="text-rose-300">$80–$120 a year</span> to do things your phone could do
-              offline if someone bothered to wire it up properly. Merge two files? Paywall. Compress?
-              Paywall. Remove a password you already know? Paywall + watermark + 2&nbsp;MB upload limit.
+              Fed up watching Chinese utility apps charge{" "}
+              <span className="text-rose-300">$10–20 a month</span> like it&apos;s nothing. Same features.
+              Worse UX. Sketchy privacy. The App Store is full of them — top of every PDF search,
+              5-star ratings farmed, free trials that auto-renew at $89.99/year before you blink.
             </p>
             <p>
-              Hey Wrist PDF is the opposite. Pay <span className="font-semibold text-white">$1 a year</span>{" "}
-              once, get every non-AI tool unlimited, forever-as-long-as-you-renew. Most of it runs on
-              your device — instant, private, offline. The hard stuff (Office round-trips, OCR at scale,
-              compliance redaction) runs on a tiny server and you get it for the same $1.
+              I&apos;m done. Hey Wrist PDF is the opposite. Pay{" "}
+              <span className="font-semibold text-white">$1 a month</span>, get every non-AI tool
+              unlimited. Clean, fast, Apple-native. Most of it runs on your device — instant, private,
+              offline. The hard stuff (Office round-trips, OCR at scale, compliance redaction) runs on
+              a tiny server and you get it for the same dollar.
             </p>
             <p className="text-slate-400">
               The only thing that costs more is AI summarize / translate, because tokens cost real money.
@@ -116,7 +117,7 @@ export default function PdfHome() {
             </h2>
             <p className="mt-4 text-slate-400">
               <span className="text-emerald-300">Free</span> = always on, fully on-device. {" "}
-              <span className="text-rose-300">Pro</span> = unlocked with $1/year. {" "}
+              <span className="text-rose-300">Pro</span> = unlocked with $1/month. {" "}
               <span className="text-violet-300">AI</span> = optional add-on.
             </p>
           </div>
@@ -152,10 +153,10 @@ export default function PdfHome() {
             <p className="text-sm uppercase tracking-widest text-rose-300">Hey Wrist PDF</p>
             <div className="mt-3 flex items-baseline justify-center gap-2">
               <span className="text-6xl font-bold sm:text-7xl">$1</span>
-              <span className="text-lg text-slate-400">/ year</span>
+              <span className="text-lg text-slate-400">/ month</span>
             </div>
             <p className="mt-2 text-sm text-slate-400">
-              vs. <span className="line-through">$80/yr</span> on the tools you&apos;re used to
+              vs. <span className="line-through">$10–20/mo</span> on the apps cluttering the App Store
             </p>
             <ul className="mx-auto mt-8 grid max-w-md gap-2 text-left text-sm text-slate-300">
               <li className="flex gap-2"><span className="text-emerald-400">✓</span> All 28 non-AI tools, unlimited use</li>
@@ -180,7 +181,7 @@ export default function PdfHome() {
           <h2 className="text-3xl font-bold sm:text-4xl">Get it when it ships.</h2>
           <p className="mt-4 text-lg text-slate-400">
             Drop your email. I&apos;ll only ping you when the app is in the App Store —
-            and once when the $1/year promo opens.
+            and once when the $1/month promo opens.
           </p>
           <div className="mx-auto mt-8 max-w-md">
             <WaitlistForm source="pdf-bottom" />

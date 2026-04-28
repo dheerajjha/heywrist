@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: {
-    default: "Hey Wrist PDF — every PDF tool you need for $1/year",
+    default: "Hey Wrist PDF — every PDF tool you need for $1/month",
     template: "%s | Hey Wrist PDF",
   },
   description:
-    "30 PDF tools — merge, split, compress, edit, sign, OCR, watermark, scan, and more. Unlimited use of every non-AI tool for $1/year. iPhone first.",
+    "30 PDF tools — merge, split, compress, edit, sign, OCR, watermark, scan, and more. Unlimited use of every non-AI tool for $1/month. Clean, fast, Apple-native.",
 };
 
 function PdfMark({ size = 32 }: { size?: number }) {
@@ -58,7 +58,7 @@ export default function PdfLayout({ children }: { children: React.ReactNode }) {
                 <span className="font-bold">Hey Wrist PDF</span>
               </div>
               <p className="text-sm text-slate-400">
-                Every PDF tool, $1/year.
+                Every PDF tool, $1/month.
                 <br />
                 Built by{" "}
                 <a href="https://heywrist.com" className="text-rose-400 hover:text-rose-300">
@@ -73,7 +73,7 @@ export default function PdfLayout({ children }: { children: React.ReactNode }) {
                   All 30 tools
                 </Link>
                 <Link href="/pdf#pricing" className="text-sm text-slate-400 hover:text-white transition-colors">
-                  $1/year pricing
+                  $1/month pricing
                 </Link>
               </div>
             </div>
