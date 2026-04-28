@@ -1,4 +1,8 @@
 import Link from "next/link";
+import WaitlistForm from "./components/WaitlistForm";
+
+const X_HANDLE = "awesome_fingers";
+const X_URL = `https://x.com/${X_HANDLE}`;
 
 const apps = [
   { name: "Screenaway", slug: "screenaway", desc: "Screen time control for iPhone and Apple Watch" },
@@ -33,9 +37,30 @@ export default function Home() {
           <h1 className="text-5xl font-bold tracking-tight sm:text-6xl">
             Hey<span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">Wrist</span>
           </h1>
-          <p className="mt-4 max-w-md text-lg text-slate-400">
-            Beautiful, privacy-first apps for iPhone &amp; Apple&nbsp;Watch
+          <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-300">
+            Solo founder shipping Apple Watch-first apps. Testing every AI tool so you don&apos;t waste tokens. Dropping startups that actually ship.
           </p>
+
+          <WaitlistForm source="home" />
+
+          <a
+            href={X_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors"
+            aria-label={`Follow @${X_HANDLE} on X`}
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="14"
+              height="14"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+            <span>Follow @{X_HANDLE} on X</span>
+          </a>
         </div>
 
         {/* App grid */}
@@ -83,12 +108,27 @@ export default function Home() {
             <p className="text-sm text-slate-500">
               &copy; {new Date().getFullYear()} Hey Wrist. All rights reserved.
             </p>
-            <a
-              href="mailto:support@heywrist.com"
-              className="text-sm text-slate-500 hover:text-slate-300 transition-colors"
-            >
-              support@heywrist.com
-            </a>
+            <div className="flex items-center gap-4 text-sm">
+              <a
+                href="mailto:support@heywrist.com"
+                className="text-slate-500 hover:text-slate-300 transition-colors"
+              >
+                support@heywrist.com
+              </a>
+              <span className="text-slate-700">&middot;</span>
+              <a
+                href={X_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-slate-500 hover:text-slate-300 transition-colors"
+                aria-label={`@${X_HANDLE} on X`}
+              >
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+                <span>@{X_HANDLE}</span>
+              </a>
+            </div>
             <p className="mt-1 text-xs text-slate-600">
               Apple Watch, iPhone, and App Store are trademarks of Apple Inc.
             </p>
