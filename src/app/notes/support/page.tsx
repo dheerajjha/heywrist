@@ -69,17 +69,17 @@ export default function NotesSupport() {
       <section className="rounded-2xl border border-white/10 bg-slate-900/50 p-8 text-center">
         <h2 className="text-xl font-semibold mb-2">Still need help?</h2>
         <p className="text-sm text-slate-400 mb-6">We typically respond within 24 hours.</p>
-        <a href="mailto:support@heywrist.com" className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-6 py-2.5 text-sm font-medium text-white hover:bg-indigo-500 transition-colors">
+        <a href="mailto:founder@heywrist.com" className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-6 py-2.5 text-sm font-medium text-white hover:bg-indigo-500 transition-colors">
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
           </svg>
-          support@heywrist.com
+          founder@heywrist.com
         </a>
       </section>
 
       <footer className="mt-16 pt-8 border-t border-white/10 text-sm text-slate-500">
         <p>&copy; {new Date().getFullYear()} Hey Wrist. All rights reserved.</p>
-        <p className="mt-1">Contact: <a href="mailto:support@heywrist.com" className="text-indigo-400 hover:text-indigo-300">support@heywrist.com</a></p>
+        <p className="mt-1">Contact: <a href="mailto:founder@heywrist.com" className="text-indigo-400 hover:text-indigo-300">founder@heywrist.com</a></p>
       </footer>
     </main>
   );

@@ -220,7 +220,7 @@ export default function ScreenawayTerms() {
         <h2>Contact Us</h2>
         <p>
           If you have any questions about these Terms, please contact us at{" "}
-          <a href="mailto:support@heywrist.com">support@heywrist.com</a>.
+          <a href="mailto:founder@heywrist.com">founder@heywrist.com</a>.
         </p>
         <p>
           <strong>Developer:</strong> Hey Wrist
@@ -232,10 +232,10 @@ export default function ScreenawayTerms() {
         <p className="mt-1">
           Contact:{" "}
           <a
-            href="mailto:support@heywrist.com"
+            href="mailto:founder@heywrist.com"
             className="text-indigo-400 hover:text-indigo-300"
           >
-            support@heywrist.com
+            founder@heywrist.com
           </a>
         </p>
       </footer>

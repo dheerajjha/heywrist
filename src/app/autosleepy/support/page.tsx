@@ -89,13 +89,13 @@ export default function AutoSleepySupport() {
           We typically respond within 24 hours.
         </p>
         <a
-          href="mailto:support@heywrist.com"
+          href="mailto:founder@heywrist.com"
           className="inline-flex items-center gap-2 rounded-full bg-purple-600 px-6 py-2.5 text-sm font-medium text-white hover:bg-purple-500 transition-colors"
         >
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
           </svg>
-          support@heywrist.com
+          founder@heywrist.com
         </a>
         <p className="mt-6 text-xs text-slate-500">
           Love AutoSleepy?{" "}
@@ -113,8 +113,8 @@ export default function AutoSleepySupport() {
         <p>&copy; {new Date().getFullYear()} Hey Wrist. All rights reserved.</p>
         <p className="mt-1">
           Contact:{" "}
-          <a href="mailto:support@heywrist.com" className="text-purple-400 hover:text-purple-300">
-            support@heywrist.com
+          <a href="mailto:founder@heywrist.com" className="text-purple-400 hover:text-purple-300">
+            founder@heywrist.com
           </a>
         </p>
       </footer>

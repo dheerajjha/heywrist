@@ -150,7 +150,7 @@ export default function StructuredTerms() {
       <h2>16. Contact Us</h2>
       <p>
         <strong>Email:</strong>{" "}
-        <a href="mailto:support@heywrist.com">support@heywrist.com</a>
+        <a href="mailto:founder@heywrist.com">founder@heywrist.com</a>
       </p>
       <p><strong>Developer:</strong> Hey Wrist</p>
     </PolicyLayout>

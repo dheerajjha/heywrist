@@ -110,10 +110,10 @@ export default function Home() {
             </p>
             <div className="flex items-center gap-4 text-sm">
               <a
-                href="mailto:support@heywrist.com"
+                href="mailto:founder@heywrist.com"
                 className="text-slate-500 hover:text-slate-300 transition-colors"
               >
-                support@heywrist.com
+                founder@heywrist.com
               </a>
               <span className="text-slate-700">&middot;</span>
               <a

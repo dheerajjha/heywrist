@@ -107,10 +107,10 @@ export default function AutoSleepyLayout({
                   FAQ &amp; Help
                 </Link>
                 <a
-                  href="mailto:support@heywrist.com"
+                  href="mailto:founder@heywrist.com"
                   className="text-sm text-slate-400 hover:text-white transition-colors"
                 >
-                  support@heywrist.com
+                  founder@heywrist.com
                 </a>
               </div>
             </div>

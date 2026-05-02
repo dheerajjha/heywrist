@@ -66,7 +66,7 @@ export default function StructuredLayout({ children }: { children: React.ReactNo
               <h4 className="mb-3 text-sm font-semibold text-slate-300">Support</h4>
               <div className="flex flex-col gap-2">
                 <Link href="/structured/support" className="text-sm text-slate-400 hover:text-white transition-colors">FAQ &amp; Help</Link>
-                <a href="mailto:support@heywrist.com" className="text-sm text-slate-400 hover:text-white transition-colors">support@heywrist.com</a>
+                <a href="mailto:founder@heywrist.com" className="text-sm text-slate-400 hover:text-white transition-colors">founder@heywrist.com</a>
               </div>
             </div>
           </div>

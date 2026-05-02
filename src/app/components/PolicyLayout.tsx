@@ -44,10 +44,10 @@ export default function PolicyLayout({
         <p className="mt-1">
           Contact:{" "}
           <a
-            href="mailto:support@heywrist.com"
+            href="mailto:founder@heywrist.com"
             className="text-blue-400 hover:text-blue-300 transition-colors"
           >
-            support@heywrist.com
+            founder@heywrist.com
           </a>
         </p>
         <p className="mt-2 text-xs text-slate-600">
