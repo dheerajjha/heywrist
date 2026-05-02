@@ -219,7 +219,7 @@ export default function PdfHome() {
               5-star ratings farmed, free trials that auto-renew at $89.99/year before you blink.
             </p>
             <p>
-              I&apos;m done. Hey Wrist PDF is the opposite. Pay{" "}
+              We built Hey Wrist PDF as the opposite. Pay{" "}
               <span className="font-semibold text-white">$1 a month</span>, get every non-AI tool
               unlimited. Clean, fast, Apple-native. Most of it runs on your device — instant, private,
               offline. The hard stuff (Office round-trips, OCR at scale, compliance redaction) runs on

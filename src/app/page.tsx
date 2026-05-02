@@ -38,7 +38,7 @@ export default function Home() {
             Hey<span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">Wrist</span>
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-300">
-            Solo founder shipping Apple Watch-first apps. Testing every AI tool so you don&apos;t waste tokens. Dropping startups that actually ship.
+            A team of developers building Apple Watch-first apps. Testing every AI tool so you don&apos;t waste tokens. Shipping products that actually work.
           </p>
 
           <WaitlistForm source="home" />
