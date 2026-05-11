@@ -48,7 +48,7 @@ const sections: Section[] = [
       },
       {
         q: "Why are some personas locked?",
-        a: "Seven of the eight personas (Muse, DevBot, FitCoach, ChefAI, Lingua, Tutor, Calm) require Sona Pro. The default Sona persona is free. Pro users get unlimited access to all eight. Tap a locked persona to see the upgrade screen.",
+        a: "Six of the eight personas (Muse, DevBot, FitCoach, ChefAI, Lingua, Calm) require Sona Pro. Sona and Tutor are free for everyone. Pro users get unlimited access to all eight. Tap a locked persona to see the upgrade screen.",
       },
     ],
   },
@@ -57,7 +57,7 @@ const sections: Section[] = [
     faqs: [
       {
         q: "What does Sona Pro include?",
-        a: "Sona Pro unlocks unlimited messages (the free tier is limited to 10 per 24 hours), all eight personas, image vision (attach photos), web grounding for up-to-date facts, premium themes, longer conversation memory, and priority access to new features.",
+        a: "Sona Pro unlocks unlimited messages (the free tier is limited to 20 per 24 hours), six additional personas (Muse, DevBot, FitCoach, ChefAI, Lingua, Calm — Sona and Tutor are free), image vision (attach photos), and four premium themes (Glass, Neo-Pop, Sunset, Ocean). Web grounding and voice-only conversations are free for everyone.",
       },
       {
         q: "How much does Sona Pro cost?",

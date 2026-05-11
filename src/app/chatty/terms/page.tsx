@@ -70,9 +70,13 @@ export default function SonaTerms() {
       <h2>5. Sona Pro &mdash; Subscriptions and Lifetime Purchase</h2>
       <p>
         Sona offers an optional <strong>Sona Pro</strong> upgrade that
-        unlocks unlimited messages, all eight personas, web grounding,
-        image vision, premium themes, and other features described on the
-        in-app upgrade screen. Sona Pro is offered in three forms:
+        unlocks unlimited messages, six additional AI personas (Muse,
+        DevBot, FitCoach, ChefAI, Lingua, and Calm — the Sona and
+        Tutor personas remain free), image-vision input, four premium
+        themes (Glass, Neo-Pop, Sunset, Ocean), and other features
+        described on the in-app upgrade screen. Web grounding and
+        voice-only conversations are available to all users at no
+        additional cost. Sona Pro is offered in three forms:
       </p>
       <ul>
         <li><strong>Sona Pro Monthly</strong> &mdash; auto-renewing subscription billed monthly. New subscribers receive a 3-day free trial.</li>
@@ -165,8 +169,9 @@ export default function SonaTerms() {
         Sona offers a free tier with the following limits:
       </p>
       <ul>
-        <li>10 AI messages per 24-hour rolling period.</li>
-        <li>Access to the default Sona persona only.</li>
+        <li>20 AI messages per 24-hour rolling period.</li>
+        <li>Access to the Sona and Tutor personas (the remaining six personas require Sona Pro).</li>
+        <li>Access to the Light, Dark, and Paper themes (the four premium themes require Sona Pro).</li>
         <li>No image-vision input.</li>
       </ul>
       <p>
