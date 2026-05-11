@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: {
-    default: "Chatty - AI Companion for Apple Watch",
-    template: "%s | Chatty",
+    default: "Sona — AI Companion for Apple Watch",
+    template: "%s | Sona",
   },
   description:
-    "AI chatbot for Apple Watch with streaming responses, 5 personas, voice-first input, and a beautiful OLED-optimized design.",
+    "AI chatbot for Apple Watch with streaming responses, eight personas plus custom ones, voice-first input, and a beautiful OLED-optimized design.",
 };
 
 function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
@@ -24,11 +24,12 @@ export default function ChattyLayout({ children }: { children: React.ReactNode }
       <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link href="/chatty" className="flex items-center gap-2">
-            <img src="/icons/chatty.png" alt="chatty icon" width={32} height={32} className="rounded-lg" />
-            <span className="text-lg font-bold">Chatty</span>
+            <img src="/icons/chatty.png" alt="Sona icon" width={32} height={32} className="rounded-lg" />
+            <span className="text-lg font-bold">Sona</span>
           </Link>
           <nav className="hidden items-center gap-6 sm:flex">
             <NavLink href="/chatty#features">Features</NavLink>
+            <NavLink href="/chatty#pricing">Pricing</NavLink>
             <NavLink href="/chatty/support">Support</NavLink>
             <a href="https://apps.apple.com/app/chatty" className="rounded-full bg-purple-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-purple-500 transition-colors">
               Download
@@ -44,8 +45,8 @@ export default function ChattyLayout({ children }: { children: React.ReactNode }
           <div className="grid gap-8 sm:grid-cols-3">
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <img src="/icons/chatty.png" alt="chatty icon" width={28} height={28} className="rounded-lg" />
-                <span className="font-bold">Chatty</span>
+                <img src="/icons/chatty.png" alt="Sona icon" width={28} height={28} className="rounded-lg" />
+                <span className="font-bold">Sona</span>
               </div>
               <p className="text-sm text-slate-400">
                 AI on your wrist.

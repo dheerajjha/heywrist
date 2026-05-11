@@ -10,7 +10,7 @@ const apps = [
   { name: "Recordy", slug: "recordy", desc: "Premium voice recorder for iPhone and Apple Watch" },
   { name: "Streaky", slug: "streaky", desc: "Habit tracking with gamification for iPhone and Apple Watch" },
   { name: "Watery", slug: "watery", desc: "Smart hydration tracking for iPhone and Apple Watch" },
-  { name: "Chatty", slug: "chatty", desc: "AI companion for Apple Watch and iPhone" },
+  { name: "Sona", slug: "chatty", desc: "AI companion with 8 personas for Apple Watch and iPhone" },
   { name: "Dexter Notes", slug: "notes", desc: "AI-powered notes and tasks for iPhone and Apple Watch" },
   { name: "Structured", slug: "structured", desc: "Visual daily planner for iPhone and Apple Watch" },
   { name: "ChronoFit", slug: "chronofit", desc: "Narrative fitness timer for iPhone and Apple Watch" },
