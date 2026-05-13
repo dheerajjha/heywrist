@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 export default function StreakyPrivacy() {
   return (
     <PolicyLayout appName="Streaky" title="Privacy Policy">
-      <p><strong>Effective Date:</strong> April 1, 2026</p>
-      <p><strong>Last Updated:</strong> April 1, 2026</p>
+      <p><strong>Effective Date:</strong> May 13, 2026</p>
+      <p><strong>Last Updated:</strong> May 13, 2026</p>
 
       <p>
         Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Streaky as a premium habit
@@ -19,8 +19,13 @@ export default function StreakyPrivacy() {
         and what rights you have regarding your data.
       </p>
       <p>
-        <strong>In short:</strong> Your habit data stays on your device and
-        syncs via your private iCloud account. We never see your data.
+        <strong>In short:</strong> Streaky does not require an account and
+        never sees your name or email. Your habit data, completion history,
+        streaks, and preferences are stored on your device and synced through
+        your private iCloud account &mdash; we never see them. We use Mixpanel
+        for anonymous, opt-out usage analytics so we know which features matter
+        and where to invest engineering effort. Apple processes any in-app
+        purchases &mdash; we never receive your payment information.
       </p>
 
       <h2>1. Information We Access</h2>
@@ -89,8 +94,9 @@ export default function StreakyPrivacy() {
         <li>Your name, email address, or any personally identifiable information</li>
         <li>Location data</li>
         <li>Contacts, photos, calendar, or microphone access</li>
-        <li>Device identifiers for tracking purposes</li>
+        <li>Apple&apos;s Advertising Identifier (IDFA), and we do not use the App Tracking Transparency framework &mdash; we do not track you across other apps or websites</li>
         <li>Browsing history or usage data outside the app</li>
+        <li>The names, contents, or any details of the habits you track (only anonymous event counts &mdash; see Section 4)</li>
       </ul>
 
       <h2>2. Data Stored on Your Device</h2>
@@ -106,20 +112,47 @@ export default function StreakyPrivacy() {
       <h2>3. Data Sharing</h2>
       <p>
         We do not share, sell, rent, trade, or disclose your habit data,
-        completion history, or any personal information to any third party.
+        completion history, or any personally identifiable information to any
+        third party. The only third party that receives data from Streaky is
+        Mixpanel, and only the anonymous usage events described in Section 4.
       </p>
 
-      <h2>4. Third-Party Services &amp; SDKs</h2>
-      <p>Streaky does not include any third-party:</p>
+      <h2>4. Analytics &mdash; Mixpanel</h2>
+      <p>
+        Streaky uses{" "}
+        <a href="https://mixpanel.com/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">
+          Mixpanel
+        </a>{" "}
+        to understand how the app is used and where to invest engineering
+        effort. The data we send is intentionally minimal:
+      </p>
       <ul>
-        <li>Analytics or telemetry SDKs</li>
-        <li>Advertising or ad-tracking frameworks</li>
-        <li>Crash reporting services that transmit user data</li>
-        <li>Social media SDKs</li>
+        <li>An anonymous device identifier derived from Apple&apos;s <code>identifierForVendor</code> (resets when you delete the app from all your devices and is not shared with other apps)</li>
+        <li>App version, build number, iOS/watchOS version, and device model</li>
+        <li>Event names &mdash; e.g. &quot;habit created&quot;, &quot;habit completed&quot;, &quot;settings viewed&quot;, &quot;paywall shown&quot;, &quot;purchase completed&quot;</li>
+        <li>Coarse event properties &mdash; habit type/category (e.g. &quot;positive&quot;, &quot;timed&quot;), schedule type, source screen, theme choice, language</li>
       </ul>
       <p>
-        Apple may collect aggregated, anonymized telemetry as part of standard
-        App Store services. See{" "}
+        We <strong>never</strong> send the names or contents of your habits,
+        your completion notes, your HealthKit data, your iCloud data, or any
+        personally identifiable information to Mixpanel.
+      </p>
+      <p>
+        Mixpanel is not used for advertising or for cross-app tracking, and
+        Streaky does not use Apple&apos;s App Tracking Transparency framework.
+      </p>
+      <p>
+        <strong>Opt out:</strong> if you do not want Streaky to send anonymous
+        analytics events, email{" "}
+        <a href="mailto:founder@heywrist.com">founder@heywrist.com</a> and we
+        will disable analytics for your installation in the next app update.
+        Streaky does <strong>not</strong> include any advertising SDKs, social
+        media SDKs, or third-party crash-reporting services that transmit
+        personal data.
+      </p>
+      <p>
+        Apple may also collect aggregated, anonymized telemetry as part of
+        standard App Store services. See{" "}
         <a href="https://www.apple.com/privacy/" target="_blank" rel="noopener noreferrer">
           Apple&apos;s Privacy Policy
         </a>{" "}
@@ -157,9 +190,15 @@ export default function StreakyPrivacy() {
 
       <h2>8. International Users</h2>
       <p>
-        Your data is stored on your device and in your personal iCloud account.
-        We do not operate servers, so there are no cross-border data transfers
-        initiated by us.
+        Your habit data is stored on your device and in your personal iCloud
+        account &mdash; we do not operate any servers that hold it. The
+        anonymous analytics events described in Section 4 are processed by
+        Mixpanel, which may store them on infrastructure outside your country.
+        See{" "}
+        <a href="https://mixpanel.com/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">
+          Mixpanel&apos;s Privacy Policy
+        </a>{" "}
+        for details on their data handling and regional storage.
       </p>
 
       <h2>9. Changes to This Policy</h2>
