@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: "What AI service does Dexter Notes use?",
-    a: "Dexter Notes uses Azure OpenAI (GPT-4.1-nano) through a secure proxy for AI features like Ask AI, categorization, and email processing. A heuristic fallback engine works when the AI service is unavailable.",
+    a: "Dexter Notes uses a secure enterprise cloud AI service, accessed through our own proxy, for AI features like Ask AI, categorization, and email processing. Cloud AI features are opt-in \u2014 the app asks for your explicit permission the first time you invoke an AI feature, and you can revoke it any time in Settings \u2192 AI & Intelligence. A heuristic fallback engine handles supported requests locally when the AI service is unavailable or you have declined cloud AI.",
   },
 ];
 

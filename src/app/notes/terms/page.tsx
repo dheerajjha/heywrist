@@ -10,7 +10,7 @@ export default function NotesTerms() {
   return (
     <PolicyLayout appName="Dexter Notes" slug="notes" title="Terms & Conditions">
       <p><strong>Effective Date:</strong> April 1, 2026</p>
-      <p><strong>Last Updated:</strong> April 1, 2026</p>
+      <p><strong>Last Updated:</strong> May 22, 2026</p>
 
       <p>
         These Terms &amp; Conditions (&quot;Terms&quot;) govern your use of the Dexter Notes
@@ -36,8 +36,9 @@ export default function NotesTerms() {
       <h2>3. AI-Generated Content Disclaimer</h2>
       <p>
         AI features including auto-categorization, summarization, task
-        extraction, and Ask AI chat are powered by Azure OpenAI and may
-        produce inaccurate, incomplete, or misleading results. You acknowledge:
+        extraction, and Ask AI chat are powered by a secure enterprise
+        cloud AI service and may produce inaccurate, incomplete, or
+        misleading results. You acknowledge:
       </p>
       <ul>
         <li>AI-generated content is for <strong>informational purposes only</strong></li>

@@ -10,7 +10,7 @@ export default function SonaPrivacy() {
   return (
     <PolicyLayout appName="Sona" slug="chatty" title="Privacy Policy">
       <p><strong>Effective Date:</strong> May 1, 2026</p>
-      <p><strong>Last Updated:</strong> May 1, 2026</p>
+      <p><strong>Last Updated:</strong> May 22, 2026</p>
 
       <p>
         Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) builds Sona &mdash; an
@@ -20,12 +20,13 @@ export default function SonaPrivacy() {
       </p>
       <p>
         <strong>In short:</strong> Sona does not require an account and never
-        sees your name or email. Your messages are sent to Microsoft Azure
-        OpenAI to generate AI responses. We use Mixpanel for anonymous,
-        opt-out usage analytics, and our own bug-reporting service for crash
-        diagnostics. Conversations, persona memory, streaks, and starred
-        messages are stored only on your device. Apple processes any in-app
-        purchases &mdash; we never receive your payment information.
+        sees your name or email. Your messages are sent to a secure
+        enterprise cloud AI service to generate AI responses. We use
+        Mixpanel for anonymous, opt-out usage analytics, and our own
+        bug-reporting service for crash diagnostics. Conversations, persona
+        memory, streaks, and starred messages are stored only on your
+        device. Apple processes any in-app purchases &mdash; we never
+        receive your payment information.
       </p>
 
       <h2>1. Information Sona Accesses on Your Device</h2>
@@ -49,9 +50,10 @@ export default function SonaPrivacy() {
       <p>
         On iPhone, Sona requests Camera and Photo Library access only when
         you tap the image-attach button to share a photo with the AI for
-        vision analysis. The image you attach is sent to Microsoft Azure
-        OpenAI (see Section 2) so the model can describe it. We do not
-        access photos in the background and we do not scan your library.
+        vision analysis. The image you attach is sent to our enterprise
+        cloud AI service (see Section 2) so the model can describe it. We
+        do not access photos in the background and we do not scan your
+        library.
       </p>
 
       <h3>1.3 Notifications (Optional)</h3>
@@ -71,13 +73,14 @@ export default function SonaPrivacy() {
         <li>Advertising identifiers (we do not use IDFA)</li>
       </ul>
 
-      <h2>2. AI Processing &mdash; Microsoft Azure OpenAI</h2>
+      <h2>2. AI Processing &mdash; Enterprise Cloud AI Provider</h2>
       <p>
-        Sona&apos;s AI personas are powered by{" "}
-        <strong>Microsoft Azure OpenAI Service</strong>, hosted in Microsoft
-        Azure cloud regions operated by Microsoft Corporation.
+        Sona&apos;s AI personas are powered by a{" "}
+        <strong>secure enterprise cloud AI service</strong>, hosted in
+        US-based cloud regions and bound by an enterprise data-processing
+        agreement.
       </p>
-      <p>When you send a message, Sona transmits the following to Azure:</p>
+      <p>When you send a message, Sona transmits the following to the AI service over HTTPS:</p>
       <ul>
         <li>The text of your message</li>
         <li>An attached image, if you chose to attach one</li>
@@ -91,25 +94,22 @@ export default function SonaPrivacy() {
         contains), or any account information &mdash; we have none of those.
       </p>
       <p>
-        <strong>How Azure OpenAI uses this data:</strong> per Microsoft&apos;s{" "}
-        <a href="https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy" target="_blank" rel="noopener noreferrer">
-          Azure OpenAI data, privacy, and security policy
-        </a>
-        :
+        <strong>How the AI service uses this data:</strong> under our
+        provider&apos;s published enterprise terms:
       </p>
       <ul>
-        <li>Your prompts and completions are <strong>not used to train</strong> OpenAI&apos;s or Microsoft&apos;s foundation models.</li>
-        <li>Microsoft may retain prompts and completions for up to <strong>30 days</strong> for abuse and misuse monitoring, accessible only to authorized Microsoft personnel under strict access controls. After 30 days they are deleted.</li>
-        <li>Data is processed in regions specified by Microsoft for the deployment.</li>
+        <li>Your prompts and completions are <strong>not used to train</strong> the provider&apos;s or its upstream model partners&apos; foundation models.</li>
+        <li>The provider may retain prompts and completions for up to <strong>30 days</strong> for abuse and misuse monitoring, accessible only to authorized personnel under strict access controls. After 30 days they are deleted.</li>
+        <li>Data is processed in the regions specified by the provider for the deployment.</li>
       </ul>
       <p>
-        <strong>Web access is restricted.</strong> Sona&apos;s Azure deployment
+        <strong>Web access is restricted.</strong> Sona&apos;s deployment
         does not give the AI tools the ability to freely browse the open
         internet. The AI cannot fetch arbitrary URLs, sign into services,
         or reach out to third-party APIs on your behalf. A small set of
-        personas optionally use Microsoft&apos;s curated web grounding to
-        cite up-to-date facts; that grounding is provided by Microsoft and
-        governed by the same Azure terms.
+        personas optionally use the provider&apos;s curated web grounding
+        to cite up-to-date facts; that grounding is provided by the same
+        AI service and governed by the same enterprise terms.
       </p>
 
       <h2>3. Analytics &mdash; Mixpanel</h2>
@@ -196,10 +196,10 @@ export default function SonaPrivacy() {
         memory in the Watch&apos;s sandboxed storage. Data synced between the
         Apple Watch and iPhone uses Apple&apos;s WatchConnectivity framework
         &mdash; a direct, encrypted, device-to-device channel. The Watch
-        does not connect to Microsoft Azure independently for chat &mdash;
-        when paired, AI requests are routed through your iPhone; when the
-        Watch is solo (e.g. on cellular), it sends requests using the same
-        Azure deployment described in Section 2.
+        does not connect to the cloud AI service independently for chat
+        &mdash; when paired, AI requests are routed through your iPhone;
+        when the Watch is solo (e.g. on cellular), it sends requests using
+        the same cloud AI service described in Section 2.
       </p>
       <p>
         The Watch does not initiate in-app purchases. If you tap a Pro
@@ -218,7 +218,7 @@ export default function SonaPrivacy() {
       <p>We do not sell, rent, trade, or share your data with third parties for advertising or marketing purposes.</p>
       <p>The only third parties that receive any data from Sona are:</p>
       <ul>
-        <li><strong>Microsoft</strong> (Azure OpenAI) &mdash; to generate AI responses (Section 2)</li>
+        <li><strong>Our enterprise cloud AI provider</strong> &mdash; to generate AI responses (Section 2)</li>
         <li><strong>Mixpanel</strong> &mdash; for anonymous usage analytics, opt-out available (Section 3)</li>
         <li><strong>Apple</strong> &mdash; for in-app purchases and standard App Store telemetry (Section 5)</li>
         <li><strong>Hey Wrist Bug Reporter</strong> (operated by us) &mdash; for crash diagnostics (Section 4)</li>
@@ -260,17 +260,17 @@ export default function SonaPrivacy() {
 
       <h2>12. International Users</h2>
       <p>
-        Microsoft Azure OpenAI processes prompts in the Azure region(s) that
-        we deploy to (currently Microsoft&apos;s East US 2 region). Mixpanel
-        is operated in the United States. By using Sona you consent to
-        these transfers. Microsoft and Mixpanel rely on Standard Contractual
-        Clauses for cross-border transfers from the EU/UK.
+        Our enterprise cloud AI provider processes prompts in US-based
+        cloud regions. Mixpanel is operated in the United States. By
+        using Sona you consent to these transfers. Our AI provider and
+        Mixpanel rely on Standard Contractual Clauses for cross-border
+        transfers from the EU/UK.
       </p>
 
       <h2>13. Security</h2>
       <p>
         All network requests from Sona use HTTPS with certificate
-        validation. The Azure API key embedded in the app is obfuscated to
+        validation. The API key embedded in the app is obfuscated to
         slow casual extraction and is not the same key we use server-side
         for unrelated services. Apple&apos;s app sandbox prevents other
         apps on your device from reading Sona&apos;s on-device storage.
