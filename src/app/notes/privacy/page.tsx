@@ -10,7 +10,7 @@ export default function NotesPrivacy() {
   return (
     <PolicyLayout appName="Dexter Notes" slug="notes" title="Privacy Policy">
       <p><strong>Effective Date:</strong> April 1, 2026</p>
-      <p><strong>Last Updated:</strong> April 1, 2026</p>
+      <p><strong>Last Updated:</strong> May 22, 2026</p>
 
       <p>
         Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Dexter Notes as an AI-powered
@@ -102,8 +102,8 @@ export default function NotesPrivacy() {
 
       <h2>2. AI Processing</h2>
       <p>
-        Dexter Notes uses Azure OpenAI (GPT-4.1-nano) through a secure proxy for AI
-        features including:
+        Dexter Notes uses a secure enterprise cloud AI service, accessed through
+        our own proxy, for AI features including:
       </p>
       <ul>
         <li><strong>Auto-categorization</strong> of notes and tasks</li>
@@ -113,6 +113,12 @@ export default function NotesPrivacy() {
         <li><strong>Priority suggestions</strong> based on content analysis</li>
       </ul>
       <p>
+        Cloud AI features are <strong>opt-in</strong>. The first time you invoke
+        an AI feature, the app shows an in-app disclosure and asks for your
+        explicit permission before any content leaves your device. You can
+        revoke this permission at any time in Settings → AI &amp; Intelligence.
+      </p>
+      <p>
         Text sent to the AI service is processed in real time and is{" "}
         <strong>not stored, logged, or used for model training</strong>. The AI
         service processes your request and returns a response — no content is
@@ -120,8 +126,8 @@ export default function NotesPrivacy() {
         HTTPS encryption.
       </p>
       <p>
-        When the AI service is unavailable, a heuristic on-device fallback
-        engine handles requests locally.
+        When the AI service is unavailable or you have declined cloud AI,
+        a heuristic on-device fallback engine handles supported requests locally.
       </p>
 
       <h2>3. Data Stored on Your Device</h2>
@@ -144,7 +150,7 @@ export default function NotesPrivacy() {
       <h2>5. Third-Party Services</h2>
       <p>Dexter Notes integrates with the following services:</p>
       <ul>
-        <li><strong>Azure OpenAI</strong> — for AI-powered features (text processing only, no data retention)</li>
+        <li><strong>Enterprise cloud AI service</strong> — for AI-powered features (text processing only, no data retention, no model training on your content)</li>
         <li><strong>Google Gmail API</strong> — for optional email integration (read-only, user-authorized via OAuth 2.0)</li>
         <li><strong>Apple CloudKit</strong> — for iCloud sync (your private container)</li>
       </ul>
@@ -196,8 +202,10 @@ export default function NotesPrivacy() {
       <h2>10. International Users</h2>
       <p>
         Your notes and tasks are stored on your device and in your private
-        iCloud account. AI processing requests are sent to Azure servers
-        (US-based). No personal identifiers are included in AI requests.
+        iCloud account. When you have opted into cloud AI features, AI
+        processing requests are sent over HTTPS to our cloud AI provider&apos;s
+        servers (US-based). No personal identifiers are included in AI
+        requests.
       </p>
 
       <h2>11. Changes to This Policy</h2>
