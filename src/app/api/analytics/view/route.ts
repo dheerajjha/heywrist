@@ -1,20 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createHash } from "crypto";
 import { getDb } from "@/lib/mongodb";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const MAX_PATH = 256;
-const HASH_SECRET = process.env.IP_HASH_SECRET || "heywrist-default-salt";
 
 let indexEnsured = false;
 async function ensureIndex() {
   if (indexEnsured) return;
   const db = await getDb();
   await db.collection("pageviews").createIndexes([
-    { key: { path: 1, ipHash: 1 }, unique: true, name: "path_ipHash_unique" },
+    { key: { path: 1, ip: 1 }, unique: true, name: "path_ip_unique" },
     { key: { path: 1 }, name: "path_idx" },
+    { key: { ip: 1 }, name: "ip_idx" },
     { key: { firstSeenAt: -1 }, name: "firstSeen_desc" },
   ]);
   indexEnsured = true;
@@ -26,13 +25,6 @@ function ipFromHeaders(req: NextRequest): string {
     req.headers.get("x-real-ip") ||
     "unknown"
   );
-}
-
-function hashIp(ip: string): string {
-  return createHash("sha256")
-    .update(`${HASH_SECRET}:${ip}`)
-    .digest("hex")
-    .slice(0, 32);
 }
 
 function normalizePath(raw: unknown): string | null {
@@ -61,7 +53,6 @@ export async function POST(req: NextRequest) {
     await ensureIndex();
     const db = await getDb();
     const ip = ipFromHeaders(req);
-    const ipHash = hashIp(ip);
     const host = req.headers.get("host") || null;
     const userAgent = req.headers.get("user-agent")?.slice(0, 256) || null;
     const referer = req.headers.get("referer")?.slice(0, 512) || null;
@@ -69,17 +60,22 @@ export async function POST(req: NextRequest) {
       req.headers.get("x-vercel-ip-country") ||
       req.headers.get("cf-ipcountry") ||
       null;
+    const region =
+      req.headers.get("x-vercel-ip-country-region") || null;
+    const city = req.headers.get("x-vercel-ip-city") || null;
     const now = new Date();
 
     await db.collection("pageviews").updateOne(
-      { path, ipHash },
+      { path, ip },
       {
         $setOnInsert: {
           path,
-          ipHash,
+          ip,
           firstSeenAt: now,
           host,
           country,
+          region,
+          city,
         },
         $set: {
           lastSeenAt: now,
