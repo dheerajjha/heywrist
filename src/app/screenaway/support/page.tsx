@@ -116,7 +116,7 @@ export default function ScreenawaySupport() {
         <p className="mt-6 text-xs text-slate-500">
           Love Screenaway?{" "}
           <a
-            href="https://apps.apple.com/app/screenaway"
+            href="https://x.com/awesome_fingers"
             className="text-indigo-400 hover:text-indigo-300"
           >
             Leave a review on the App Store

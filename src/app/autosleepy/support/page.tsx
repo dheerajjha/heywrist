@@ -100,7 +100,7 @@ export default function AutoSleepySupport() {
         <p className="mt-6 text-xs text-slate-500">
           Love AutoSleepy?{" "}
           <a
-            href="https://apps.apple.com/app/autosleepy"
+            href="https://x.com/awesome_fingers"
             className="text-purple-400 hover:text-purple-300"
           >
             Leave a review on the App Store

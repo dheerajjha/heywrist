@@ -31,7 +31,7 @@ export default function StreakyLayout({ children }: { children: React.ReactNode 
             <NavLink href="/streaky#features">Features</NavLink>
             <NavLink href="/streaky#pricing">Pricing</NavLink>
             <NavLink href="/streaky/support">Support</NavLink>
-            <a href="https://apps.apple.com/app/streaky" className="rounded-full bg-orange-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-orange-500 transition-colors">
+            <a href="https://apps.apple.com/us/app/streaky-streak-tracker/id6760764570" className="rounded-full bg-orange-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-orange-500 transition-colors">
               Download
             </a>
           </nav>
@@ -75,7 +75,7 @@ export default function StreakyLayout({ children }: { children: React.ReactNode 
               <p>&copy; {new Date().getFullYear()} Hey Wrist. All rights reserved.</p>
               <p className="mt-1 text-xs text-slate-600">Apple Watch, iPhone, and App Store are trademarks of Apple Inc.</p>
             </div>
-            <a href="https://apps.apple.com/app/streaky" className="inline-block">
+            <a href="https://apps.apple.com/us/app/streaky-streak-tracker/id6760764570" className="inline-block">
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-10" />
             </a>
           </div>

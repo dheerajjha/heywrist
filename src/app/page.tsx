@@ -4,18 +4,26 @@ import WaitlistForm from "./components/WaitlistForm";
 const X_HANDLE = "awesome_fingers";
 const X_URL = `https://x.com/${X_HANDLE}`;
 
-const apps = [
-  { name: "Screenaway", slug: "screenaway", desc: "Screen time control for iPhone and Apple Watch" },
-  { name: "AutoSleepy", slug: "autosleepy", desc: "Privacy-first sleep tracking for iPhone and Apple Watch" },
-  { name: "Recordy", slug: "recordy", desc: "Premium voice recorder for iPhone and Apple Watch" },
-  { name: "Streaky", slug: "streaky", desc: "Habit tracking with gamification for iPhone and Apple Watch" },
-  { name: "Watery", slug: "watery", desc: "Smart hydration tracking for iPhone and Apple Watch" },
-  { name: "Sona", slug: "chatty", desc: "AI companion with 8 personas for Apple Watch and iPhone" },
-  { name: "Dexter Notes", slug: "notes", desc: "AI-powered notes and tasks for iPhone and Apple Watch" },
-  { name: "Structured", slug: "structured", desc: "Visual daily planner for iPhone and Apple Watch" },
-  { name: "ChronoFit", slug: "chronofit", desc: "Narrative fitness timer for iPhone and Apple Watch" },
-  { name: "Lumina", slug: "lumina", desc: "Focus timer that lights the cosmos for iPhone and Apple Watch" },
-  { name: "BetterChannels", slug: "betterchannels", desc: "Mobile mission control for Claude Code sessions" },
+type App = {
+  name: string;
+  slug: string;
+  desc: string;
+  appStoreUrl?: string;
+  cooking?: string;
+};
+
+const apps: App[] = [
+  { name: "Recordy", slug: "recordy", desc: "Premium voice recorder for iPhone and Apple Watch", appStoreUrl: "https://apps.apple.com/us/app/record-audio-voice-smart/id6760845363" },
+  { name: "Dexter Notes", slug: "notes", desc: "AI-powered notes and tasks for iPhone and Apple Watch", appStoreUrl: "https://apps.apple.com/us/app/dexter-notes/id6761487065" },
+  { name: "Streaky", slug: "streaky", desc: "Habit tracking with gamification for iPhone and Apple Watch", appStoreUrl: "https://apps.apple.com/us/app/streaky-streak-tracker/id6760764570" },
+  { name: "Screenaway", slug: "screenaway", desc: "Screen time control for iPhone and Apple Watch", cooking: "wrestling Apple's ScreenTime API" },
+  { name: "AutoSleepy", slug: "autosleepy", desc: "Privacy-first sleep tracking for iPhone and Apple Watch", cooking: "still in deep sleep" },
+  { name: "Watery", slug: "watery", desc: "Smart hydration tracking for iPhone and Apple Watch", cooking: "still hydrating" },
+  { name: "Sona", slug: "chatty", desc: "AI companion with 8 personas for Apple Watch and iPhone", cooking: "teaching her to talk" },
+  { name: "Structured", slug: "structured", desc: "Visual daily planner for iPhone and Apple Watch", cooking: "unstructured rn" },
+  { name: "ChronoFit", slug: "chronofit", desc: "Narrative fitness timer for iPhone and Apple Watch", cooking: "doing reps" },
+  { name: "Lumina", slug: "lumina", desc: "Focus timer that lights the cosmos for iPhone and Apple Watch", cooking: "lighting the fuse" },
+  { name: "BetterChannels", slug: "betterchannels", desc: "Mobile mission control for Claude Code sessions", cooking: "tuning in" },
 ];
 
 export default function Home() {
@@ -68,9 +76,21 @@ export default function Home() {
           {apps.map((app) => (
             <Link
               key={app.slug}
-              href={`/${app.slug}`}
+              href={app.appStoreUrl ?? `/${app.slug}`}
+              target={app.appStoreUrl ? "_blank" : undefined}
+              rel={app.appStoreUrl ? "noopener noreferrer" : undefined}
               className="group relative rounded-2xl border border-white/[0.06] bg-white/[0.03] p-5 backdrop-blur-sm hover:border-white/15 hover:bg-white/[0.06] transition-all duration-200"
             >
+              {app.appStoreUrl ? (
+                <span className="absolute top-3 right-3 inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-medium text-emerald-400 ring-1 ring-emerald-500/20">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                  Shipped
+                </span>
+              ) : (
+                <span className="absolute top-3 right-3 inline-flex items-center gap-1 rounded-full bg-amber-500/10 px-2 py-0.5 text-[10px] font-medium text-amber-400 ring-1 ring-amber-500/20">
+                  🍳 Cooking
+                </span>
+              )}
               <div className="flex items-center gap-3.5 mb-3">
                 <img
                   src={`/icons/${app.slug}.png`}
@@ -85,11 +105,18 @@ export default function Home() {
               </div>
               <p className="text-sm text-slate-400 leading-relaxed">{app.desc}</p>
               <div className="mt-4 flex items-center gap-3 text-xs text-slate-500">
-                <span className="group-hover:text-slate-400 transition-colors">Privacy</span>
-                <span className="text-slate-700">&middot;</span>
-                <span className="group-hover:text-slate-400 transition-colors">Terms</span>
-                <span className="text-slate-700">&middot;</span>
-                <span className="group-hover:text-slate-400 transition-colors">Support</span>
+                {app.appStoreUrl ? (
+                  <span className="inline-flex items-center gap-1 text-slate-400 group-hover:text-white transition-colors">
+                    Get it on the App Store
+                    <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor" aria-hidden="true">
+                      <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z" />
+                    </svg>
+                  </span>
+                ) : (
+                  <span className="italic text-slate-500 group-hover:text-slate-300 transition-colors">
+                    {app.cooking}
+                  </span>
+                )}
               </div>
             </Link>
           ))}

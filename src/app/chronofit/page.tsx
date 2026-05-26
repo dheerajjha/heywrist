@@ -99,8 +99,8 @@ export default function ChronoFitHome() {
             anomalies &mdash; all designed Watch-first.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a href="https://apps.apple.com/app/chronofit" className="inline-block">
-              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-14" />
+            <a href="https://x.com/awesome_fingers" className="inline-block">
+              <span className="inline-flex items-center gap-2 rounded-full bg-red-500/10 px-5 py-3 text-base font-medium text-red-300 ring-1 ring-red-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
             </a>
             <span className="text-sm text-slate-500">Free to start &middot; Lifetime purchase available</span>
           </div>
@@ -251,8 +251,8 @@ export default function ChronoFitHome() {
             Every rep stabilizes reality. Download ChronoFit and begin your first mission.
           </p>
           <div className="mt-10">
-            <a href="https://apps.apple.com/app/chronofit" className="inline-block">
-              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-14" />
+            <a href="https://x.com/awesome_fingers" className="inline-block">
+              <span className="inline-flex items-center gap-2 rounded-full bg-red-500/10 px-5 py-3 text-base font-medium text-red-300 ring-1 ring-red-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
             </a>
           </div>
         </div>

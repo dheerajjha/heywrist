@@ -45,11 +45,9 @@ export default function AutoSleepyLayout({
             <NavLink href="/autosleepy#pricing">Pricing</NavLink>
             <NavLink href="/autosleepy/support">Support</NavLink>
             <a
-              href="https://apps.apple.com/app/autosleepy"
+              href="https://x.com/awesome_fingers"
               className="rounded-full bg-purple-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-purple-500 transition-colors"
-            >
-              Download
-            </a>
+            >Follow for launch</a>
           </nav>
         </div>
       </header>
@@ -121,14 +119,10 @@ export default function AutoSleepyLayout({
               <p className="mt-1 text-xs text-slate-600">Apple Watch, iPhone, and App Store are trademarks of Apple Inc.</p>
             </div>
             <a
-              href="https://apps.apple.com/app/autosleepy"
+              href="https://x.com/awesome_fingers"
               className="inline-block"
             >
-              <img
-                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                alt="Download on the App Store"
-                className="h-10"
-              />
+              <span className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-300 ring-1 ring-purple-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
             </a>
           </div>
         </div>

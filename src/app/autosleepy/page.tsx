@@ -112,14 +112,10 @@ export default function AutoSleepyHome() {
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
-              href="https://apps.apple.com/app/autosleepy"
+              href="https://x.com/awesome_fingers"
               className="inline-block"
             >
-              <img
-                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                alt="Download on the App Store"
-                className="h-14"
-              />
+              <span className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-5 py-3 text-base font-medium text-purple-300 ring-1 ring-purple-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
             </a>
             <span className="text-sm text-slate-500">
               Free &middot; No account required &middot; Zero cloud
@@ -285,14 +281,10 @@ export default function AutoSleepyHome() {
           </p>
           <div className="mt-10">
             <a
-              href="https://apps.apple.com/app/autosleepy"
+              href="https://x.com/awesome_fingers"
               className="inline-block"
             >
-              <img
-                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                alt="Download on the App Store"
-                className="h-14"
-              />
+              <span className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-5 py-3 text-base font-medium text-purple-300 ring-1 ring-purple-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
             </a>
           </div>
         </div>

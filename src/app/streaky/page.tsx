@@ -99,7 +99,7 @@ export default function StreakyHome() {
             all on iPhone and Apple Watch.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a href="https://apps.apple.com/app/streaky" className="inline-block">
+            <a href="https://apps.apple.com/us/app/streaky-streak-tracker/id6760764570" className="inline-block">
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-14" />
             </a>
             <span className="text-sm text-slate-500">Free &middot; No account required</span>
@@ -207,7 +207,7 @@ export default function StreakyHome() {
             Join thousands building better habits with Streaky&apos;s unique narrative-driven approach.
           </p>
           <div className="mt-10">
-            <a href="https://apps.apple.com/app/streaky" className="inline-block">
+            <a href="https://apps.apple.com/us/app/streaky-streak-tracker/id6760764570" className="inline-block">
               <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-14" />
             </a>
           </div>
