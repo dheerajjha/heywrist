@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import WaitlistForm from "@/app/components/WaitlistForm";
 
 export const metadata: Metadata = {
   title: "ChronoFit - Narrative Fitness Timer",
@@ -99,9 +100,7 @@ export default function ChronoFitHome() {
             anomalies &mdash; all designed Watch-first.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a href="https://x.com/awesome_fingers" className="inline-block">
-              <span className="inline-flex items-center gap-2 rounded-full bg-red-500/10 px-5 py-3 text-base font-medium text-red-300 ring-1 ring-red-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
-            </a>
+            <div id="waitlist" className="w-full"><WaitlistForm source="chronofit" /><p className="mt-3 text-xs text-slate-500">🍳 Cooking · join the list to get notified when it ships.</p></div>
             <span className="text-sm text-slate-500">Free to start &middot; Lifetime purchase available</span>
           </div>
 
@@ -251,9 +250,7 @@ export default function ChronoFitHome() {
             Every rep stabilizes reality. Download ChronoFit and begin your first mission.
           </p>
           <div className="mt-10">
-            <a href="https://x.com/awesome_fingers" className="inline-block">
-              <span className="inline-flex items-center gap-2 rounded-full bg-red-500/10 px-5 py-3 text-base font-medium text-red-300 ring-1 ring-red-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
-            </a>
+            <div className="w-full"><WaitlistForm source="chronofit" /><p className="mt-3 text-xs text-slate-500">🍳 Cooking · join the list to get notified when it ships.</p></div>
           </div>
         </div>
       </section>

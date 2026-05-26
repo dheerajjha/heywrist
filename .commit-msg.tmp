@@ -1,0 +1,13 @@
+feat(site): waitlist CTAs on cooking pages + per-page unique-IP analytics
+
+- Cooking app pages (autosleepy, betterchannels, chatty, chronofit, lumina,
+  screenaway, structured, watery): replace 'Follow @awesome_fingers for launch'
+  X CTAs with inline <WaitlistForm source="<slug>" /> blocks. Hero waitlist
+  is anchored at #waitlist; nav button and footer pill now link to that
+  anchor instead of x.com.
+- /api/analytics/view: new POST endpoint that records (path, ipHash) into
+  the `pageviews` collection. IP is salted-sha256 hashed (IP_HASH_SECRET),
+  unique compound index enforces dedup, hits counter still increments on
+  revisit, captures host/country/userAgent/referer.
+- <PageTracker /> client component mounted in the root layout fires a
+  sendBeacon to /api/analytics/view on every route change.

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import WaitlistForm from "@/app/components/WaitlistForm";
 
 export const metadata: Metadata = {
   title: "Watery - Smart Hydration Tracking",
@@ -99,9 +100,7 @@ export default function WateryHome() {
             on iPhone and Apple Watch.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a href="https://x.com/awesome_fingers" className="inline-block">
-              <span className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-5 py-3 text-base font-medium text-blue-300 ring-1 ring-blue-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
-            </a>
+            <div id="waitlist" className="w-full"><WaitlistForm source="watery" /><p className="mt-3 text-xs text-slate-500">🍳 Cooking · join the list to get notified when it ships.</p></div>
             <span className="text-sm text-slate-500">Free &middot; No account required</span>
           </div>
 
@@ -218,9 +217,7 @@ export default function WateryHome() {
             Watery makes hydration effortless with the fastest logging experience on iPhone and Apple Watch.
           </p>
           <div className="mt-10">
-            <a href="https://x.com/awesome_fingers" className="inline-block">
-              <span className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-5 py-3 text-base font-medium text-blue-300 ring-1 ring-blue-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
-            </a>
+            <div className="w-full"><WaitlistForm source="watery" /><p className="mt-3 text-xs text-slate-500">🍳 Cooking · join the list to get notified when it ships.</p></div>
           </div>
         </div>
       </section>

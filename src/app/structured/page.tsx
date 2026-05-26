@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import WaitlistForm from "@/app/components/WaitlistForm";
 
 export const metadata: Metadata = {
   title: "Structured - Visual Daily Planner",
@@ -99,9 +100,7 @@ export default function StructuredHome() {
             and a full Apple Watch experience.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a href="https://x.com/awesome_fingers" className="inline-block">
-              <span className="inline-flex items-center gap-2 rounded-full bg-teal-500/10 px-5 py-3 text-base font-medium text-teal-300 ring-1 ring-teal-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
-            </a>
+            <div id="waitlist" className="w-full"><WaitlistForm source="structured" /><p className="mt-3 text-xs text-slate-500">🍳 Cooking · join the list to get notified when it ships.</p></div>
             <span className="text-sm text-slate-500">Free to use &middot; Pro subscription available</span>
           </div>
 
@@ -260,9 +259,7 @@ export default function StructuredHome() {
             See your entire day at a glance. Drag, drop, and focus your way through it.
           </p>
           <div className="mt-10">
-            <a href="https://x.com/awesome_fingers" className="inline-block">
-              <span className="inline-flex items-center gap-2 rounded-full bg-teal-500/10 px-5 py-3 text-base font-medium text-teal-300 ring-1 ring-teal-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
-            </a>
+            <div className="w-full"><WaitlistForm source="structured" /><p className="mt-3 text-xs text-slate-500">🍳 Cooking · join the list to get notified when it ships.</p></div>
           </div>
         </div>
       </section>

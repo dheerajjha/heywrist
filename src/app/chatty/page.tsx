@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import WaitlistForm from "@/app/components/WaitlistForm";
 
 export const metadata: Metadata = {
   title: "Sona — AI Companion for Apple Watch",
@@ -104,9 +105,7 @@ export default function SonaHome() {
             eight personas plus custom ones, voice-first input, and conversations that feel alive.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a href="https://x.com/awesome_fingers" className="inline-block">
-              <span className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-5 py-3 text-base font-medium text-purple-300 ring-1 ring-purple-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
-            </a>
+            <div id="waitlist" className="w-full"><WaitlistForm source="chatty" /><p className="mt-3 text-xs text-slate-500">🍳 Cooking · join the list to get notified when it ships.</p></div>
             <span className="text-sm text-slate-500">Free to use &middot; Sona Pro available</span>
           </div>
 
@@ -253,9 +252,7 @@ export default function SonaHome() {
             Ask anything, anytime — right from your Apple Watch.
           </p>
           <div className="mt-10">
-            <a href="https://x.com/awesome_fingers" className="inline-block">
-              <span className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-5 py-3 text-base font-medium text-purple-300 ring-1 ring-purple-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
-            </a>
+            <div className="w-full"><WaitlistForm source="chatty" /><p className="mt-3 text-xs text-slate-500">🍳 Cooking · join the list to get notified when it ships.</p></div>
           </div>
         </div>
       </section>

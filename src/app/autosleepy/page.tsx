@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import WaitlistForm from "@/app/components/WaitlistForm";
 
 export const metadata: Metadata = {
   title: "AutoSleepy - Automatic Sleep Tracking",
@@ -111,12 +112,7 @@ export default function AutoSleepyHome() {
             or cloud uploads.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a
-              href="https://x.com/awesome_fingers"
-              className="inline-block"
-            >
-              <span className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-5 py-3 text-base font-medium text-purple-300 ring-1 ring-purple-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
-            </a>
+            <div id="waitlist" className="w-full"><WaitlistForm source="autosleepy" /><p className="mt-3 text-xs text-slate-500">🍳 Cooking · join the list to get notified when it ships.</p></div>
             <span className="text-sm text-slate-500">
               Free &middot; No account required &middot; Zero cloud
             </span>
@@ -280,12 +276,7 @@ export default function AutoSleepyHome() {
             AutoSleepy tracks your sleep automatically, so you can focus on living better.
           </p>
           <div className="mt-10">
-            <a
-              href="https://x.com/awesome_fingers"
-              className="inline-block"
-            >
-              <span className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-5 py-3 text-base font-medium text-purple-300 ring-1 ring-purple-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
-            </a>
+            <div className="w-full"><WaitlistForm source="autosleepy" /><p className="mt-3 text-xs text-slate-500">🍳 Cooking · join the list to get notified when it ships.</p></div>
           </div>
         </div>
       </section>

@@ -31,7 +31,7 @@ export default function StructuredLayout({ children }: { children: React.ReactNo
             <NavLink href="/structured#features">Features</NavLink>
             <NavLink href="/structured#pricing">Pricing</NavLink>
             <NavLink href="/structured/support">Support</NavLink>
-            <a href="https://x.com/awesome_fingers" className="rounded-full bg-teal-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-teal-500 transition-colors">Follow for launch</a>
+            <a href="#waitlist" className="rounded-full bg-teal-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-teal-500 transition-colors">Join waitlist</a>
           </nav>
         </div>
       </header>
@@ -73,9 +73,7 @@ export default function StructuredLayout({ children }: { children: React.ReactNo
               <p>&copy; {new Date().getFullYear()} Hey Wrist. All rights reserved.</p>
               <p className="mt-1 text-xs text-slate-600">Apple Watch, iPhone, and App Store are trademarks of Apple Inc.</p>
             </div>
-            <a href="https://x.com/awesome_fingers" className="inline-block">
-              <span className="inline-flex items-center gap-2 rounded-full bg-teal-500/10 px-4 py-2 text-sm font-medium text-teal-300 ring-1 ring-teal-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
-            </a>
+            <a href="#waitlist" className="inline-block"><span className="inline-flex items-center gap-2 rounded-full bg-teal-500/10 px-4 py-2 text-sm font-medium text-teal-300 ring-1 ring-teal-500/30">🍳 Cooking · Join the waitlist</span></a>
           </div>
         </div>
       </footer>

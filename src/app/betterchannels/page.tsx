@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import WaitlistForm from "@/app/components/WaitlistForm";
 
 export const metadata: Metadata = {
   title: "BetterChannels - Mobile Mission Control for Claude Code",
@@ -99,9 +100,7 @@ export default function BetterChannelsHome() {
             powered by the Model Context Protocol.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a href="https://x.com/awesome_fingers" className="inline-block">
-              <span className="inline-flex items-center gap-2 rounded-full bg-orange-500/10 px-5 py-3 text-base font-medium text-orange-300 ring-1 ring-orange-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
-            </a>
+            <div id="waitlist" className="w-full"><WaitlistForm source="betterchannels" /><p className="mt-3 text-xs text-slate-500">🍳 Cooking · join the list to get notified when it ships.</p></div>
             <span className="text-sm text-slate-500">Free &middot; Requires Claude Code on your Mac</span>
           </div>
 
@@ -243,9 +242,7 @@ export default function BetterChannelsHome() {
             from anywhere in your home or office.
           </p>
           <div className="mt-10">
-            <a href="https://x.com/awesome_fingers" className="inline-block">
-              <span className="inline-flex items-center gap-2 rounded-full bg-orange-500/10 px-5 py-3 text-base font-medium text-orange-300 ring-1 ring-orange-500/30">🍳 Cooking · Follow @awesome_fingers for launch</span>
-            </a>
+            <div className="w-full"><WaitlistForm source="betterchannels" /><p className="mt-3 text-xs text-slate-500">🍳 Cooking · join the list to get notified when it ships.</p></div>
           </div>
         </div>
       </section>
