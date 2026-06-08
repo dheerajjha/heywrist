@@ -23,8 +23,8 @@ export default function TickdPrivacy() {
         sees your name or email. Your tasks, schedule, and preferences are
         stored on your device and synced through your private iCloud account
         &mdash; we never see them. When you use the AI planner, the text you
-        type or dictate is sent to a secure cloud AI service to build your
-        schedule, but it is not stored or used to train models. We use Mixpanel
+        type or dictate is sent to a secure enterprise cloud AI service to build
+        your schedule, but it is not used to train AI models. We use Mixpanel
         for anonymous, opt-out usage analytics. Apple processes any in-app
         purchases &mdash; we never receive your payment information.
       </p>
@@ -77,27 +77,31 @@ export default function TickdPrivacy() {
         <li>Browsing history or usage data outside the app</li>
       </ul>
 
-      <h2>2. AI Planner</h2>
+      <h2>2. AI Planner &mdash; Enterprise Cloud AI Provider</h2>
       <p>
         Tickd&apos;s headline feature lets you describe your day in natural
         language (for example, &quot;plan my afternoon around 2 hours of deep
         work&quot;) and turns it into a schedule. To do this, the text you type
         or dictate into the AI planner is sent over an encrypted HTTPS
-        connection to <strong>our own proxy</strong> (hosted on Cloudflare
-        Workers), which forwards it to <strong>Microsoft Azure OpenAI</strong>{" "}
-        for processing. The assistant&apos;s reply is returned to your device.
+        connection to a <strong>secure enterprise cloud AI service</strong>,
+        hosted in US-based cloud regions and bound by an enterprise
+        data-processing agreement. The generated schedule is returned to your
+        device.
       </p>
       <p>What is and isn&apos;t sent:</p>
       <ul>
         <li><strong>Sent:</strong> only the text of the planning request you choose to make (and prior messages in that conversation needed for context).</li>
         <li><strong>Not sent:</strong> your name or email, your full task database, location, contacts, photos, or any device identifiers.</li>
       </ul>
+      <p>Under our provider&apos;s enterprise terms:</p>
+      <ul>
+        <li>Your requests are <strong>not used to train</strong> the provider&apos;s or its upstream partners&apos; AI models.</li>
+        <li>The provider may retain request data for a limited period (up to 30 days) solely for abuse and misuse monitoring, after which it is deleted.</li>
+      </ul>
       <p>
-        Text sent to the AI service is processed in real time and is{" "}
-        <strong>not stored, logged, or used for model training</strong>. The AI
-        feature is only triggered when you actively use the planner &mdash; no
-        content leaves your device in the background. Release builds of Tickd do
-        not log your AI conversations.
+        The AI feature is only triggered when you actively use the planner
+        &mdash; no content leaves your device in the background. Release builds
+        of Tickd do not log your AI conversations.
       </p>
 
       <h2>3. Data Stored on Your Device</h2>
@@ -192,8 +196,8 @@ export default function TickdPrivacy() {
       <p>
         Your tasks and schedule are stored on your device and in your private
         iCloud account &mdash; we do not operate any servers that hold them. When
-        you use the AI planner, your request text is processed over HTTPS by
-        Microsoft Azure OpenAI (US-based) via our proxy, and the anonymous
+        you use the AI planner, your request text is processed over HTTPS by our
+        enterprise cloud AI provider in US-based cloud regions, and the anonymous
         analytics events in Section 5 are processed by Mixpanel, which may store
         them on infrastructure outside your country.
       </p>

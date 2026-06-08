@@ -34,9 +34,9 @@ export default function TickdTerms() {
 
       <h2>3. AI-Generated Content Disclaimer</h2>
       <p>
-        The AI planner is powered by a secure cloud AI service (Microsoft Azure
-        OpenAI, accessed through our proxy) and may produce inaccurate,
-        incomplete, or unexpected schedules. You acknowledge:
+        The AI planner is powered by a secure enterprise cloud AI service
+        accessed over HTTPS and may produce inaccurate, incomplete, or
+        unexpected schedules. You acknowledge:
       </p>
       <ul>
         <li>AI-generated plans are <strong>suggestions</strong> for your convenience only</li>

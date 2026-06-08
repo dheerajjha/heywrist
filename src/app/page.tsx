@@ -9,6 +9,7 @@ type App = {
   slug: string;
   desc: string;
   appStoreUrl?: string;
+  preview?: boolean;
   cooking?: string;
 };
 
@@ -16,6 +17,7 @@ const apps: App[] = [
   { name: "Recordy", slug: "recordy", desc: "Premium voice recorder for iPhone and Apple Watch", appStoreUrl: "https://apps.apple.com/us/app/record-audio-voice-smart/id6760845363" },
   { name: "Dexter Notes", slug: "notes", desc: "AI-powered notes and tasks for iPhone and Apple Watch", appStoreUrl: "https://apps.apple.com/us/app/dexter-notes/id6761487065" },
   { name: "Streaky", slug: "streaky", desc: "Habit tracking with gamification for iPhone and Apple Watch", appStoreUrl: "https://apps.apple.com/us/app/streaky-streak-tracker/id6760764570" },
+  { name: "Tickd", slug: "tickd", desc: "A calm daily planner & to-do with AI scheduling for iPhone and Apple Watch", preview: true },
   { name: "Screenaway", slug: "screenaway", desc: "Screen time control for iPhone and Apple Watch", cooking: "wrestling Apple's ScreenTime API" },
   { name: "AutoSleepy", slug: "autosleepy", desc: "Privacy-first sleep tracking for iPhone and Apple Watch", cooking: "still in deep sleep" },
   { name: "Watery", slug: "watery", desc: "Smart hydration tracking for iPhone and Apple Watch", cooking: "still hydrating" },
@@ -86,6 +88,11 @@ export default function Home() {
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                   Shipped
                 </span>
+              ) : app.preview ? (
+                <span className="absolute top-3 right-3 inline-flex items-center gap-1 rounded-full bg-indigo-500/10 px-2 py-0.5 text-[10px] font-medium text-indigo-300 ring-1 ring-indigo-500/20">
+                  <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
+                  New
+                </span>
               ) : (
                 <span className="absolute top-3 right-3 inline-flex items-center gap-1 rounded-full bg-amber-500/10 px-2 py-0.5 text-[10px] font-medium text-amber-400 ring-1 ring-amber-500/20">
                   🍳 Cooking
@@ -110,6 +117,13 @@ export default function Home() {
                     Get it on the App Store
                     <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor" aria-hidden="true">
                       <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z" />
+                    </svg>
+                  </span>
+                ) : app.preview ? (
+                  <span className="inline-flex items-center gap-1 text-slate-400 group-hover:text-white transition-colors">
+                    Learn more
+                    <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor" aria-hidden="true">
+                      <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z" />
                     </svg>
                   </span>
                 ) : (
