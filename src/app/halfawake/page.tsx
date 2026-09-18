@@ -71,13 +71,43 @@ export default function HalfAwakePage() {
           devices through your iCloud account if you choose to turn it on.
         </Card>
         <Card eyebrow="Everywhere" title="Wrist, Lock Screen, widget">
-          A watch face complication, Lock Screen and Home Screen widgets, and a morning reminder you
-          can set for the time you actually wake up.
+          A watch face complication, Lock Screen and Home Screen widgets, a Control Centre button,
+          and one quiet nudge at the start of the wake window you choose.
         </Card>
         <Card eyebrow="Yours to take" title="Export whenever">
-          Every entry exports as plain text or CSV. Deleting the app takes the journal with it, and
-          &ldquo;Delete all my data&rdquo; inside the app clears it without uninstalling.
+          Every entry exports as Markdown or JSON with Half Awake Pro. Deleting the app takes the
+          journal with it, and &ldquo;Delete everything&rdquo; in Settings clears it without
+          uninstalling.
         </Card>
+      </section>
+
+      <section className="pb-20">
+        <h2 className="text-2xl font-bold tracking-tight">Free, and Pro</h2>
+        <p className="mt-3 max-w-2xl text-slate-400">
+          Everything the app is for is free and uncapped: unlimited dreams, unlimited voice
+          capture, on-device transcription, capture from the Watch, titles and tags for the last
+          thirty days, the streak, and the small widget.
+        </p>
+        <p className="mt-4 max-w-2xl text-slate-400">
+          Half Awake Pro adds Patterns, the Lucid toolkit, full-text search, audio playback, Face ID
+          lock, iCloud sync, Markdown and JSON export, and the remaining widgets. It is $4.99 per
+          month, $29.99 per year with a 14-day free trial, or $59.99 once, for good.
+        </p>
+        <p className="mt-4 max-w-2xl text-xs leading-relaxed text-slate-500">
+          Subscriptions renew automatically unless cancelled at least 24 hours before the end of the
+          current period. Manage or cancel any time in iOS Settings &rarr; Apple Account &rarr;
+          Subscriptions. The lifetime purchase is not a subscription and never renews.
+        </p>
+      </section>
+
+      <section className="pb-20">
+        <h2 className="text-2xl font-bold tracking-tight">A note on what this is</h2>
+        <p className="mt-3 max-w-2xl text-slate-400">
+          Half Awake is a journal, for reflection rather than treatment. It records what you say and
+          counts what repeats. It does not interpret dreams, predict anything, or offer medical,
+          psychological or therapeutic advice. If your sleep or your dreams worry you, please speak
+          to a doctor.
+        </p>
       </section>
     </main>
   );
