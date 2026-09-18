@@ -3,7 +3,7 @@ import PolicyLayout from "../../components/PolicyLayout";
 
 export const metadata: Metadata = {
   title: "Billsoon - Terms of Use",
-  description: "Terms of use for the Billsoon subscription and renewal tracker by Hey Wrist",
+  description: "Terms of use for the Billsoon subscription manager by Hey Wrist",
 };
 
 export default function BillsoonTerms() {

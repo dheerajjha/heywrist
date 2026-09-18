@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | Billsoon",
   },
   description:
-    "A subscription and renewal tracker for iPhone and Apple Watch that needs no bank link and no account. Your list stays on the device; the next charge shows up on the Lock Screen, in a widget, on a watch face, and in a Live Activity that counts down the last day of a free trial.",
+    "A subscription manager for iPhone and Apple Watch that needs no bank link and no account. Your list stays on the device; the next charge shows up on the Lock Screen, in a widget, on a watch face, and in a Live Activity that counts down the last day of a free trial.",
 };
 
 function NavLink({ href, children }: { href: string; children: React.ReactNode }) {

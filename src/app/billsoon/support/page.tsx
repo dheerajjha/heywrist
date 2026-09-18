@@ -3,7 +3,7 @@ import PolicyLayout from "../../components/PolicyLayout";
 
 export const metadata: Metadata = {
   title: "Billsoon - Support",
-  description: "Help, FAQs and contact details for the Billsoon subscription and renewal tracker",
+  description: "Help, FAQs and contact details for the Billsoon subscription manager",
 };
 
 function FAQ({ q, children }: { q: string; children: React.ReactNode }) {

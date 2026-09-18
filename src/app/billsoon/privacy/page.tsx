@@ -3,7 +3,7 @@ import PolicyLayout from "../../components/PolicyLayout";
 
 export const metadata: Metadata = {
   title: "Billsoon - Privacy Policy",
-  description: "Privacy policy for the Billsoon subscription and renewal tracker by Hey Wrist",
+  description: "Privacy policy for the Billsoon subscription manager by Hey Wrist",
 };
 
 export default function BillsoonPrivacy() {
