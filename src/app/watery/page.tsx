@@ -1,82 +1,77 @@
 import type { Metadata } from "next";
-import WaitlistForm from "@/app/components/WaitlistForm";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Watery - Smart Hydration Tracking",
+  title: { absolute: "Quench: Water & Drink Tracker" },
   description:
-    "Smart hydration tracking for iPhone and Apple Watch. Personalized goals, 10 drink types, Dynamic Island, widgets, and Siri.",
+    "Quench is a water and drink tracker for iPhone, iPad and Apple Watch. Log any of 14 drink types, with an Apple Watch app, widgets, Siri and Apple Health. Free to download, with an optional Quench Pro.",
 };
 
 const features = [
   {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3.75c-4.97 4.97-7.5 8.03-7.5 11.25a7.5 7.5 0 0 0 15 0c0-3.22-2.53-6.28-7.5-11.25Z" />
-      </svg>
-    ),
-    title: "10 Drink Types",
-    desc: "Water, coffee, tea, juice, soda, milk, smoothie, sports drink, alcohol, and custom. Each has a unique hydration multiplier so you see the real impact.",
-    color: "from-blue-500 to-blue-600",
+    title: "14 drink types",
+    desc: "Water, coffee, tea, juice, milk, soda, smoothies, sports and energy drinks, sparkling and coconut water, beer, wine and spirits. Logging any of them is free.",
+    pro: false,
   },
   {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
-      </svg>
-    ),
-    title: "One-Tap Logging",
-    desc: "Quick-add cups right on the dashboard. Log from widgets, Control Center, Siri, or Apple Watch complications — without opening the app.",
-    color: "from-cyan-500 to-cyan-600",
-  },
-  {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
-      </svg>
-    ),
-    title: "Smart Goals",
-    desc: "Personalized daily goal based on your weight, activity level, and climate. Pace-to-goal messaging keeps you on track throughout the day.",
-    color: "from-teal-500 to-teal-600",
-  },
-  {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-      </svg>
-    ),
     title: "Apple Watch",
-    desc: "Standalone Watch app with progress ring, quick-add buttons, and 4 complication families. Log water from your wrist in seconds.",
-    color: "from-indigo-500 to-indigo-600",
+    desc: "A Watch app for logging drinks from your wrist, with complications that keep today’s progress on your watch face.",
+    pro: false,
   },
   {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
-      </svg>
-    ),
-    title: "Dynamic Island",
-    desc: "Live Activity shows your hydration progress on the Lock Screen and Dynamic Island. Watch your progress ring fill up in real time.",
-    color: "from-violet-500 to-violet-600",
+    title: "Widgets",
+    desc: "Home Screen and Lock Screen widgets show how today is going without opening the app.",
+    pro: false,
   },
   {
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
-      </svg>
-    ),
-    title: "Smart Reminders",
-    desc: "Local notifications with smart scheduling based on your routine. Never forget to hydrate again.",
-    color: "from-emerald-500 to-emerald-600",
+    title: "Siri and Shortcuts",
+    desc: "Ask Siri to log water or another drink, or to check your progress. The same actions are in the Shortcuts app.",
+    pro: false,
+  },
+  {
+    title: "Reminders",
+    desc: "Optional reminders at the interval you choose, only between the wake and sleep times you set.",
+    pro: false,
+  },
+  {
+    title: "Apple Health",
+    desc: "With your permission, Quench saves the water and caffeine you log to Apple Health, and can use your weight and activity from Health to suggest a daily goal.",
+    pro: false,
+  },
+  {
+    title: "Weather-aware goal",
+    desc: "Raises your goal on hot days using Apple’s WeatherKit. It uses your location only if you turn it on.",
+    pro: true,
+  },
+  {
+    title: "iCloud sync",
+    desc: "Keeps your history, profile and challenges in step across your devices, through your own private iCloud account.",
+    pro: true,
   },
 ];
 
-const steps = [
-  { num: "1", title: "Set Your Goal", desc: "Enter your weight and activity level. Watery calculates your ideal daily intake." },
-  { num: "2", title: "Log Drinks", desc: "One-tap quick add from dashboard, widgets, Watch, Control Center, or Siri." },
-  { num: "3", title: "Stay on Track", desc: "Watch your progress ring fill, maintain streaks, and get smart reminders." },
+const freeItems = [
+  "Logging any of the 14 drink types",
+  "Deleting entries",
+  "Your daily goal, today’s progress and history",
+  "The Apple Watch app and complications",
+  "Home Screen and Lock Screen widgets",
+  "Siri and Shortcuts",
+  "Reminders",
+  "Apple Health",
 ];
 
-export default function WateryHome() {
+const proItems = [
+  "Weather-aware daily goal",
+  "iCloud sync across your devices",
+  "Smart reminder timing",
+  "Advanced insights: 30, 90 and 365-day trends",
+  "CSV and PDF export",
+  "Extra colour themes and mascots",
+  "Custom challenges",
+];
+
+export default function QuenchHome() {
   return (
     <main>
       {/* Hero */}
@@ -85,27 +80,39 @@ export default function WateryHome() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-br from-blue-500/30 via-cyan-500/20 to-transparent rounded-full blur-3xl -translate-y-1/2" />
         <div className="relative mx-auto max-w-6xl px-6 pt-24 pb-20 text-center sm:pt-32 sm:pb-28">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-1.5 text-sm text-blue-300">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
-            For iPhone, iPad, and Apple Watch
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-blue-400" />
+            For iPhone, iPad and Apple Watch
           </div>
           <h1 className="text-5xl font-bold tracking-tight sm:text-7xl">
-            Hydration,{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
-              simplified
-            </span>
+            Quench
           </h1>
+          <p className="mt-3 text-xl font-medium sm:text-2xl">
+            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
+              Water &amp; Drink Tracker
+            </span>
+          </p>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-400 sm:text-xl">
-            Personalized goals, 10 drink types with hydration multipliers,
-            one-tap logging from anywhere &mdash; the fastest way to stay hydrated
-            on iPhone and Apple Watch.
+            Log water and every other drink in a tap, and see how close you are to
+            today&apos;s goal &mdash; on your iPhone, your iPad or your wrist.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <div id="waitlist" className="w-full"><WaitlistForm source="watery" /><p className="mt-3 text-xs text-slate-500">🍳 Cooking · join the list to get notified when it ships.</p></div>
-            <span className="text-sm text-slate-500">Free &middot; No account required</span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-blue-600/90 px-6 py-3 text-sm font-semibold text-white">
+              Coming soon to the App Store
+            </span>
+            <Link
+              href="/watery/support"
+              className="rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-slate-200 hover:border-white/30 hover:text-white transition-colors"
+            >
+              Support &amp; FAQ
+            </Link>
           </div>
+          <p className="mx-auto mt-5 max-w-xl text-sm text-slate-500">
+            Free to download. Logging any drink, deleting entries and the basics are free, and
+            nothing that is free today will move to Pro.
+          </p>
 
-          {/* Hero mockup */}
-          <div className="relative mx-auto mt-16 max-w-3xl">
+          {/* Illustration of the Today screen and a Watch complication (not a screenshot) */}
+          <div className="relative mx-auto mt-16 max-w-3xl" aria-hidden="true">
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10" />
             <div className="flex items-end justify-center gap-6">
               <div className="w-56 sm:w-64 rounded-3xl border border-white/10 bg-slate-900/80 p-3 shadow-2xl shadow-blue-500/10">
@@ -153,7 +160,7 @@ export default function WateryHome() {
               <div className="hidden w-28 sm:block mb-8">
                 <div className="rounded-2xl border border-white/10 bg-slate-900/80 p-2 shadow-2xl shadow-blue-500/10">
                   <div className="aspect-square rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 flex flex-col items-center justify-center p-2">
-                    <p className="text-[8px] text-slate-500">Hydration</p>
+                    <p className="text-[8px] text-slate-500">Today</p>
                     <p className="text-lg font-bold text-blue-400">74%</p>
                     <p className="text-[8px] text-slate-400">650 ml left</p>
                   </div>
@@ -168,21 +175,22 @@ export default function WateryHome() {
       <section id="features" className="py-20 sm:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold sm:text-4xl">
-              The fastest way to{" "}
-              <span className="text-blue-400">stay hydrated</span>
-            </h2>
+            <h2 className="text-3xl font-bold sm:text-4xl">What Quench does</h2>
             <p className="mt-4 text-lg text-slate-400">
-              Smart goals, instant logging, and deep Apple ecosystem integration.
+              Quick logging wherever you are, and a goal that fits you.
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((f) => (
-              <div key={f.title} className="group rounded-2xl border border-white/5 bg-slate-900/50 p-6 hover:border-blue-500/30 hover:bg-slate-900/80 transition-all">
-                <div className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${f.color} text-white`}>
-                  {f.icon}
-                </div>
-                <h3 className="text-lg font-semibold mb-2">{f.title}</h3>
+              <div key={f.title} className="rounded-2xl border border-white/5 bg-slate-900/50 p-6">
+                <h3 className="flex items-center gap-2 text-lg font-semibold mb-2">
+                  {f.title}
+                  {f.pro && (
+                    <span className="rounded-full bg-blue-500/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-blue-300 ring-1 ring-blue-500/30">
+                      Pro
+                    </span>
+                  )}
+                </h3>
                 <p className="text-sm text-slate-400 leading-relaxed">{f.desc}</p>
               </div>
             ))}
@@ -190,34 +198,76 @@ export default function WateryHome() {
         </div>
       </section>
 
-      {/* How it works */}
-      <section className="py-20 sm:py-28 border-t border-white/5">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold sm:text-4xl">How it works</h2>
-            <p className="mt-4 text-lg text-slate-400">Three steps to better hydration.</p>
+      {/* Pricing */}
+      <section id="pricing" className="py-20 sm:py-28 border-t border-white/5">
+        <div className="mx-auto max-w-4xl px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold sm:text-4xl">Free, with an optional Pro</h2>
+            <p className="mt-4 text-lg text-slate-400">
+              Quench is free to download. Quench Pro adds extras; it never takes away the basics.
+            </p>
           </div>
-          <div className="grid gap-8 sm:grid-cols-3">
-            {steps.map((s) => (
-              <div key={s.num} className="text-center">
-                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 text-2xl font-bold">{s.num}</div>
-                <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{s.desc}</p>
+          <div className="grid gap-6 sm:grid-cols-2">
+            <div className="rounded-3xl border border-white/10 bg-slate-900/50 p-8">
+              <h3 className="text-xl font-bold">Free</h3>
+              <ul className="mt-4 space-y-2 text-sm text-slate-300">
+                {freeItems.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <p className="mt-6 text-xs leading-relaxed text-slate-500">
+                Nothing that is free today will become part of Pro.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-blue-500/40 bg-blue-500/[0.06] p-8">
+              <h3 className="text-xl font-bold text-blue-300">Quench Pro</h3>
+              <ul className="mt-4 space-y-2 text-sm text-slate-300">
+                {proItems.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <div className="mt-6 space-y-1 text-sm text-slate-300">
+                <p>$2.99 per month</p>
+                <p>$14.99 per year, with a 7-day free trial for new subscribers</p>
+                <p>$29.99 once, for lifetime access</p>
               </div>
-            ))}
+              <p className="mt-4 text-xs leading-relaxed text-slate-500">
+                US prices; the App Store shows the price for your country before you buy.
+                Subscriptions renew automatically unless cancelled at least 24 hours before the end
+                of the current period. Manage or cancel in iOS Settings &rarr; your name &rarr;
+                Subscriptions.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 sm:py-28 border-t border-white/5">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="text-3xl font-bold sm:text-4xl">Drink more, feel better</h2>
-          <p className="mt-4 text-lg text-slate-400">
-            Watery makes hydration effortless with the fastest logging experience on iPhone and Apple Watch.
-          </p>
-          <div className="mt-10">
-            <div className="w-full"><WaitlistForm source="watery" /><p className="mt-3 text-xs text-slate-500">🍳 Cooking · join the list to get notified when it ships.</p></div>
+      {/* Privacy and health note */}
+      <section className="pb-24">
+        <div className="mx-auto max-w-3xl px-6">
+          <div className="rounded-3xl border border-white/10 bg-slate-900/50 p-8 text-sm leading-relaxed text-slate-300">
+            <h2 className="text-lg font-bold text-white">Your data</h2>
+            <p className="mt-3">
+              There is no account to create. Your drink entries are stored on your device and, if
+              you turn on iCloud sync, in your own private iCloud. Quench uses Mixpanel for product
+              analytics. It shows no ads, does not use the advertising identifier (IDFA) and does
+              not track you across other companies&apos; apps or websites. The{" "}
+              <Link href="/watery/privacy" className="text-blue-400 hover:text-blue-300">
+                Privacy Policy
+              </Link>{" "}
+              lists exactly what is sent.
+            </p>
+            <h2 className="mt-6 text-lg font-bold text-white">Not medical advice</h2>
+            <p className="mt-3">
+              Quench is not a medical device. Its goals are general guidance. If you have a
+              condition that affects how much you should drink, ask your doctor.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+              <Link href="/watery/support" className="text-blue-400 hover:text-blue-300">Support</Link>
+              <Link href="/watery/privacy" className="text-blue-400 hover:text-blue-300">Privacy Policy</Link>
+              <Link href="/watery/terms" className="text-blue-400 hover:text-blue-300">Terms of Use</Link>
+              <a href="mailto:founder@heywrist.com" className="text-blue-400 hover:text-blue-300">founder@heywrist.com</a>
+            </div>
           </div>
         </div>
       </section>

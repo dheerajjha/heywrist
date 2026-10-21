@@ -20,7 +20,7 @@ const apps: App[] = [
   { name: "Tickd", slug: "tickd", desc: "A calm daily planner & to-do with AI scheduling for iPhone and Apple Watch", preview: true },
   { name: "Screenaway", slug: "screenaway", desc: "Screen time control for iPhone and Apple Watch", cooking: "wrestling Apple's ScreenTime API" },
   { name: "AutoSleepy", slug: "autosleepy", desc: "Privacy-first sleep tracking for iPhone and Apple Watch", cooking: "still in deep sleep" },
-  { name: "Watery", slug: "watery", desc: "Smart hydration tracking for iPhone and Apple Watch", cooking: "still hydrating" },
+  { name: "Quench", slug: "watery", desc: "Water & drink tracker for iPhone, iPad and Apple Watch", preview: true },
   { name: "Sona", slug: "chatty", desc: "AI companion with 8 personas for Apple Watch and iPhone", cooking: "teaching her to talk" },
   { name: "Structured", slug: "structured", desc: "Visual daily planner for iPhone and Apple Watch", cooking: "unstructured rn" },
   { name: "ChronoFit", slug: "chronofit", desc: "Narrative fitness timer for iPhone and Apple Watch", cooking: "doing reps" },

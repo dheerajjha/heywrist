@@ -3,83 +3,86 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Support",
-  description: "Get help with the Watery app",
+  description:
+    "Help with Quench: Water & Drink Tracker — restoring purchases, cancelling a subscription, iCloud sync, Apple Health and deleting your data.",
 };
 
 const faqs = [
   {
-    q: "How is my daily goal calculated?",
-    a: "Watery calculates your goal based on your weight, activity level, and climate. You can adjust it manually anytime in Settings. The goal adapts as your profile changes.",
+    q: "How do I restore my Quench Pro purchase?",
+    a: "Quench Pro belongs to the Apple Account you bought it with. On a new iPhone or iPad signed in to that account it is usually recognised automatically. If it isn’t, open Quench, go to Settings → Quench Pro, and tap Restore Purchases at the bottom of the screen.",
   },
   {
-    q: "Why do different drinks have different hydration values?",
-    a: "Each drink type has a hydration multiplier. Water is 100%, coffee is 80% (caffeine is mildly dehydrating), alcohol is -50% (it dehydrates you), and sports drinks are 110%. Watery explains each multiplier so you understand the real impact.",
+    q: "How do I cancel a subscription?",
+    a: "Subscriptions are billed and managed by Apple. On your iPhone or iPad, open the Settings app, tap your name, then Subscriptions → Quench, and tap Cancel Subscription. Cancel at least 24 hours before the renewal date to avoid the next charge; after a paid period you keep Pro until it ends. Deleting the app does not cancel a subscription. The lifetime purchase is a one-time payment with nothing to cancel. Refunds are handled by Apple at reportaproblem.apple.com.",
   },
   {
-    q: "How do I log water from my Apple Watch?",
-    a: "Open the Watery Watch app and tap a quick-add button on the dashboard, or use a Watch complication for one-tap access. You can also use the Control Center widget on watchOS.",
+    q: "How does iCloud sync work?",
+    a: "iCloud sync is part of Quench Pro and is off until you turn it on in Settings → Customise My Hydration → iCloud Sync. It takes effect the next time you open Quench. Your drink history, profile and challenges are then stored in your own private iCloud account and appear on your other devices signed in to the same Apple Account. We cannot see that data. If nothing syncs, check that each device is signed in to iCloud with the same Apple Account.",
   },
   {
-    q: "How do I use widgets to log water?",
-    a: "Add a Watery widget to your Home Screen or Lock Screen. Interactive widgets let you tap +200, +250, or +500 ml buttons without opening the app. Control Center widgets work the same way.",
+    q: "How do I allow or change Apple Health access?",
+    a: "Quench asks for Apple Health access during setup, and Apple’s permission screen lets you choose each type of data. To change it later, open the Health app, tap your profile picture, then Apps → Quench (or go to Settings → Privacy & Security → Health → Quench). Quench saves the water and caffeine you log; caffeine only while Sync caffeine is on in Settings → Customise My Hydration. It can read your weight, to suggest a goal, and your biological sex, to pick the body figure the app shows; and your steps and workouts if you turn on Auto from Health, to estimate your activity level. Quench works without Health access; you just enter your details yourself.",
   },
   {
-    q: "Does Watery sync with Apple Health?",
-    a: "Yes. Watery reads and writes water intake data to Apple Health. Grant HealthKit permission when prompted. Your hydration data stays on-device and syncs through your personal Apple Health database.",
+    q: "How do I delete my data?",
+    a: "To delete a single drink, tap the trash icon next to it on the Today screen or in History. To delete everything, delete Quench from each device you use it on; that removes the data it stored there, and deleting it from your iPhone also removes the Apple Watch app. If you turned on iCloud sync, also delete Quench’s data in Settings → your name → iCloud → Manage Storage, or it will come back when you reinstall. Water and caffeine already saved to Apple Health stay in Health until you delete them in the Health app. To ask us to delete analytics data, email founder@heywrist.com.",
   },
   {
-    q: "How do I set up reminders?",
-    a: "Go to Settings \u2192 Reminders. Watery uses smart scheduling based on your routine to send local notification reminders throughout the day.",
-  },
-  {
-    q: "Can I create custom cups?",
-    a: "Yes. Go to Settings \u2192 Cups to create custom cup sizes that appear as quick-add buttons on your dashboard and widgets.",
+    q: "What is free, and what is in Quench Pro?",
+    a: "Free: logging any of the 14 drink types, deleting entries, your goal and history, the Apple Watch app and complications, widgets, Siri and Shortcuts, reminders and Apple Health. Nothing that is free today will move to Pro. Quench Pro adds the weather-aware goal, iCloud sync, smart reminder timing, advanced insights, CSV and PDF export, extra themes and mascots, and custom challenges, for $2.99 a month, $14.99 a year (with a 7-day free trial for new subscribers) or $29.99 once for lifetime access. These are US prices; the App Store shows your local price before you buy.",
   },
 ];
 
-export default function WaterySupport() {
+export default function QuenchSupport() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-16">
       <nav className="mb-8 text-sm text-slate-500 flex gap-2">
-        <Link href="/watery" className="hover:text-white transition-colors">Watery</Link>
+        <Link href="/watery" className="hover:text-white transition-colors">Quench</Link>
         <span>/</span>
         <span className="text-white">Support</span>
       </nav>
 
-      <h1 className="text-3xl font-bold mb-2">Support</h1>
-      <p className="text-slate-400 mb-12">Find answers to common questions or reach out to us directly.</p>
+      <h1 className="text-3xl font-bold mb-2">Quench Support</h1>
+      <p className="text-slate-400">
+        Help with Quench: Water &amp; Drink Tracker for iPhone, iPad and Apple Watch.
+      </p>
 
-      <section className="mb-16">
-        <h2 className="text-xl font-semibold mb-8">Frequently Asked Questions</h2>
-        <div className="space-y-6">
-          {faqs.map((faq, i) => (
-            <details key={i} className="group rounded-xl border border-white/10 bg-slate-900/50 open:bg-slate-900/80 transition-colors">
-              <summary className="flex cursor-pointer items-center justify-between p-5 text-sm font-medium list-none [&::-webkit-details-marker]:hidden">
-                <span>{faq.q}</span>
-                <svg className="h-4 w-4 shrink-0 text-slate-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                </svg>
-              </summary>
-              <p className="px-5 pb-5 text-sm text-slate-400 leading-relaxed">{faq.a}</p>
-            </details>
+      <section className="mt-10 rounded-2xl border border-blue-500/30 bg-blue-500/[0.06] p-6">
+        <h2 className="text-base font-semibold text-white">Contact us</h2>
+        <p className="mt-2 text-sm leading-relaxed text-slate-300">
+          Email{" "}
+          <a href="mailto:founder@heywrist.com" className="text-blue-400 hover:text-blue-300">
+            founder@heywrist.com
+          </a>
+          . A person reads every message. If something isn&apos;t working, tell us your iOS
+          version, whether it happened on the iPhone, iPad or Apple Watch, and what you were doing
+          at the time.
+        </p>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="text-xl font-semibold mb-6">Frequently asked questions</h2>
+        <div className="space-y-4">
+          {faqs.map((faq) => (
+            <div key={faq.q} className="rounded-2xl border border-white/10 bg-slate-900/50 p-6">
+              <h3 className="text-base font-semibold text-white">{faq.q}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-300">{faq.a}</p>
+            </div>
           ))}
         </div>
       </section>
 
-      <section className="rounded-2xl border border-white/10 bg-slate-900/50 p-8 text-center">
-        <h2 className="text-xl font-semibold mb-2">Still need help?</h2>
-        <p className="text-sm text-slate-400 mb-6">We typically respond within 24 hours.</p>
-        <a href="mailto:founder@heywrist.com" className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-2.5 text-sm font-medium text-white hover:bg-blue-500 transition-colors">
-          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-          </svg>
-          founder@heywrist.com
-        </a>
-      </section>
-
       <footer className="mt-16 pt-8 border-t border-white/10 text-sm text-slate-500">
-        <p>&copy; {new Date().getFullYear()} Hey Wrist. All rights reserved.</p>
-        <p className="mt-1">Contact: <a href="mailto:founder@heywrist.com" className="text-blue-400 hover:text-blue-300">founder@heywrist.com</a></p>
+        <div className="flex flex-wrap gap-4">
+          <Link href="/watery/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+          <Link href="/watery/terms" className="hover:text-white transition-colors">Terms of Use</Link>
+          <a href="mailto:founder@heywrist.com" className="hover:text-white transition-colors">founder@heywrist.com</a>
+        </div>
+        <p className="mt-4">&copy; {new Date().getFullYear()} Hey Wrist. All rights reserved.</p>
+        <p className="mt-1 text-xs text-slate-600">
+          Quench is not a medical device and gives no medical advice.
+        </p>
       </footer>
     </main>
   );

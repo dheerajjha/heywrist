@@ -2,140 +2,76 @@ import { Metadata } from "next";
 import PolicyLayout from "../../components/PolicyLayout";
 
 export const metadata: Metadata = {
-  title: "Watery - Terms & Conditions",
-  description: "Terms and conditions for the Watery app by HeyWrist",
+  title: "Terms of Use",
+  description: "Terms of use for Quench: Water & Drink Tracker by Hey Wrist",
 };
 
-export default function WateryTerms() {
+export default function QuenchTerms() {
   return (
-    <PolicyLayout appName="Watery" title="Terms & Conditions">
-      <p><strong>Effective Date:</strong> April 1, 2026</p>
-      <p><strong>Last Updated:</strong> April 1, 2026</p>
+    <PolicyLayout appName="Quench" slug="watery" title="Terms of Use">
+      <p><strong>Effective date:</strong> October 21, 2026</p>
 
+      <h2>1. The licence agreement</h2>
       <p>
-        These Terms &amp; Conditions (&quot;Terms&quot;) govern your use of the Watery
-        application (&quot;the App&quot;) developed by Hey Wrist (&quot;we,&quot; &quot;us,&quot; or
-        &quot;our&quot;). By downloading, installing, or using Watery, you agree to be
-        bound by these Terms.
-      </p>
-
-      <h2>1. Description of Service</h2>
-      <p>
-        Watery is a smart hydration tracking application for iPhone and Apple
-        Watch that calculates personalized water intake goals, provides smart
-        reminders, tracks drink history, and integrates with Apple HealthKit,
-        Siri, widgets, and Dynamic Island.
-      </p>
-
-      <h2>2. Eligibility</h2>
-      <p>
-        You must be at least 13 years of age to use the App. By using Watery,
-        you represent that you meet this requirement.
-      </p>
-
-      <h2>3. Health &amp; Medical Disclaimer</h2>
-      <p>
-        Watery is <strong>not a medical device</strong> and is not intended to
-        diagnose, treat, cure, or prevent any disease or health condition.
-        Hydration goals, recommendations, and calculations are for{" "}
-        <strong>informational purposes only</strong> and should not be used as a
-        substitute for professional medical advice.
-      </p>
-      <p>
-        Individual hydration needs vary based on factors including medical
-        conditions, medications, climate, and physical activity. Always consult
-        a qualified healthcare provider regarding your specific hydration needs,
-        especially if you have kidney disease, heart conditions, or other
-        medical conditions affecting fluid intake.
-      </p>
-
-      <h2>4. HealthKit Usage</h2>
-      <p>
-        The App reads and writes data to Apple HealthKit. You may grant or
-        revoke HealthKit permissions at any time from iOS Settings. Revoking
-        access may limit or disable features such as personalized goal
-        calculation and health data syncing. Your use of HealthKit is also
-        subject to Apple&apos;s terms.
-      </p>
-
-      <h2>5. In-App Purchases</h2>
-      <p>
-        Watery may offer premium features through one-time in-app purchases.
-        All purchases are processed by Apple and subject to Apple&apos;s{" "}
+        Quench: Water &amp; Drink Tracker (&quot;Quench&quot;) is made by Hey Wrist and distributed
+        through the App Store. Your use of Quench, and everything you buy in it, is governed by
+        Apple&apos;s{" "}
         <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">
-          Standard EULA
-        </a>.
+          Standard Licensed Application End User License Agreement (EULA)
+        </a>
+        . That is the agreement that applies; this page summarises how purchases work in Quench and
+        adds nothing that contradicts it.
+      </p>
+
+      <h2>2. Quench Pro</h2>
+      <p>
+        Quench is free to download. Logging any drink, deleting entries and the other basics are
+        free. Quench Pro is optional and adds extra features. It is available as:
       </p>
       <ul>
-        <li>All sales are final. Refunds are handled by Apple.</li>
-        <li>Prices may vary by region.</li>
+        <li>Quench Pro Monthly: $2.99 per month</li>
+        <li>Quench Pro Annual: $14.99 per year, with a 7-day free trial for new subscribers</li>
+        <li>Quench Pro Lifetime: $29.99, paid once, with nothing to renew</li>
       </ul>
-
-      <h2>6. Acceptable Use</h2>
-      <p>You agree not to:</p>
-      <ul>
-        <li>Reverse engineer, decompile, or disassemble the App</li>
-        <li>Use the App for any unlawful purpose</li>
-        <li>Attempt to interfere with the proper operation of the App</li>
-      </ul>
-
-      <h2>7. Intellectual Property</h2>
       <p>
-        All content, design, graphics, code, and other elements of Watery are
-        the intellectual property of Hey Wrist. You are granted a limited,
-        non-exclusive, non-transferable license for personal use.
+        Payment is charged to your Apple Account when you confirm the purchase, or when a free
+        trial ends. Subscriptions renew automatically unless cancelled at least 24 hours before the
+        end of the current period, and your account is charged for renewal within the 24 hours
+        before the period ends. Manage or cancel a subscription in iOS Settings &rarr; your name
+        &rarr; Subscriptions. Prices shown here are United States prices and vary by country; the
+        price you pay is the one the App Store shows before you buy. Refunds are handled by Apple
+        at{" "}
+        <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer">
+          reportaproblem.apple.com
+        </a>
+        .
       </p>
 
-      <h2>8. Disclaimer of Warranties</h2>
+      <h2>3. Not medical advice</h2>
       <p>
-        The App is provided on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis without
-        warranties of any kind. We do not guarantee the accuracy of hydration
-        calculations, goal recommendations, or uninterrupted operation.
+        Quench is not a medical device and is not intended to diagnose, treat, cure or prevent any
+        condition. Its daily goals and hydration estimates are general guidance only. Hydration
+        needs vary with health conditions, medication, climate and activity; if you have a
+        condition that affects how much you should drink, such as kidney or heart disease, follow
+        your doctor&apos;s advice rather than the app.
       </p>
 
-      <h2>9. Limitation of Liability</h2>
+      <h2>4. Your data</h2>
       <p>
-        To the maximum extent permitted by law, Hey Wrist shall not be liable
-        for any indirect, incidental, special, consequential, or punitive
-        damages arising from your use of the App, including:
-      </p>
-      <ul>
-        <li>Inaccurate hydration recommendations</li>
-        <li>Health consequences from following or ignoring app recommendations</li>
-        <li>Loss of hydration data</li>
-        <li>HealthKit read/write failures</li>
-      </ul>
-
-      <h2>10. Indemnification</h2>
-      <p>
-        You agree to indemnify and hold harmless Hey Wrist from any claims
-        arising from your use of the App or violation of these Terms.
+        There is no account. How Quench handles your information, including Apple Health data and
+        the analytics it sends, is described in the{" "}
+        <a href="/watery/privacy">Privacy Policy</a>.
       </p>
 
-      <h2>11. Termination</h2>
+      <h2>5. Changes</h2>
       <p>
-        You may stop using the App at any time by uninstalling it. We reserve
-        the right to discontinue or modify the App without prior notice.
+        We may update this page; the date at the top will change when we do.
       </p>
 
-      <h2>12. Changes to These Terms</h2>
+      <h2>6. Contact</h2>
       <p>
-        We may modify these Terms at any time. Continued use after changes
-        constitutes acceptance.
+        Hey Wrist &mdash; <a href="mailto:founder@heywrist.com">founder@heywrist.com</a>
       </p>
-
-      <h2>13. Governing Law</h2>
-      <p>
-        These Terms shall be governed by the laws of the jurisdiction in which
-        the developer resides.
-      </p>
-
-      <h2>14. Contact Us</h2>
-      <p>
-        <strong>Email:</strong>{" "}
-        <a href="mailto:founder@heywrist.com">founder@heywrist.com</a>
-      </p>
-      <p><strong>Developer:</strong> Hey Wrist</p>
     </PolicyLayout>
   );
 }
