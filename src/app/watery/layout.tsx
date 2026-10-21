@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Quench",
   },
   description:
-    "Quench is a water and drink tracker for iPhone, iPad and Apple Watch. Log any of 14 drink types for free, with an optional Quench Pro.",
+    "Quench is a water and drink tracker for iPhone and Apple Watch. Log any of 14 drink types for free, with an optional Quench Pro.",
 };
 
 function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
@@ -56,7 +56,7 @@ export default function QuenchLayout({ children }: { children: React.ReactNode }
                 <span className="font-bold">Quench</span>
               </div>
               <p className="text-sm text-slate-400">
-                Water &amp; Drink Tracker for iPhone, iPad and Apple Watch.
+                Water &amp; Drink Tracker for iPhone and Apple Watch.
                 <br />
                 Built by{" "}
                 <a href="https://heywrist.com" className="text-blue-400 hover:text-blue-300">Hey Wrist</a>
@@ -82,7 +82,7 @@ export default function QuenchLayout({ children }: { children: React.ReactNode }
               <p>&copy; {new Date().getFullYear()} Hey Wrist. All rights reserved.</p>
               <p className="mt-1 text-xs text-slate-600">
                 Quench is not a medical device and gives no medical advice. Apple, Apple Watch,
-                iPhone, iPad and App Store are trademarks of Apple Inc.
+                iPhone and App Store are trademarks of Apple Inc.
               </p>
             </div>
             <span className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-300 ring-1 ring-blue-500/30">

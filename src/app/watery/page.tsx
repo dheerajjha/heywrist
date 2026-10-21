@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: { absolute: "Quench: Water & Drink Tracker" },
   description:
-    "Quench is a water and drink tracker for iPhone, iPad and Apple Watch. Log any of 14 drink types, with an Apple Watch app, widgets, Siri and Apple Health. Free to download, with an optional Quench Pro.",
+    "Quench is a water and drink tracker for iPhone and Apple Watch. Log any of 14 drink types, with an Apple Watch app, widgets, Siri and Apple Health. Free to download, with an optional Quench Pro.",
 };
 
 const features = [
@@ -75,7 +75,7 @@ export default function QuenchHome() {
         <div className="relative mx-auto max-w-6xl px-6 pt-24 pb-20 text-center sm:pt-32 sm:pb-28">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-1.5 text-sm text-blue-300">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-blue-400" />
-            For iPhone, iPad and Apple Watch
+            For iPhone and Apple Watch
           </div>
           <h1 className="text-5xl font-bold tracking-tight sm:text-7xl">
             Quench
@@ -87,7 +87,7 @@ export default function QuenchHome() {
           </p>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-400 sm:text-xl">
             Log water and every other drink in a tap, and see how close you are to
-            today&apos;s goal &mdash; on your iPhone, your iPad or your wrist.
+            today&apos;s goal &mdash; on your iPhone or your wrist.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-blue-600/90 px-6 py-3 text-sm font-semibold text-white">

@@ -9,7 +9,9 @@ export const metadata: Metadata = {
 // Every statement on this page was checked against the code of Quench 1.0,
 // build 1792587890 (watery repo, commit 2174224), except section 3: it
 // describes the follow-up 1.0 build without iCloud sync (EM decision,
-// 2026-10-21; 1792587890 itself still has the toggle). Section 6 mirrors that
+// 2026-10-21; 1792587890 itself still has the toggle), and the device scope
+// (iPhone and Apple Watch only) follows the EM's launch decision of the same
+// day, not 2174224's device family. Section 6 mirrors that
 // build's Analytics.track call sites, its MetricKit diagnostics and its super
 // properties: if a property is added to or removed from the app, update section
 // 6 (and the App Store privacy details) in the same change.
@@ -20,7 +22,7 @@ export default function QuenchPrivacy() {
 
       <p>
         Hey Wrist (&quot;we&quot;, &quot;us&quot;) makes Quench: Water &amp; Drink Tracker
-        (&quot;Quench&quot;) for iPhone, iPad and Apple Watch. This policy explains what
+        (&quot;Quench&quot;) for iPhone and Apple Watch. This policy explains what
         information Quench uses, where it goes, and the choices you have.
       </p>
 
@@ -87,7 +89,7 @@ export default function QuenchPrivacy() {
       </p>
 
       <h2>2. Information stored on your devices</h2>
-      <p>Quench keeps your information on your iPhone or iPad, using Apple&apos;s on-device storage:</p>
+      <p>Quench keeps your information on your iPhone, using Apple&apos;s on-device storage:</p>
       <ul>
         <li>
           <strong>Your profile</strong> &mdash; an optional first name, weight, optional height,
@@ -110,7 +112,7 @@ export default function QuenchPrivacy() {
       </ul>
       <p>
         Quench&apos;s widgets, Live Activities and Siri actions use this information through
-        storage they share with the app on your iPhone or iPad. The Apple Watch app keeps its own
+        storage they share with the app on your iPhone. The Apple Watch app keeps its own
         copy of what it shows &mdash; such as today&apos;s progress, your goal and streak, your
         first name and your quick-log cups &mdash; sent from your iPhone (section 4). Quench uses
         your first name only in greetings and reminder text.
@@ -119,8 +121,8 @@ export default function QuenchPrivacy() {
       <h2>3. iCloud</h2>
       <p>
         This version of Quench does not sync through iCloud. Your drink history, cups, challenges
-        and profile stay on the iPhone or iPad where you entered them, and the Apple Watch app
-        syncs with your iPhone over WatchConnectivity (section 4). The only thing Quench itself
+        and profile stay on your iPhone, and the Apple Watch app syncs with it over
+        WatchConnectivity (section 4). The only thing Quench itself
         puts in iCloud is the install marker from section 2, if you use iCloud Keychain. If you
         back up your device to iCloud, that backup includes Quench&apos;s data, as it does for
         other apps.

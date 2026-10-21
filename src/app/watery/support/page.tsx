@@ -10,15 +10,15 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "How do I restore my Quench Pro purchase?",
-    a: "Quench Pro belongs to the Apple Account you bought it with. On a new iPhone or iPad signed in to that account it is usually recognised automatically. If it isn’t, open Quench, go to Settings → Quench Pro, and tap Restore Purchases at the bottom of the screen.",
+    a: "Quench Pro belongs to the Apple Account you bought it with. On another iPhone signed in to the same Apple Account it is usually recognised automatically. If it isn’t, open Quench, go to Settings → Quench Pro, and tap Restore Purchases at the bottom of the screen.",
   },
   {
     q: "How do I cancel a subscription?",
-    a: "Subscriptions are billed and managed by Apple. On your iPhone or iPad, open the Settings app, tap your name, then Subscriptions → Quench, and tap Cancel Subscription. Cancel at least 24 hours before the renewal date to avoid the next charge; after a paid period you keep Pro until it ends. Deleting the app does not cancel a subscription. The lifetime purchase is a one-time payment with nothing to cancel. Refunds are handled by Apple at reportaproblem.apple.com.",
+    a: "Subscriptions are billed and managed by Apple. On your iPhone, open the Settings app, tap your name, then Subscriptions → Quench, and tap Cancel Subscription. Cancel at least 24 hours before the renewal date to avoid the next charge; after a paid period you keep Pro until it ends. Deleting the app does not cancel a subscription. The lifetime purchase is a one-time payment with nothing to cancel. Refunds are handled by Apple at reportaproblem.apple.com.",
   },
   {
     q: "Does Quench sync between my devices?",
-    a: "Your Apple Watch syncs with your iPhone: drinks you log on the Watch are saved on your iPhone (if the iPhone is out of reach, they are sent when it is back), and the Watch shows today’s progress, goal and streak from your iPhone. This version of Quench doesn’t sync between iPhones and iPads, so each one keeps its own history.",
+    a: "Your Apple Watch syncs with your iPhone: drinks you log on the Watch are saved on your iPhone (if the iPhone is out of reach, they are sent when it is back), and the Watch shows today’s progress, goal and streak from your iPhone. If you use Quench on more than one iPhone, each keeps its own history; this version doesn’t sync between them.",
   },
   {
     q: "How do I allow or change Apple Health access?",
@@ -45,7 +45,7 @@ export default function QuenchSupport() {
 
       <h1 className="text-3xl font-bold mb-2">Quench Support</h1>
       <p className="text-slate-400">
-        Help with Quench: Water &amp; Drink Tracker for iPhone, iPad and Apple Watch.
+        Help with Quench: Water &amp; Drink Tracker for iPhone and Apple Watch.
       </p>
 
       <section className="mt-10 rounded-2xl border border-blue-500/30 bg-blue-500/[0.06] p-6">
@@ -56,7 +56,7 @@ export default function QuenchSupport() {
             founder@heywrist.com
           </a>
           . A person reads every message. If something isn&apos;t working, tell us your iOS
-          version, whether it happened on the iPhone, iPad or Apple Watch, and what you were doing
+          version, whether it happened on the iPhone or the Apple Watch, and what you were doing
           at the time.
         </p>
       </section>
