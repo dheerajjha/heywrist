@@ -7,7 +7,9 @@ export const metadata: Metadata = {
 };
 
 // Every statement on this page was checked against the code of Quench 1.0,
-// build 1792587890 (watery repo, commit 2174224). Section 6 mirrors that
+// build 1792587890 (watery repo, commit 2174224), except section 3: it
+// describes the follow-up 1.0 build without iCloud sync (EM decision,
+// 2026-10-21; 1792587890 itself still has the toggle). Section 6 mirrors that
 // build's Analytics.track call sites, its MetricKit diagnostics and its super
 // properties: if a property is added to or removed from the app, update section
 // 6 (and the App Store privacy details) in the same change.
@@ -26,9 +28,9 @@ export default function QuenchPrivacy() {
       <ul>
         <li>There is no account and no sign-up, and Quench never asks for your email address.</li>
         <li>
-          Your profile &mdash; name, weight, goal and settings &mdash; stays on your devices. So do
-          your drink entries, unless you turn on iCloud sync (Quench Pro), which keeps them in your
-          own private iCloud account. We cannot read either.
+          Your profile &mdash; name, weight, goal and settings &mdash; and your drink entries stay
+          on your devices. This version of Quench does not sync them through iCloud, and we cannot
+          read them.
         </li>
         <li>
           Quench sends product analytics to Mixpanel: which features you use, some of your
@@ -80,8 +82,8 @@ export default function QuenchPrivacy() {
       </ul>
       <p>
         Quench reads and writes no other Health data. It never sends Health data to us or to
-        Mixpanel, never stores it in iCloud, never uses it for advertising or marketing, and never
-        sells it. What Quench reads goes into your profile, which stays on your devices.
+        Mixpanel, never uses it for advertising or marketing, and never sells it. What Quench reads
+        goes into your profile, which stays on your devices.
       </p>
 
       <h2>2. Information stored on your devices</h2>
@@ -90,9 +92,9 @@ export default function QuenchPrivacy() {
         <li>
           <strong>Your profile</strong> &mdash; an optional first name, weight, optional height,
           biological sex, activity level, climate, units, daily goal, wake and sleep times,
-          reminder settings, and the reason you chose for using Quench. Your profile is never
-          synced to iCloud. Section 6 lists the few setup choices that analytics include, which
-          never include your name, weight, height or biological sex.
+          reminder settings, and the reason you chose for using Quench. Section 6 lists the few
+          setup choices that analytics include, which never include your name, weight, height or
+          biological sex.
         </li>
         <li><strong>Your drink log</strong> &mdash; the type, amount and time of each drink.</li>
         <li><strong>Your cups, challenges and streaks</strong>, and your theme and mascot choices.</li>
@@ -114,20 +116,14 @@ export default function QuenchPrivacy() {
         your first name only in greetings and reminder text.
       </p>
 
-      <h2>3. iCloud sync (Quench Pro)</h2>
+      <h2>3. iCloud</h2>
       <p>
-        iCloud sync is part of Quench Pro and is off unless you turn it on (Settings &rarr;
-        Customise My Hydration &rarr; iCloud Sync). When it is on, Quench stores your drink log,
-        cups and challenges in your own private iCloud database using Apple&apos;s CloudKit, so
-        they appear on your other iPhones and iPads signed in to the same Apple Account. Your
-        profile &mdash; name, weight, biological sex, goal, reminders and units &mdash; is never
-        synced and stays on each device. iCloud data is held by Apple under{" "}
-        <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">
-          Apple&apos;s Privacy Policy
-        </a>
-        , and we have no access to your private iCloud data. You can turn sync off in the app, and
-        delete Quench&apos;s iCloud data in iOS Settings &rarr; your name &rarr; iCloud &rarr;
-        Manage Storage.
+        This version of Quench does not sync through iCloud. Your drink history, cups, challenges
+        and profile stay on the iPhone or iPad where you entered them, and the Apple Watch app
+        syncs with your iPhone over WatchConnectivity (section 4). The only thing Quench itself
+        puts in iCloud is the install marker from section 2, if you use iCloud Keychain. If you
+        back up your device to iCloud, that backup includes Quench&apos;s data, as it does for
+        other apps.
       </p>
 
       <h2>4. Apple Watch, widgets, Live Activities and Siri</h2>
@@ -275,14 +271,12 @@ export default function QuenchPrivacy() {
         <li>Delete a single drink with the trash icon next to it on the Today screen or in History.</li>
         <li>Edit your profile and daily goal at any time in Settings.</li>
         <li>
-          Turn off iCloud sync, the weather-aware goal or reminders at any time, and revoke Apple
-          Health, location or notification access in iOS Settings.
+          Turn off the weather-aware goal or reminders at any time, and revoke Apple Health,
+          location or notification access in iOS Settings.
         </li>
         <li>
           Deleting Quench removes the data it stored on that device, except the install marker in
-          your keychain (section 2), which holds no personal information. If iCloud sync was on,
-          also delete the iCloud copy of your drink log, cups and challenges in iOS Settings &rarr;
-          your name &rarr; iCloud &rarr; Manage Storage, or it will come back when you reinstall.
+          your keychain (section 2), which holds no personal information.
         </li>
         <li>
           Water and caffeine that Quench saved to Apple Health stay in Health until you delete them

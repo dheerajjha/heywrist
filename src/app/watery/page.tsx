@@ -43,11 +43,6 @@ const features = [
     desc: "Raises your goal on hot days using Apple’s WeatherKit. It uses your location only if you turn it on.",
     pro: true,
   },
-  {
-    title: "iCloud sync",
-    desc: "Keeps your drink history, cups and challenges in step across your iPhone and iPad, through your own private iCloud account. Your profile stays on each device.",
-    pro: true,
-  },
 ];
 
 const freeItems = [
@@ -63,7 +58,6 @@ const freeItems = [
 
 const proItems = [
   "Weather-aware daily goal",
-  "iCloud sync across your devices",
   "Smart reminder timing",
   "Advanced insights: 30, 90 and 365-day trends",
   "CSV and PDF export",
@@ -248,8 +242,8 @@ export default function QuenchHome() {
           <div className="rounded-3xl border border-white/10 bg-slate-900/50 p-8 text-sm leading-relaxed text-slate-300">
             <h2 className="text-lg font-bold text-white">Your data</h2>
             <p className="mt-3">
-              There is no account to create. Your drink entries are stored on your device and, if
-              you turn on iCloud sync, in your own private iCloud. Quench uses Mixpanel for product
+              There is no account to create. Your drink entries and profile are stored on your
+              devices. Quench uses Mixpanel for product
               analytics. It shows no ads, does not use the advertising identifier (IDFA) and does
               not track you across other companies&apos; apps or websites. The{" "}
               <Link href="/watery/privacy" className="text-blue-400 hover:text-blue-300">

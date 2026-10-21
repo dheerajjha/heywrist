@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Support",
   description:
-    "Help with Quench: Water & Drink Tracker — restoring purchases, cancelling a subscription, iCloud sync, Apple Health and deleting your data.",
+    "Help with Quench: Water & Drink Tracker — restoring purchases, cancelling a subscription, Apple Watch sync, Apple Health and deleting your data.",
 };
 
 const faqs = [
@@ -17,8 +17,8 @@ const faqs = [
     a: "Subscriptions are billed and managed by Apple. On your iPhone or iPad, open the Settings app, tap your name, then Subscriptions → Quench, and tap Cancel Subscription. Cancel at least 24 hours before the renewal date to avoid the next charge; after a paid period you keep Pro until it ends. Deleting the app does not cancel a subscription. The lifetime purchase is a one-time payment with nothing to cancel. Refunds are handled by Apple at reportaproblem.apple.com.",
   },
   {
-    q: "How does iCloud sync work?",
-    a: "iCloud sync is part of Quench Pro and is off until you turn it on in Settings → Customise My Hydration → iCloud Sync. It takes effect the next time you open Quench. Your drink history, cups and challenges are then stored in your own private iCloud account and appear on your other iPhones and iPads signed in to the same Apple Account. Your profile (name, weight, goal and settings) is not synced and stays on each device. We cannot see your iCloud data. If nothing syncs, check that each device is signed in to iCloud with the same Apple Account.",
+    q: "Does Quench sync between my devices?",
+    a: "Your Apple Watch syncs with your iPhone: drinks you log on the Watch are saved on your iPhone (if the iPhone is out of reach, they are sent when it is back), and the Watch shows today’s progress, goal and streak from your iPhone. This version of Quench doesn’t sync between iPhones and iPads, so each one keeps its own history.",
   },
   {
     q: "How do I allow or change Apple Health access?",
@@ -26,11 +26,11 @@ const faqs = [
   },
   {
     q: "How do I delete my data?",
-    a: "To delete a single drink, tap the trash icon next to it on the Today screen or in History. To delete everything, delete Quench from each device you use it on; that removes the data it stored there (apart from a small install marker in the keychain, which holds no personal information), and deleting it from your iPhone also removes the Apple Watch app. If you turned on iCloud sync, also delete Quench’s data in Settings → your name → iCloud → Manage Storage, or your drink history will come back when you reinstall. Water and caffeine already saved to Apple Health stay in Health until you delete them in the Health app. To ask us to delete analytics data, email founder@heywrist.com.",
+    a: "To delete a single drink, tap the trash icon next to it on the Today screen or in History. To delete everything, delete Quench from each device you use it on; that removes the data it stored there (apart from a small install marker in the keychain, which holds no personal information), and deleting it from your iPhone also removes the Apple Watch app. Water and caffeine already saved to Apple Health stay in Health until you delete them in the Health app. To ask us to delete analytics data, email founder@heywrist.com.",
   },
   {
     q: "What is free, and what is in Quench Pro?",
-    a: "Free: logging any of the 14 drink types, deleting entries, your goal and history, the Apple Watch app and complications, widgets, Siri and Shortcuts, reminders and Apple Health. Nothing that is free today will move to Pro. Quench Pro adds the weather-aware goal, iCloud sync, smart reminder timing, advanced insights, CSV and PDF export, extra themes and mascots, and custom challenges, for $2.99 a month, $14.99 a year (with a 7-day free trial for new subscribers) or $29.99 once for lifetime access. These are US prices; the App Store shows your local price before you buy.",
+    a: "Free: logging any of the 14 drink types, deleting entries, your goal and history, the Apple Watch app and complications, widgets, Siri and Shortcuts, reminders and Apple Health. Nothing that is free today will move to Pro. Quench Pro adds the weather-aware goal, smart reminder timing, advanced insights, CSV and PDF export, extra themes and mascots, and custom challenges, for $2.99 a month, $14.99 a year (with a 7-day free trial for new subscribers) or $29.99 once for lifetime access. These are US prices; the App Store shows your local price before you buy.",
   },
 ];
 
