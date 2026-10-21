@@ -6,10 +6,11 @@ export const metadata: Metadata = {
   description: "Privacy policy for Quench: Water & Drink Tracker by Hey Wrist",
 };
 
-// Every statement on this page was checked against the app's code (watery repo,
-// 2026-10-21). The analytics list in section 6 mirrors the app's Analytics.track
-// call sites: if a property is added to or removed from the app, update section 6
-// in the same change.
+// Every statement on this page was checked against the code of Quench 1.0,
+// build 1792587890 (watery repo, commit 2174224). Section 6 mirrors that
+// build's Analytics.track call sites, its MetricKit diagnostics and its super
+// properties: if a property is added to or removed from the app, update section
+// 6 (and the App Store privacy details) in the same change.
 export default function QuenchPrivacy() {
   return (
     <PolicyLayout appName="Quench" slug="watery" title="Privacy Policy">
@@ -25,13 +26,15 @@ export default function QuenchPrivacy() {
       <ul>
         <li>There is no account and no sign-up, and Quench never asks for your email address.</li>
         <li>
-          Your drink entries are stored on your devices, and in your own private iCloud account if
-          you turn on iCloud sync. We cannot read them.
+          Your profile &mdash; name, weight, goal and settings &mdash; stays on your devices. So do
+          your drink entries, unless you turn on iCloud sync (Quench Pro), which keeps them in your
+          own private iCloud account. We cannot read either.
         </li>
         <li>
-          Quench sends product analytics to Mixpanel. Besides which features you use, this includes
-          some profile and goal values, such as your weight and daily goal. Section 6 lists
-          everything it includes.
+          Quench sends product analytics to Mixpanel: which features you use, some of your
+          settings, purchase steps and crash reports. They never include what or how much you
+          drink, your name, weight, height or biological sex, or any Apple Health data. Section 6
+          lists everything.
         </li>
         <li>
           No ads, no advertising identifier (IDFA), and no tracking across other companies&apos;
@@ -46,57 +49,50 @@ export default function QuenchPrivacy() {
 
       <h2>1. Apple Health</h2>
       <p>
-        Quench uses Apple Health (HealthKit) only if you allow it, and Apple&apos;s permission
-        screen lets you choose each type of data. You can change your choices at any time in the
-        Health app (tap your profile picture, then Apps &rarr; Quench) or in iOS Settings &rarr;
-        Privacy &amp; Security &rarr; Health.
+        Quench asks for Apple Health access only when you tap a Health option: Pull from Apple
+        Health during setup, or the Auto from Health or Sync caffeine switches in Settings &rarr;
+        Customise My Hydration. Apple&apos;s permission screen lets you choose each type of data,
+        and you can change your choices at any time in the Health app (tap your profile picture,
+        then Apps &rarr; Quench) or in iOS Settings &rarr; Privacy &amp; Security &rarr; Health.
       </p>
       <p><strong>Quench can read:</strong></p>
       <ul>
         <li>
-          <strong>Body weight and biological sex</strong> &mdash; to pre-fill your profile during
-          setup. Your weight is used to calculate your daily goal; biological sex picks the body
-          figure the app shows.
+          <strong>Body weight and biological sex</strong> &mdash; to pre-fill your profile. Your
+          weight is used to suggest your daily goal; biological sex picks the body figure the app
+          shows.
         </li>
         <li>
-          <strong>Step count and workouts</strong> &mdash; only if you turn on Auto from Health, to
+          <strong>Step count and workouts</strong> &mdash; only while Auto from Health is on, to
           estimate your activity level from the last 7 days.
-        </li>
-        <li>
-          <strong>Date of birth, dietary water and dietary caffeine</strong> &mdash; these are part
-          of the permission request, but the current version of Quench does not use, store or send
-          them.
         </li>
       </ul>
       <p><strong>Quench can write:</strong></p>
       <ul>
         <li>
-          <strong>Dietary water</strong> &mdash; for each drink you log, its hydration-adjusted
-          amount. Alcoholic drinks are not written.
+          <strong>Dietary water</strong> &mdash; for drinks you log in the app or on your Apple
+          Watch, the hydration-adjusted amount. Alcoholic drinks are not written.
         </li>
         <li>
           <strong>Dietary caffeine</strong> &mdash; an estimate for coffee, tea, energy drinks and
-          soda, while Sync caffeine is on.
+          soda, unless you turn off Sync caffeine (it is on by default).
         </li>
       </ul>
       <p>
-        Health data is never used for advertising or marketing, and never sold. Your step counts,
-        workouts and other Health readings are not sent anywhere, with one exception you should
-        know about: the weight and biological sex on your profile, which may have been pre-filled
-        from Apple Health, are included in the analytics event Quench sends when you finish setup
-        (section 6), and are part of your profile in iCloud if you turn on iCloud sync (section 3).
+        Quench reads and writes no other Health data. It never sends Health data to us or to
+        Mixpanel, never stores it in iCloud, never uses it for advertising or marketing, and never
+        sells it. What Quench reads goes into your profile, which stays on your devices.
       </p>
 
       <h2>2. Information stored on your devices</h2>
-      <p>
-        Quench keeps your information on your iPhone or iPad and, if you use it, your Apple Watch,
-        using Apple&apos;s on-device storage:
-      </p>
+      <p>Quench keeps your information on your iPhone or iPad, using Apple&apos;s on-device storage:</p>
       <ul>
         <li>
           <strong>Your profile</strong> &mdash; an optional first name, weight, optional height,
           biological sex, activity level, climate, units, daily goal, wake and sleep times,
-          reminder settings, and the reason you chose for using Quench.
+          reminder settings, and the reason you chose for using Quench. Your profile is never
+          synced to iCloud. Section 6 lists the few setup choices that analytics include, which
+          never include your name, weight, height or biological sex.
         </li>
         <li><strong>Your drink log</strong> &mdash; the type, amount and time of each drink.</li>
         <li><strong>Your cups, challenges and streaks</strong>, and your theme and mascot choices.</li>
@@ -104,21 +100,28 @@ export default function QuenchPrivacy() {
           If the weather-aware goal is on, the latest high temperature and the climate it implies
           (not your location).
         </li>
+        <li>
+          <strong>An install marker</strong> &mdash; a small item in your keychain that records
+          only when Quench was first installed, so that a reinstall is not counted as a new user.
+          It syncs through iCloud Keychain if you use it, and it stays after you delete the app.
+        </li>
       </ul>
       <p>
         Quench&apos;s widgets, Live Activities and Siri actions use this information through
-        storage they share with the app on your iPhone or iPad. The Watch app keeps its own copy,
-        synced from your iPhone (section 4). Your first name stays on your devices (and in your
-        iCloud, if you turn on sync); Quench uses it in greetings and reminder text.
+        storage they share with the app on your iPhone or iPad. The Apple Watch app keeps its own
+        copy of what it shows &mdash; such as today&apos;s progress, your goal and streak, your
+        first name and your quick-log cups &mdash; sent from your iPhone (section 4). Quench uses
+        your first name only in greetings and reminder text.
       </p>
 
       <h2>3. iCloud sync (Quench Pro)</h2>
       <p>
-        iCloud sync is off unless you turn it on (Settings &rarr; Customise My Hydration &rarr;
-        iCloud Sync). When it is on, Quench stores your profile, drink log, cups and challenges in
-        your own private iCloud database using Apple&apos;s CloudKit, so they appear on your other
-        devices signed in to the same Apple Account. Your profile includes details such as your
-        weight and biological sex. This data is held by Apple under{" "}
+        iCloud sync is part of Quench Pro and is off unless you turn it on (Settings &rarr;
+        Customise My Hydration &rarr; iCloud Sync). When it is on, Quench stores your drink log,
+        cups and challenges in your own private iCloud database using Apple&apos;s CloudKit, so
+        they appear on your other iPhones and iPads signed in to the same Apple Account. Your
+        profile &mdash; name, weight, biological sex, goal, reminders and units &mdash; is never
+        synced and stays on each device. iCloud data is held by Apple under{" "}
         <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">
           Apple&apos;s Privacy Policy
         </a>
@@ -129,11 +132,12 @@ export default function QuenchPrivacy() {
 
       <h2>4. Apple Watch, widgets, Live Activities and Siri</h2>
       <p>
-        The Watch app syncs with your iPhone using Apple&apos;s WatchConnectivity framework; this
-        does not pass through any server of ours. Widgets, complications and Live Activities show
-        information that is already on your device and do not send it anywhere. When you use Siri
-        or Shortcuts, Apple handles the request and Quench receives only the action to perform,
-        such as logging a glass of water. We do not receive your voice or Siri transcripts.
+        The Watch app syncs with your iPhone using Apple&apos;s WatchConnectivity framework, not
+        iCloud, and this does not pass through any server of ours. Widgets, complications and Live
+        Activities show information that is already on your device and do not send it anywhere.
+        When you use Siri or Shortcuts, Apple handles the request and Quench receives only the
+        action to perform, such as logging a glass of water. We do not receive your voice or Siri
+        transcripts.
       </p>
 
       <h2>5. Location and weather (Quench Pro, optional)</h2>
@@ -146,18 +150,20 @@ export default function QuenchPrivacy() {
         <a href="https://www.apple.com/legal/privacy/data/en/weather/" target="_blank" rel="noopener noreferrer">
           weather privacy terms
         </a>
-        . Quench does not store your location and never sends it to us or to Mixpanel; it keeps
-        only the temperature and the climate setting that follows from it. That temperature and
-        climate are included in an analytics event (section 6). You can turn the feature off in
-        the app, or revoke location access in iOS Settings &rarr; Privacy &amp; Security &rarr;
-        Location Services &rarr; Quench.
+        . Quench does not store your location and never sends it to us or to Mixpanel. It keeps
+        only the day&apos;s temperature and the climate setting that follows from it, on your
+        device; analytics record only that climate category and whether it raised your goal
+        (section 6), never the temperature. You can turn the feature off in the app, or revoke
+        location access in iOS Settings &rarr; Privacy &amp; Security &rarr; Location Services
+        &rarr; Quench.
       </p>
 
       <h2>6. Analytics (Mixpanel)</h2>
       <p>
-        We use Mixpanel, a product analytics service, to understand how Quench is used and what to
-        improve. Mixpanel processes this data on our behalf as our service provider, under terms
-        that require it to protect the data, and it may process it in the United States. See{" "}
+        We use Mixpanel, a product analytics service, to understand how Quench is used, what to
+        improve and what is going wrong. Mixpanel processes this data on our behalf as our service
+        provider, under terms that require it to protect the data, and it may process it in the
+        United States. See{" "}
         <a href="https://mixpanel.com/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">
           Mixpanel&apos;s Privacy Policy
         </a>
@@ -171,36 +177,52 @@ export default function QuenchPrivacy() {
         data with other companies&apos; data, and does not use it for advertising. The IDFV
         changes once every Hey Wrist app has been removed from the device.
       </p>
-      <p><strong>What Quench sends to Mixpanel:</strong></p>
+      <p>
+        <strong>With every event:</strong> a random ID for the current app session, your
+        device&apos;s language and the app&apos;s language, which part of Quench sent it, and
+        whether it is an App Store or test install. The Mixpanel SDK adds device and app details
+        such as device model, iOS version, screen size, and app version and build, and we record
+        when Quench was first and last opened.
+      </p>
+      <p><strong>The events themselves:</strong></p>
       <ul>
         <li>
-          <strong>Usage events</strong>, for example: the app was opened; a screen or setup step
-          was viewed; a setting was changed; a drink was logged or deleted, and from where (such as
-          the Today screen or a reminder&apos;s quick-log button); a reminder was opened or
-          dismissed; the daily goal was reached; the upgrade screen was shown; a purchase or
-          restore was started, completed, cancelled or failed, with the plan and whether it was a
-          free trial.
+          <strong>Usage</strong>, for example: the app was opened, or opened for the first time
+          (and whether that looks like a new install or a reinstall); a screen or setup step was
+          viewed; a setting was changed; a drink was logged or deleted, and from where (such as the
+          Today screen or a reminder button), never what or how much; a reminder was opened or
+          dismissed; the daily goal was reached, with your streak length; a rating prompt was
+          requested.
         </li>
         <li>
-          <strong>Profile and goal values.</strong> When you finish setup: weight, height,
-          biological sex, activity level, climate, units, daily goal, wake and sleep hours,
-          reminder settings, the reason you chose for using Quench, whether you entered a first
-          name (and how many characters it has, never the name itself), and whether setup used
-          Apple Health. Later, when you change your activity level, climate, units, daily goal,
-          wake or sleep hour, or reminder interval in Settings, the new value.
+          <strong>Setup choices</strong>, when you finish setup: the reason you chose for using
+          Quench, activity level, climate, volume and weight units, reminder settings, wake and
+          sleep hours, whether you entered a first name (and how many characters it has, never the
+          name itself), and whether setup used Apple Health. Later, when you change your activity
+          level, climate, units, wake or sleep hour, or reminder interval, the new value; and
+          whether your daily goal is one you set yourself.
         </li>
         <li>
-          <strong>Summary numbers</strong>: today&apos;s total intake and number of drinks when you
-          open the Today screen; your daily goal and streak; how many entries and days are in your
-          history; the type, length and target of a custom challenge you create (for example, a
-          no-caffeine or no-alcohol challenge); and, if the weather-aware goal is on, the
-          day&apos;s high temperature.
+          <strong>Counts</strong>: how many drinks you have logged today (not how much), how many
+          entries and days are in your history or an export, how many cups you have, and the type
+          and length of a custom challenge you create (for example, a no-caffeine or no-alcohol
+          challenge).
         </li>
         <li>
-          <strong>Device and app details</strong> that the Mixpanel SDK adds, such as device model,
-          iOS version, screen size, and app version and build; when Quench was first and last
-          opened; a random ID for each time the app is opened; and error details when something
-          fails, such as a weather lookup.
+          <strong>Weather</strong>, if the weather-aware goal is on: the climate category Quench
+          worked out (for example, hot) and whether it raised your goal.
+        </li>
+        <li>
+          <strong>Purchases</strong>: the upgrade screen being shown, plans tapped, purchases and
+          restores started, completed, cancelled or failed (with the product, whether it was a free
+          trial, and the reason for a failure), free trials converting or expiring, and billing
+          problems Apple reports, such as whether you still have access.
+        </li>
+        <li>
+          <strong>Diagnostics</strong>: crash, hang and exit reports from Apple&apos;s MetricKit,
+          such as the crash type and code, the crashing code&apos;s stack frames, how long a hang
+          lasted, counts of how the app exited, the app build, iOS version and device type. They
+          contain no drink or health data.
         </li>
         <li>
           <strong>An approximate location from your IP address.</strong> Like most online services,
@@ -209,10 +231,16 @@ export default function QuenchPrivacy() {
         </li>
       </ul>
       <p>
-        <strong>What Quench does not send:</strong> which drinks you log (water, coffee, wine and
-        so on), the names of your cups, your first name, your email address, your location
-        coordinates, or any Apple Health data other than the weight and biological sex described
-        above.
+        <strong>What Quench does not send:</strong> what you drink or how much (drink types,
+        amounts or daily totals), the names of your cups, your first name, your weight, height or
+        biological sex, your email address, your location coordinates or the temperature, or any
+        Apple Health data.
+      </p>
+      <p>
+        <strong>App Store privacy details.</strong> Quench&apos;s privacy label on the App Store
+        declares Device ID, Product Interaction, Purchase History and Coarse Location, used for
+        analytics, and Crash Data and Performance Data, used for app functionality. None of it is
+        linked to your identity or used to track you, and no health data is collected.
       </p>
       <p>
         <strong>Your choices.</strong> Quench does not currently have a setting to turn analytics
@@ -231,9 +259,9 @@ export default function QuenchPrivacy() {
         Quench Pro is sold through Apple&apos;s In-App Purchase system. Apple processes the
         payment; we never see your payment details or your Apple Account information. Quench
         checks with Apple, on your device, whether you own Pro, and keeps that status on the
-        device so its widgets can see it. Apple gives us sales and subscription
-        reports that do not include your name, email address or payment details. The analytics
-        events in section 6 record purchase steps, such as that a trial or a purchase started.
+        device so its widgets can see it. Apple gives us sales and subscription reports that do
+        not include your name, email address or payment details. The analytics events in section
+        6 record purchase steps, such as that a trial or a purchase started.
       </p>
 
       <h2>8. Notifications</h2>
@@ -251,9 +279,10 @@ export default function QuenchPrivacy() {
           Health, location or notification access in iOS Settings.
         </li>
         <li>
-          Deleting Quench removes the data it stored on that device. If iCloud sync was on, also
-          delete the iCloud copy in iOS Settings &rarr; your name &rarr; iCloud &rarr; Manage
-          Storage, or it will come back when you reinstall.
+          Deleting Quench removes the data it stored on that device, except the install marker in
+          your keychain (section 2), which holds no personal information. If iCloud sync was on,
+          also delete the iCloud copy of your drink log, cups and challenges in iOS Settings &rarr;
+          your name &rarr; iCloud &rarr; Manage Storage, or it will come back when you reinstall.
         </li>
         <li>
           Water and caffeine that Quench saved to Apple Health stay in Health until you delete them

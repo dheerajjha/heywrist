@@ -35,7 +35,7 @@ const features = [
   },
   {
     title: "Apple Health",
-    desc: "With your permission, Quench saves the water and caffeine you log to Apple Health, and can use your weight and activity from Health to suggest a daily goal.",
+    desc: "With your permission, Quench saves the water and caffeine from drinks you log in the app or on your Apple Watch to Apple Health, and can use your weight and activity from Health to suggest a daily goal.",
     pro: false,
   },
   {
@@ -45,7 +45,7 @@ const features = [
   },
   {
     title: "iCloud sync",
-    desc: "Keeps your history, profile and challenges in step across your devices, through your own private iCloud account.",
+    desc: "Keeps your drink history, cups and challenges in step across your iPhone and iPad, through your own private iCloud account. Your profile stays on each device.",
     pro: true,
   },
 ];
