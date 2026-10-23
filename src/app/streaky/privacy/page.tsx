@@ -24,8 +24,9 @@ export default function StreakyPrivacy() {
         streaks, and preferences are stored on your device and synced through
         your private iCloud account, which we cannot read. We use Mixpanel for
         anonymous usage analytics so we know which features matter and where to
-        invest engineering effort; today those events include the names you give
-        your habits, which we are changing &mdash; see Section 4. There is no
+        invest engineering effort. Versions of Streaky before 1.7.3 include the
+        name you gave a habit in events about it; 1.7.3 and later send only the
+        name&apos;s length, never the name &mdash; see Section 4. There is no
         in-app analytics switch: to opt out, email us and we will disable
         analytics for your installation in the next app update (Section 4).
         Apple processes any in-app purchases &mdash; we never receive your
@@ -100,7 +101,7 @@ export default function StreakyPrivacy() {
         <li>Contacts, photos, calendar, or microphone access</li>
         <li>Apple&apos;s Advertising Identifier (IDFA), and we do not use the App Tracking Transparency framework &mdash; we do not track you across other apps or websites</li>
         <li>Browsing history or usage data outside the app</li>
-        <li>Your completion notes, or the contents of anything you write inside a habit (the names you give your habits are an exception &mdash; see Section 4)</li>
+        <li>Your completion notes, or the contents of anything you write inside a habit (habit names were an exception before version 1.7.3 &mdash; see Section 4)</li>
       </ul>
 
       <h2>2. Data Stored on Your Device</h2>
@@ -135,16 +136,17 @@ export default function StreakyPrivacy() {
         <li>App version, build number, iOS/watchOS version, and device model</li>
         <li>Event names &mdash; e.g. &quot;habit created&quot;, &quot;habit completed&quot;, &quot;settings viewed&quot;, &quot;paywall shown&quot;, &quot;purchase completed&quot;</li>
         <li>Coarse event properties &mdash; habit type/category (e.g. &quot;positive&quot;, &quot;timed&quot;), schedule type, source screen, theme choice, language</li>
-        <li><strong>The name you give a habit</strong>, attached to events about that habit</li>
+        <li><strong>The length of a habit&apos;s name</strong> &mdash; the number of characters, never the name itself. Versions before 1.7.3 sent the name instead; see below</li>
       </ul>
       <p>
-        <strong>About habit names.</strong> Today, events about a habit carry the
-        name you typed for it. We know that a habit name can be personal, and we
-        are changing the app to send a length instead of the name. Until that
-        update ships, please treat a habit name as something you have shared with
-        us &mdash; and if you would rather it were not, you can rename the habit
-        to something neutral, or opt out of analytics by email as described at
-        the end of this section.
+        <strong>About habit names.</strong> A habit name can be personal, so
+        Streaky 1.7.3 stopped sending it: from that version on, an event about a
+        habit carries only the number of characters in its name. Versions before
+        1.7.3 sent the name you typed, and an install that has not updated yet
+        still does &mdash; so if you are on an earlier version, please treat a
+        habit name as something you have shared with us until you update. You can
+        also rename a habit to something neutral, or opt out of analytics by
+        email as described at the end of this section.
       </p>
       <p>
         We <strong>never</strong> send your completion notes, your HealthKit
