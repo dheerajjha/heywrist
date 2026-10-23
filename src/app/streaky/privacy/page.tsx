@@ -19,7 +19,7 @@ export default function StreakyPrivacy() {
         and what rights you have regarding your data.
       </p>
       <p>
-        <strong>In short:</strong> Streaky does not require an account and
+        <strong>In short:</strong>{" "}Streaky does not require an account and
         never sees your name or email. Your habit data, completion history,
         streaks, and preferences are stored on your device and synced through
         your private iCloud account, which we cannot read. We use Mixpanel for
@@ -139,7 +139,7 @@ export default function StreakyPrivacy() {
         <li><strong>The length of a habit&apos;s name</strong> &mdash; the number of characters, never the name itself. Versions before 1.7.3 sent the name instead; see below</li>
       </ul>
       <p>
-        <strong>About habit names.</strong> A habit name can be personal, so
+        <strong>About habit names.</strong>{" "}A habit name can be personal, so
         Streaky 1.7.3 stopped sending it: from that version on, an event about a
         habit carries only the number of characters in its name. Versions before
         1.7.3 sent the name you typed, and an install that has not updated yet

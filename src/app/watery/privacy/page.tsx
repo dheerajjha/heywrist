@@ -168,7 +168,7 @@ export default function QuenchPrivacy() {
         .
       </p>
       <p>
-        <strong>The identifier.</strong> Quench labels its analytics with Apple&apos;s
+        <strong>The identifier.</strong>{" "}Quench labels its analytics with Apple&apos;s
         identifierForVendor (IDFV), an ID that iOS gives to apps from the same developer on the
         same device, or with a random ID if the IDFV is not available. It is not the advertising
         identifier (IDFA). Quench does not ask for permission to track you, does not combine this
@@ -176,7 +176,7 @@ export default function QuenchPrivacy() {
         changes once every Hey Wrist app has been removed from the device.
       </p>
       <p>
-        <strong>With every event:</strong> a random ID for the current app session, your
+        <strong>With every event:</strong>{" "}a random ID for the current app session, your
         device&apos;s language and the app&apos;s language, which part of Quench sent it, and
         whether it is an App Store or test install. The Mixpanel SDK adds device and app details
         such as device model, iOS version, screen size, and app version and build, and we record
@@ -235,7 +235,7 @@ export default function QuenchPrivacy() {
         Apple Health data.
       </p>
       <p>
-        <strong>App Store privacy details.</strong> Quench&apos;s privacy label on the App Store
+        <strong>App Store privacy details.</strong>{" "}Quench&apos;s privacy label on the App Store
         declares Device ID, Product Interaction, Purchase History and Coarse Location, used for
         analytics, and Crash Data and Performance Data, used for app functionality. None of it is
         linked to your identity or used to track you, and no health data is collected.

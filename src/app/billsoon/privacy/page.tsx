@@ -20,7 +20,7 @@ export default function BillsoonPrivacy() {
       </p>
 
       <p>
-        <strong>In short:</strong> your subscription list lives on your device. Billsoon has no
+        <strong>In short:</strong>{" "}your subscription list lives on your device. Billsoon has no
         server of its own and no user accounts. It never connects to a bank. It does send anonymous
         product-usage analytics to Mixpanel, described below, and that &mdash; plus an exchange-rate
         lookup from open.er-api.com if you switch on live rates, a bare request that carries nothing
@@ -116,7 +116,7 @@ export default function BillsoonPrivacy() {
       <h2>7. iCloud sync (optional, Pro, off by default)</h2>
       <p>
         If you turn on iCloud sync, your subscription list is mirrored through{" "}
-        <strong>your own private iCloud database</strong> using Apple&apos;s CloudKit, so it appears
+        <strong>your own private iCloud database</strong>{" "}using Apple&apos;s CloudKit, so it appears
         on your other devices signed in to the same Apple Account. We do not operate that storage,
         cannot read it, and receive nothing from it. Turning sync off returns Billsoon to local-only
         storage. Apple&apos;s handling of iCloud data is governed by{" "}

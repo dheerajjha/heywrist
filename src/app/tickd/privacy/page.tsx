@@ -19,7 +19,7 @@ export default function TickdPrivacy() {
         and what rights you have regarding your data.
       </p>
       <p>
-        <strong>In short:</strong> Tickd does not require an account and never
+        <strong>In short:</strong>{" "}Tickd does not require an account and never
         sees your name or email. Your tasks, schedule, and preferences are
         stored on your device and synced through your private iCloud account
         &mdash; we never see them. When you use the AI planner, the text you
@@ -139,7 +139,7 @@ export default function TickdPrivacy() {
         <li>Coarse event properties — e.g. source screen, theme choice, language</li>
       </ul>
       <p>
-        We <strong>never</strong> send the contents of your tasks, your schedule,
+        We <strong>never</strong>{" "}send the contents of your tasks, your schedule,
         your AI planner text, or any personally identifiable information to
         Mixpanel. Mixpanel is not used for advertising or cross-app tracking, and
         Tickd does not use Apple&apos;s App Tracking Transparency framework.

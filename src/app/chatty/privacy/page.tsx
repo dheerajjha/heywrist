@@ -19,7 +19,7 @@ export default function SonaPrivacy() {
         shared with, and what controls you have over your data.
       </p>
       <p>
-        <strong>In short:</strong> Sona does not require an account and never
+        <strong>In short:</strong>{" "}Sona does not require an account and never
         sees your name or email. Your messages are sent to a secure
         enterprise cloud AI service to generate AI responses. We use
         Mixpanel for anonymous, opt-out usage analytics and for crash
@@ -57,7 +57,7 @@ export default function SonaPrivacy() {
 
       <h3>1.3 Notifications (Optional)</h3>
       <p>
-        Sona schedules <strong>local</strong> notifications for the daily
+        Sona schedules <strong>local</strong>{" "}notifications for the daily
         prompt. These run entirely on your device through Apple&apos;s
         <code>UNUserNotificationCenter</code>. We do not operate a push
         server; nothing is transmitted to receive a daily prompt.
@@ -88,12 +88,12 @@ export default function SonaPrivacy() {
         <li>A small set of facts you have explicitly saved as Memory in the app</li>
       </ul>
       <p>
-        We do <strong>not</strong> attach your name, email, device
+        We do <strong>not</strong>{" "}attach your name, email, device
         identifier, IP address (beyond what any standard HTTPS request
         contains), or any account information &mdash; we have none of those.
       </p>
       <p>
-        <strong>How the AI service uses this data:</strong> under our
+        <strong>How the AI service uses this data:</strong>{" "}under our
         provider&apos;s published enterprise terms:
       </p>
       <ul>
@@ -102,7 +102,7 @@ export default function SonaPrivacy() {
         <li>Data is processed in the regions specified by the provider for the deployment.</li>
       </ul>
       <p>
-        <strong>Web access is restricted.</strong> Sona&apos;s deployment
+        <strong>Web access is restricted.</strong>{" "}Sona&apos;s deployment
         does not give the AI tools the ability to freely browse the open
         internet. The AI cannot fetch arbitrary URLs, sign into services,
         or reach out to third-party APIs on your behalf. A small set of
@@ -129,7 +129,7 @@ export default function SonaPrivacy() {
         information to Mixpanel.
       </p>
       <p>
-        <strong>Opt out:</strong> Open Sona &rarr; Settings &rarr; Privacy
+        <strong>Opt out:</strong>{" "}Open Sona &rarr; Settings &rarr; Privacy
         &rarr; turn off &quot;Share anonymous usage&quot;. We will stop
         sending events immediately and Mixpanel will discard your existing
         anonymous profile.
@@ -177,7 +177,7 @@ export default function SonaPrivacy() {
         The following data lives only on your device, in the app&apos;s
         sandboxed <code>UserDefaults</code> storage. It is never{" "}
         <strong>stored</strong> on a server we operate. Your messages pass{" "}
-        <strong>through</strong> our proxy on the way to the AI service, which is
+        <strong>through</strong>{" "}our proxy on the way to the AI service, which is
         all that proxy does with them &mdash; it keeps no copy of the request or
         the reply. Your IP address is used only to apply daily abuse limits and
         is never stored with your messages:
