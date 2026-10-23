@@ -10,7 +10,7 @@ export default function TickdPrivacy() {
   return (
     <PolicyLayout appName="Tickd" slug="tickd" title="Privacy Policy">
       <p><strong>Effective Date:</strong> June 8, 2026</p>
-      <p><strong>Last Updated:</strong> June 8, 2026</p>
+      <p><strong>Last Updated:</strong> October 23, 2026</p>
 
       <p>
         Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Tickd as a calm daily
@@ -90,7 +90,7 @@ export default function TickdPrivacy() {
       </p>
       <p>What is and isn&apos;t sent:</p>
       <ul>
-        <li><strong>Sent:</strong> only the text of the planning request you choose to make (and prior messages in that conversation needed for context).</li>
+        <li><strong>Sent:</strong> only the text of the planning request you choose to make (and prior messages in that conversation needed for context). The request passes through our own server and is authenticated with your account so that we can apply your plan&apos;s limits, but your name and email address are not part of what the AI service receives.</li>
         <li><strong>Not sent:</strong> your name or email, your full task database, location, contacts, photos, or any device identifiers.</li>
       </ul>
       <p>Under our provider&apos;s enterprise terms:</p>

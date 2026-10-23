@@ -10,7 +10,7 @@ export default function RecordyPrivacy() {
   return (
     <PolicyLayout appName="Recordy" title="Privacy Policy">
       <p><strong>Effective Date:</strong> April 1, 2026</p>
-      <p><strong>Last Updated:</strong> April 1, 2026</p>
+      <p><strong>Last Updated:</strong> October 23, 2026</p>
 
       <p>
         Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Recordy as a premium
@@ -19,9 +19,10 @@ export default function RecordyPrivacy() {
         and what rights you have regarding your data.
       </p>
       <p>
-        <strong>In short:</strong> Your recordings and transcriptions stay on
-        your device and sync via iCloud under your control. We never have access
-        to your audio content.
+        <strong>In short:</strong> Your recordings never leave your device, and
+        sync via iCloud under your control. We never have access to your audio.
+        Transcription text is sent only when you ask for an AI summary — see
+        Section 3.
       </p>
 
       <h2>1. Information We Access</h2>
@@ -88,18 +89,43 @@ export default function RecordyPrivacy() {
 
       <h2>3. AI-Powered Features</h2>
       <p>
-        Recordy uses on-device intelligence to generate summaries, key points,
-        and action items from your transcriptions. All AI processing occurs
-        locally on your device using Apple&apos;s on-device frameworks. No
-        recording content, transcription text, or summary data is sent to
-        external AI services or cloud APIs.
+        When you ask for a summary, key points, or action items, Recordy sends{" "}
+        <strong>the text of that recording&apos;s transcription</strong> (up to
+        4,000 characters) over HTTPS to our AI service, which passes it to
+        Microsoft Azure OpenAI in the United States and returns the result.{" "}
+        <strong>Your audio is never sent.</strong> Our service keeps no copy of
+        the request or the response, and your text is never used to train any
+        model. If the service is unreachable, Recordy falls back to an on-device
+        summariser. Transcription itself is always on-device.
       </p>
 
       <h2>4. Data Sharing</h2>
       <p>
-        We do not share, sell, rent, trade, or disclose your recordings,
-        transcriptions, or any personal data to any third party. Your content is
-        yours alone.
+        We never sell, rent, or trade your data. Two services receive anything at
+        all:
+      </p>
+      <ul>
+        <li>
+          <strong>Mixpanel</strong> (United States) receives anonymous usage
+          events — which screens you open, which features you use, and an
+          anonymous device identifier used only to tell one install from another.
+          There is no account and no name, email, or phone number.{" "}
+          <strong>
+            Today these events also include the names you give your folders and
+            tags.
+          </strong>{" "}
+          We are changing the app to send a length instead of the name; until
+          that update ships, treat a folder or tag name as something you have
+          shared with us.
+        </li>
+        <li>
+          <strong>Our AI service</strong> receives the text of a transcription,
+          and only when you ask for a summary — see Section 3.
+        </li>
+      </ul>
+      <p>
+        Your recordings themselves are never sent to either one, and neither
+        receives your transcriptions except as described in Section 3.
       </p>
       <p>
         You may choose to export or share recordings using the iOS share sheet.
@@ -108,13 +134,21 @@ export default function RecordyPrivacy() {
       </p>
 
       <h2>5. Third-Party Services &amp; SDKs</h2>
-      <p>Recordy does not include any third-party:</p>
+      <p>
+        Recordy uses <strong>Mixpanel</strong> for product analytics — the usage
+        events described in Section 4 — and sends crash{" "}
+        <em>classifications</em> (the exception type and termination reason,
+        never call stacks or your content) to the same place.
+      </p>
+      <p>Recordy includes no third-party:</p>
       <ul>
-        <li>Analytics or telemetry SDKs</li>
         <li>Advertising or ad-tracking frameworks</li>
-        <li>Crash reporting services that transmit user data</li>
         <li>Social media SDKs</li>
       </ul>
+      <p>
+        Recordy does not use Apple&apos;s App Tracking Transparency framework and
+        does not track you across other companies&apos; apps or websites.
+      </p>
       <p>
         Apple may collect aggregated, anonymized telemetry as part of standard
         App Store services. See{" "}
@@ -155,9 +189,14 @@ export default function RecordyPrivacy() {
 
       <h2>9. International Users</h2>
       <p>
-        Your data is stored on your device and optionally in your personal
-        iCloud account. We do not operate servers, so there are no cross-border
-        data transfers initiated by us.
+        Your recordings, transcriptions, and summaries are stored on your device
+        and optionally in your personal iCloud account. We do operate two small
+        servers: the AI service described in Section 3, which passes your
+        transcription text to Microsoft Azure OpenAI in the United States (West
+        US 3) and retains nothing, and a configuration service that tells the app
+        whether an update is available. Analytics events are processed by
+        Mixpanel in the United States. If you are outside the United States,
+        asking for an AI summary moves that text across a border.
       </p>
 
       <h2>10. Changes to This Policy</h2>

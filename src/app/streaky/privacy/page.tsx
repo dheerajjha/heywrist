@@ -10,7 +10,7 @@ export default function StreakyPrivacy() {
   return (
     <PolicyLayout appName="Streaky" title="Privacy Policy">
       <p><strong>Effective Date:</strong> May 13, 2026</p>
-      <p><strong>Last Updated:</strong> May 13, 2026</p>
+      <p><strong>Last Updated:</strong> October 23, 2026</p>
 
       <p>
         Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Streaky as a premium habit
@@ -22,10 +22,14 @@ export default function StreakyPrivacy() {
         <strong>In short:</strong> Streaky does not require an account and
         never sees your name or email. Your habit data, completion history,
         streaks, and preferences are stored on your device and synced through
-        your private iCloud account &mdash; we never see them. We use Mixpanel
-        for anonymous, opt-out usage analytics so we know which features matter
-        and where to invest engineering effort. Apple processes any in-app
-        purchases &mdash; we never receive your payment information.
+        your private iCloud account, which we cannot read. We use Mixpanel for
+        anonymous usage analytics so we know which features matter and where to
+        invest engineering effort; today those events include the names you give
+        your habits, which we are changing &mdash; see Section 4. There is no
+        in-app analytics switch: to opt out, email us and we will disable
+        analytics for your installation in the next app update (Section 4).
+        Apple processes any in-app purchases &mdash; we never receive your
+        payment information.
       </p>
 
       <h2>1. Information We Access</h2>
@@ -96,7 +100,7 @@ export default function StreakyPrivacy() {
         <li>Contacts, photos, calendar, or microphone access</li>
         <li>Apple&apos;s Advertising Identifier (IDFA), and we do not use the App Tracking Transparency framework &mdash; we do not track you across other apps or websites</li>
         <li>Browsing history or usage data outside the app</li>
-        <li>The names, contents, or any details of the habits you track (only anonymous event counts &mdash; see Section 4)</li>
+        <li>Your completion notes, or the contents of anything you write inside a habit (the names you give your habits are an exception &mdash; see Section 4)</li>
       </ul>
 
       <h2>2. Data Stored on Your Device</h2>
@@ -131,11 +135,21 @@ export default function StreakyPrivacy() {
         <li>App version, build number, iOS/watchOS version, and device model</li>
         <li>Event names &mdash; e.g. &quot;habit created&quot;, &quot;habit completed&quot;, &quot;settings viewed&quot;, &quot;paywall shown&quot;, &quot;purchase completed&quot;</li>
         <li>Coarse event properties &mdash; habit type/category (e.g. &quot;positive&quot;, &quot;timed&quot;), schedule type, source screen, theme choice, language</li>
+        <li><strong>The name you give a habit</strong>, attached to events about that habit</li>
       </ul>
       <p>
-        We <strong>never</strong> send the names or contents of your habits,
-        your completion notes, your HealthKit data, your iCloud data, or any
-        personally identifiable information to Mixpanel.
+        <strong>About habit names.</strong> Today, events about a habit carry the
+        name you typed for it. We know that a habit name can be personal, and we
+        are changing the app to send a length instead of the name. Until that
+        update ships, please treat a habit name as something you have shared with
+        us &mdash; and if you would rather it were not, you can rename the habit
+        to something neutral, or opt out of analytics by email as described at
+        the end of this section.
+      </p>
+      <p>
+        We <strong>never</strong> send your completion notes, your HealthKit
+        data, your iCloud data, or any personally identifiable information such
+        as your name or email address to Mixpanel.
       </p>
       <p>
         Mixpanel is not used for advertising or for cross-app tracking, and

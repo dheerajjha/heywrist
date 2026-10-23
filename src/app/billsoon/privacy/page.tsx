@@ -10,7 +10,7 @@ export default function BillsoonPrivacy() {
   return (
     <PolicyLayout appName="Billsoon" slug="billsoon" title="Privacy Policy">
       <p><strong>Effective date:</strong> 18 September 2026</p>
-      <p><strong>Last updated:</strong> 18 September 2026</p>
+      <p><strong>Last updated:</strong> 23 October 2026</p>
 
       <p>
         Hey Wrist (&quot;we&quot;, &quot;us&quot;) makes Billsoon, an app for iPhone, iPad and Apple
@@ -22,8 +22,9 @@ export default function BillsoonPrivacy() {
       <p>
         <strong>In short:</strong> your subscription list lives on your device. Billsoon has no
         server of its own and no user accounts. It never connects to a bank. It does send anonymous
-        product-usage analytics to Mixpanel, described below, and that is the only routine
-        transmission the app makes.
+        product-usage analytics to Mixpanel, described below, and that &mdash; plus an exchange-rate
+        lookup from open.er-api.com if you switch on live rates, a bare request that carries nothing
+        about you &mdash; is all that leaves the device.
       </p>
 
       <h2>1. Billsoon does not ask for an account</h2>
@@ -62,9 +63,10 @@ export default function BillsoonPrivacy() {
       <h2>4. Analytics (Mixpanel)</h2>
       <p>
         Billsoon sends anonymous product-usage events to Mixpanel, Inc. so we can tell which parts of
-        the app are used and where people get stuck. This is the only routine transmission the app
-        makes, and it is described here rather than buried because it is the one claim a
-        &ldquo;private by design&rdquo; app most often gets wrong.
+        the app are used and where people get stuck. Apart from the optional exchange-rate lookup in
+        Section 8, this is the only transmission the app makes, and it is described here rather than
+        buried because it is the one claim a &ldquo;private by design&rdquo; app most often gets
+        wrong.
       </p>
       <p><strong>What is sent:</strong></p>
       <ul>

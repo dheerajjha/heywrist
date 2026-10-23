@@ -10,7 +10,7 @@ export default function SonaPrivacy() {
   return (
     <PolicyLayout appName="Sona" slug="chatty" title="Privacy Policy">
       <p><strong>Effective Date:</strong> May 1, 2026</p>
-      <p><strong>Last Updated:</strong> May 22, 2026</p>
+      <p><strong>Last Updated:</strong> October 23, 2026</p>
 
       <p>
         Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) builds Sona &mdash; an
@@ -22,11 +22,10 @@ export default function SonaPrivacy() {
         <strong>In short:</strong> Sona does not require an account and never
         sees your name or email. Your messages are sent to a secure
         enterprise cloud AI service to generate AI responses. We use
-        Mixpanel for anonymous, opt-out usage analytics, and our own
-        bug-reporting service for crash diagnostics. Conversations, persona
-        memory, streaks, and starred messages are stored only on your
-        device. Apple processes any in-app purchases &mdash; we never
-        receive your payment information.
+        Mixpanel for anonymous, opt-out usage analytics and for crash
+        classifications. Conversations, persona memory, streaks, and starred
+        messages are stored only on your device. Apple processes any in-app
+        purchases &mdash; we never receive your payment information.
       </p>
 
       <h2>1. Information Sona Accesses on Your Device</h2>
@@ -136,23 +135,20 @@ export default function SonaPrivacy() {
         anonymous profile.
       </p>
 
-      <h2>4. Crash and Bug Reporting &mdash; Hey Wrist Bug Reporter</h2>
+      <h2>4. Crash Reporting</h2>
       <p>
-        Sona includes our internal bug-reporting SDK that sends crash
-        diagnostics to <code>bug.heywrist.com</code>, a service we operate.
-        In the App Store build it transmits only:
+        The App Store build of Sona sends crash <em>classifications</em> to
+        Mixpanel, the same service described in Section 3: the exception type,
+        the exception code, and the termination reason. It does{" "}
+        <strong>not</strong> send stack traces, screenshots, network logs, or any
+        of your conversation content.
       </p>
-      <ul>
-        <li>Crash type and stack trace</li>
-        <li>App version and build number</li>
-        <li>iOS/watchOS version and device model</li>
-        <li>An anonymous installation identifier</li>
-      </ul>
       <p>
-        Production builds do <strong>not</strong> capture screenshots, do
-        not capture network logs, and do not associate any tester email
-        with the report. Diagnostic data is retained for up to 90 days and
-        then deleted.
+        We also have an internal bug-reporting tool that can send fuller
+        diagnostics to <code>bug.heywrist.com</code>. It is compiled into
+        development builds only and is <strong>not present in the App Store
+        build</strong>, so an app installed from the App Store never contacts
+        that service.
       </p>
 
       <h2>5. In-App Purchases &mdash; Apple StoreKit</h2>
@@ -179,8 +175,12 @@ export default function SonaPrivacy() {
       <h2>6. Data Stored Only on Your Device</h2>
       <p>
         The following data lives only on your device, in the app&apos;s
-        sandboxed <code>UserDefaults</code> storage. It is never uploaded
-        to a server we operate:
+        sandboxed <code>UserDefaults</code> storage. It is never{" "}
+        <strong>stored</strong> on a server we operate. Your messages pass{" "}
+        <strong>through</strong> our proxy on the way to the AI service, which is
+        all that proxy does with them &mdash; it keeps no copy of the request or
+        the reply. Your IP address is used only to apply daily abuse limits and
+        is never stored with your messages:
       </p>
       <ul>
         <li>Conversation history (your messages and AI replies)</li>
@@ -219,9 +219,8 @@ export default function SonaPrivacy() {
       <p>The only third parties that receive any data from Sona are:</p>
       <ul>
         <li><strong>Our enterprise cloud AI provider</strong> &mdash; to generate AI responses (Section 2)</li>
-        <li><strong>Mixpanel</strong> &mdash; for anonymous usage analytics, opt-out available (Section 3)</li>
+        <li><strong>Mixpanel</strong> &mdash; for anonymous usage analytics and crash classifications; opt-out available (Section 3)</li>
         <li><strong>Apple</strong> &mdash; for in-app purchases and standard App Store telemetry (Section 5)</li>
-        <li><strong>Hey Wrist Bug Reporter</strong> (operated by us) &mdash; for crash diagnostics (Section 4)</li>
       </ul>
 
       <h2>10. Your Rights and Controls</h2>

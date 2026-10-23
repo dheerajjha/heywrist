@@ -10,7 +10,7 @@ export default function NotesPrivacy() {
   return (
     <PolicyLayout appName="Dexter Notes" slug="notes" title="Privacy Policy">
       <p><strong>Effective Date:</strong> April 1, 2026</p>
-      <p><strong>Last Updated:</strong> May 22, 2026</p>
+      <p><strong>Last Updated:</strong> October 23, 2026</p>
 
       <p>
         Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Dexter Notes as an AI-powered
@@ -142,21 +142,23 @@ export default function NotesPrivacy() {
 
       <h2>4. Data Sharing</h2>
       <p>
-        We do not share, sell, rent, trade, or disclose your notes, tasks,
-        email content, or any personal data to any third party beyond what
-        is necessary for AI processing as described above.
+        We do not sell, rent, or trade your data. We do not disclose your notes,
+        tasks, or email content to any third party beyond what is necessary for
+        AI processing as described above. The only other service that receives
+        anything is Mixpanel, which gets anonymous usage events and no content of
+        any kind &mdash; see Section 5.
       </p>
 
       <h2>5. Third-Party Services</h2>
       <p>Dexter Notes integrates with the following services:</p>
       <ul>
         <li><strong>Enterprise cloud AI service</strong> — for AI-powered features (text processing only, no data retention, no model training on your content)</li>
+        <li><strong>Mixpanel</strong> — for anonymous product-usage events (which screens you open, which features you use) and crash classifications. No note content, task content, or email content is sent to Mixpanel.</li>
         <li><strong>Google Gmail API</strong> — for optional email integration (read-only, user-authorized via OAuth 2.0)</li>
         <li><strong>Apple CloudKit</strong> — for iCloud sync (your private container)</li>
       </ul>
       <p>Dexter Notes does not include any:</p>
       <ul>
-        <li>Analytics or telemetry SDKs</li>
         <li>Advertising or ad-tracking frameworks</li>
         <li>Social media SDKs</li>
       </ul>
@@ -202,10 +204,24 @@ export default function NotesPrivacy() {
       <h2>10. International Users</h2>
       <p>
         Your notes and tasks are stored on your device and in your private
-        iCloud account. When you have opted into cloud AI features, AI
-        processing requests are sent over HTTPS to our cloud AI provider&apos;s
-        servers (US-based). No personal identifiers are included in AI
-        requests.
+        iCloud account.{" "}
+        <strong>
+          If you create an account and turn on sync, they are also stored on our
+          own server (notesapi.heywrist.com, United States)
+        </strong>{" "}
+        so they can reach your other devices. What that server holds for a
+        signed-in user: note titles and bodies, AI summaries, task titles and
+        dates, folder and tag names, the name and email address of any contact
+        you link to a note, the text of any recording transcriptions, and the
+        email address of the account itself. It is sent over HTTPS. You can
+        delete it at any time from Settings &rarr; Account, and deleting your
+        account removes it. <strong>Without an account, nothing is sent to our
+        server.</strong>
+      </p>
+      <p>
+        When you have opted into cloud AI features, AI processing requests are
+        sent over HTTPS to our cloud AI provider&apos;s servers (US-based). No
+        personal identifiers are included in AI requests.
       </p>
 
       <h2>11. Changes to This Policy</h2>
