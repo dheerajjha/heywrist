@@ -82,7 +82,7 @@ export default function RecordyPrivacy() {
         <li><strong>Audio recordings</strong> in M4A / WAV format</li>
         <li><strong>Recording metadata</strong> — title, duration, date, source device, bookmarks</li>
         <li><strong>Transcriptions</strong> — text generated from speech recognition</li>
-        <li><strong>AI summaries</strong> — generated on-device from transcription text</li>
+        <li><strong>AI summaries</strong> — the summaries, key points and action items you ask for (Section 3 explains how they are made)</li>
         <li><strong>Organization data</strong> — folders, tags, favorites</li>
         <li><strong>App preferences</strong> — recording quality settings, UI preferences</li>
       </ul>
