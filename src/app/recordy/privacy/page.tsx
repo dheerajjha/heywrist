@@ -10,7 +10,7 @@ export default function RecordyPrivacy() {
   return (
     <PolicyLayout appName="Recordy" title="Privacy Policy">
       <p><strong>Effective Date:</strong> April 1, 2026</p>
-      <p><strong>Last Updated:</strong> October 23, 2026</p>
+      <p><strong>Last Updated:</strong> October 26, 2026</p>
 
       <p>
         Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Recordy as a premium
@@ -77,7 +77,7 @@ export default function RecordyPrivacy() {
       </ul>
 
       <h2>2. Data Stored on Your Device</h2>
-      <p>Recordy stores the following data locally:</p>
+      <p>Recordy also stores the following data locally:</p>
       <ul>
         <li><strong>Audio recordings</strong> in M4A / WAV format</li>
         <li><strong>Recording metadata</strong> — title, duration, date, source device, bookmarks</li>
@@ -93,9 +93,10 @@ export default function RecordyPrivacy() {
         <strong>the text of that recording&apos;s transcription</strong> (up to
         4,000 characters) over HTTPS to our AI service, which passes it to
         Microsoft Azure OpenAI in the United States and returns the result.{" "}
-        <strong>Your audio is never sent.</strong> Our service keeps no copy of
-        the request or the response, and your text is never used to train any
-        model. If the service is unreachable, Recordy falls back to an on-device
+        <strong>Your audio is never sent.</strong> We keep what you send to AI
+        features and the replies they generate to fix problems and improve the
+        app. We never sell it. Your text is never used to train any model. If
+        the service is unreachable, Recordy falls back to an on-device
         summariser. Transcription itself is always on-device.
       </p>
 
@@ -168,12 +169,12 @@ export default function RecordyPrivacy() {
       </p>
 
       <h2>7. Data Retention &amp; Deletion</h2>
-      <p>You are in full control of your data at all times:</p>
+      <p>You control recordings and the copies stored on your devices and in your private iCloud account:</p>
       <ul>
         <li>Delete individual recordings or entire folders from within the app</li>
         <li>Revoke microphone or speech recognition permissions from iOS Settings</li>
         <li>Disable iCloud sync to prevent cloud storage</li>
-        <li>Delete all app data by uninstalling the app</li>
+        <li>Delete local app data by uninstalling the app</li>
       </ul>
       <p>
         When you uninstall Recordy, all locally stored data is permanently
@@ -193,7 +194,7 @@ export default function RecordyPrivacy() {
         and optionally in your personal iCloud account. We do operate two small
         servers: the AI service described in Section 3, which passes your
         transcription text to Microsoft Azure OpenAI in the United States (West
-        US 3) and retains nothing, and a configuration service that tells the app
+        US 3), and a configuration service that tells the app
         whether an update is available. Analytics events are processed by
         Mixpanel in the United States. If you are outside the United States,
         asking for an AI summary moves that text across a border.

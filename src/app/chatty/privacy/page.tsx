@@ -10,7 +10,7 @@ export default function SonaPrivacy() {
   return (
     <PolicyLayout appName="Sona" slug="chatty" title="Privacy Policy">
       <p><strong>Effective Date:</strong> May 1, 2026</p>
-      <p><strong>Last Updated:</strong> October 23, 2026</p>
+      <p><strong>Last Updated:</strong> October 26, 2026</p>
 
       <p>
         Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) builds Sona &mdash; an
@@ -24,7 +24,7 @@ export default function SonaPrivacy() {
         enterprise cloud AI service to generate AI responses. We use
         Mixpanel for anonymous, opt-out usage analytics and for crash
         classifications. Conversations, persona memory, streaks, and starred
-        messages are stored only on your device. Apple processes any in-app
+        messages are stored on your device. Apple processes any in-app
         purchases &mdash; we never receive your payment information.
       </p>
 
@@ -87,6 +87,7 @@ export default function SonaPrivacy() {
         <li>The selected persona&apos;s system prompt</li>
         <li>A small set of facts you have explicitly saved as Memory in the app</li>
       </ul>
+      <p>We keep what you send to AI features and the replies they generate to fix problems and improve the app. We never sell it.</p>
       <p>
         We do <strong>not</strong>{" "}attach your name, email, device
         identifier, IP address (beyond what any standard HTTPS request
@@ -172,15 +173,10 @@ export default function SonaPrivacy() {
         .
       </p>
 
-      <h2>6. Data Stored Only on Your Device</h2>
+      <h2>6. Data Stored on Your Device</h2>
       <p>
-        The following data lives only on your device, in the app&apos;s
-        sandboxed <code>UserDefaults</code> storage. It is never{" "}
-        <strong>stored</strong> on a server we operate. Your messages pass{" "}
-        <strong>through</strong>{" "}our proxy on the way to the AI service, which is
-        all that proxy does with them &mdash; it keeps no copy of the request or
-        the reply. Your IP address is used only to apply daily abuse limits and
-        is never stored with your messages:
+        Sona also stores the following data on your device, in the app&apos;s
+        sandboxed <code>UserDefaults</code> storage:
       </p>
       <ul>
         <li>Conversation history (your messages and AI replies)</li>
@@ -235,10 +231,7 @@ export default function SonaPrivacy() {
       <p>
         EU/UK residents have the right under GDPR/UK GDPR to access, correct,
         or delete personal data, and to object to processing or restrict it.
-        Because we do not collect personally identifiable information, the
-        practical exercise of these rights is achieved through the controls
-        above. If you believe we hold data about you and want to exercise
-        these rights formally, contact us at{" "}
+        To exercise these rights formally, contact us at{" "}
         <a href="mailto:founder@heywrist.com">founder@heywrist.com</a>.
       </p>
       <p>
@@ -253,8 +246,7 @@ export default function SonaPrivacy() {
         not knowingly collect personal information from children under 13.
         If you are a parent or guardian and believe your child has used
         Sona, contact us and we will help you delete any associated
-        on-device data (although we typically have nothing to delete from
-        our servers because we have no account).
+        on-device data.
       </p>
 
       <h2>12. International Users</h2>

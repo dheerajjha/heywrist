@@ -10,7 +10,7 @@ export default function NotesPrivacy() {
   return (
     <PolicyLayout appName="Dexter Notes" slug="notes" title="Privacy Policy">
       <p><strong>Effective Date:</strong> April 1, 2026</p>
-      <p><strong>Last Updated:</strong> October 23, 2026</p>
+      <p><strong>Last Updated:</strong> October 26, 2026</p>
 
       <p>
         Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Dexter Notes as an AI-powered
@@ -20,8 +20,8 @@ export default function NotesPrivacy() {
       </p>
       <p>
         <strong>In short:</strong> Your notes sync via your private iCloud
-        account. AI features use a secure cloud service but do not store your
-        content. Gmail access is read-only and revocable at any time. Dexter Notes
+        account. AI features use a secure cloud service. Gmail access is
+        read-only and revocable at any time. Dexter Notes
         complies with the Google API Services User Data Policy.
       </p>
 
@@ -47,8 +47,7 @@ export default function NotesPrivacy() {
       <p>
         Email data is fetched directly from Google&apos;s servers to your device.
         Email content may be sent to our AI service for summarization and task
-        extraction, but is <strong>not stored</strong> on any server. No email
-        content, attachments, or metadata is persisted outside your device.
+        extraction.
       </p>
       <p>
         You can disconnect your Gmail account at any time from within the app
@@ -119,11 +118,10 @@ export default function NotesPrivacy() {
         revoke this permission at any time in Settings → AI &amp; Intelligence.
       </p>
       <p>
-        Text sent to the AI service is processed in real time and is{" "}
-        <strong>not stored, logged, or used for model training</strong>. The AI
-        service processes your request and returns a response — no content is
-        retained after processing. Communication with the AI service uses
-        HTTPS encryption.
+        Text sent to the AI service is processed and returned over HTTPS. It is
+        not used for model training. We keep what you send to AI features and
+        the replies they generate to fix problems and improve the app. We never
+        sell it.
       </p>
       <p>
         When the AI service is unavailable or you have declined cloud AI,
@@ -152,7 +150,7 @@ export default function NotesPrivacy() {
       <h2>5. Third-Party Services</h2>
       <p>Dexter Notes integrates with the following services:</p>
       <ul>
-        <li><strong>Enterprise cloud AI service</strong> — for AI-powered features (text processing only, no data retention, no model training on your content)</li>
+        <li><strong>Enterprise cloud AI service</strong> — for AI-powered features (text processing, no model training on your content)</li>
         <li><strong>Mixpanel</strong> — for anonymous product-usage events (which screens you open, which features you use) and crash classifications. No note content, task content, or email content is sent to Mixpanel.</li>
         <li><strong>Google Gmail API</strong> — for optional email integration (read-only, user-authorized via OAuth 2.0)</li>
         <li><strong>Apple CloudKit</strong> — for iCloud sync (your private container)</li>
