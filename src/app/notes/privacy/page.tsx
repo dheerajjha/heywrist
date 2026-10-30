@@ -10,7 +10,7 @@ export default function NotesPrivacy() {
   return (
     <PolicyLayout appName="Dexter Notes" slug="notes" title="Privacy Policy">
       <p><strong>Effective Date:</strong> April 1, 2026</p>
-      <p><strong>Last Updated:</strong> October 26, 2026</p>
+      <p><strong>Last Updated:</strong> October 30, 2026</p>
 
       <p>
         Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Dexter Notes as an AI-powered
@@ -119,10 +119,9 @@ export default function NotesPrivacy() {
       </p>
       <p>
         Text sent to the AI service is processed and returned over HTTPS. It is
-        not used for model training. We keep what you send to AI features and
-        the replies they generate to fix problems and improve the app. We never
-        sell it.
+        not used for model training.
       </p>
+      <p>We keep what you send to AI features to fix problems and improve the app. We never sell it.</p>
       <p>
         When the AI service is unavailable or you have declined cloud AI,
         a heuristic on-device fallback engine handles supported requests locally.

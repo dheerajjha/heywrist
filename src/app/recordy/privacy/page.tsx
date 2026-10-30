@@ -10,7 +10,7 @@ export default function RecordyPrivacy() {
   return (
     <PolicyLayout appName="Recordy" title="Privacy Policy">
       <p><strong>Effective Date:</strong> April 1, 2026</p>
-      <p><strong>Last Updated:</strong> October 26, 2026</p>
+      <p><strong>Last Updated:</strong> October 30, 2026</p>
 
       <p>
         Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Recordy as a premium
@@ -93,12 +93,12 @@ export default function RecordyPrivacy() {
         <strong>the text of that recording&apos;s transcription</strong> (up to
         4,000 characters) over HTTPS to our AI service, which passes it to
         Microsoft Azure OpenAI in the United States and returns the result.{" "}
-        <strong>Your audio is never sent.</strong> We keep what you send to AI
-        features and the replies they generate to fix problems and improve the
-        app. We never sell it. Your text is never used to train any model. If
+        <strong>Your audio is never sent.</strong> Your text is never used to
+        train any model. If
         the service is unreachable, Recordy falls back to an on-device
         summariser. Transcription itself is always on-device.
       </p>
+      <p>We keep what you send to AI features to fix problems and improve the app. We never sell it.</p>
 
       <h2>4. Data Sharing</h2>
       <p>

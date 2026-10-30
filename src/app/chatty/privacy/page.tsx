@@ -10,7 +10,7 @@ export default function SonaPrivacy() {
   return (
     <PolicyLayout appName="Sona" slug="chatty" title="Privacy Policy">
       <p><strong>Effective Date:</strong> May 1, 2026</p>
-      <p><strong>Last Updated:</strong> October 26, 2026</p>
+      <p><strong>Last Updated:</strong> October 30, 2026</p>
 
       <p>
         Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) builds Sona &mdash; an
@@ -87,7 +87,7 @@ export default function SonaPrivacy() {
         <li>The selected persona&apos;s system prompt</li>
         <li>A small set of facts you have explicitly saved as Memory in the app</li>
       </ul>
-      <p>We keep what you send to AI features and the replies they generate to fix problems and improve the app. We never sell it.</p>
+      <p>We keep what you send to AI features to fix problems and improve the app. We never sell it.</p>
       <p>
         We do <strong>not</strong>{" "}attach your name, email, device
         identifier, IP address (beyond what any standard HTTPS request
@@ -99,7 +99,6 @@ export default function SonaPrivacy() {
       </p>
       <ul>
         <li>Your prompts and completions are <strong>not used to train</strong> the provider&apos;s or its upstream model partners&apos; foundation models.</li>
-        <li>The provider may retain prompts and completions for up to <strong>30 days</strong> for abuse and misuse monitoring, accessible only to authorized personnel under strict access controls. After 30 days they are deleted.</li>
         <li>Data is processed in the regions specified by the provider for the deployment.</li>
       </ul>
       <p>
