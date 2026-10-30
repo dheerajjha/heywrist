@@ -13,7 +13,6 @@ const subdomainApps = [
   "structured",
   "betterchannels",
   "pdf",
-  "tickd",
 ];
 
 export function middleware(request: NextRequest) {
