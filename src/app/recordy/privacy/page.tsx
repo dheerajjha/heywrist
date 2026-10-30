@@ -19,10 +19,11 @@ export default function RecordyPrivacy() {
         and what rights you have regarding your data.
       </p>
       <p>
-        <strong>In short:</strong> Your recordings never leave your device, and
-        sync via iCloud under your control. We never have access to your audio.
-        Transcription text is sent only when you ask for an AI summary — see
-        Section 3.
+        <strong>In short:</strong> Your recordings are stored on your device
+        and, if enabled, in your private iCloud. Apple may process audio through
+        its speech service when on-device recognition cannot complete. We do
+        not receive your audio. Transcript text is sent to our AI service only
+        when you ask for a summary — see Section 3.
       </p>
 
       <h2>1. Information We Access</h2>
@@ -32,16 +33,25 @@ export default function RecordyPrivacy() {
         Recordy requires microphone access to record audio on your iPhone and
         Apple Watch. Microphone access is requested through the iOS system-level
         permissions dialog. Audio is captured and stored locally on your device.
-        We do not stream, transmit, or upload audio to any external server.
+        Recordy does not upload audio to our servers. Apple may process audio for
+        speech recognition as described in Section 1.2.
       </p>
 
       <h3>1.2 Speech Recognition</h3>
       <p>
-        Recordy uses Apple&apos;s on-device speech recognition framework to
-        transcribe your recordings to text. Transcription processing occurs
-        entirely on your device — no audio data is sent to Apple&apos;s servers or
-        any third-party service for transcription purposes. You can revoke
-        speech recognition permission at any time from iOS Settings.
+        Recordy uses Apple&apos;s Speech framework and requests on-device
+        recognition when it is supported. If that attempt cannot complete for a
+        retryable reason, Recordy may retry with Apple&apos;s server-based speech
+        recognizer. In that case, Apple may process the audio being transcribed.
+        Long recordings are split on your device into shorter segments before
+        recognition; the same on-device and Apple server paths apply to those
+        segments. Recordy does not send audio to our servers or AI summary
+        service. You can revoke speech recognition permission at any time from
+        iOS Settings. See{" "}
+        <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">
+          Apple&apos;s Privacy Policy
+        </a>
+        {" for Apple&apos;s handling of speech data."}
       </p>
 
       <h3>1.3 iCloud Sync</h3>
@@ -93,31 +103,33 @@ export default function RecordyPrivacy() {
         <strong>the text of that recording&apos;s transcription</strong> (up to
         4,000 characters) over HTTPS to our AI service, which passes it to
         Microsoft Azure OpenAI in the United States and returns the result.{" "}
-        <strong>Your audio is never sent.</strong> Your text is never used to
-        train any model. If
-        the service is unreachable, Recordy falls back to an on-device
-        summariser. Transcription itself is always on-device.
+        <strong>Your audio is never sent to our AI service.</strong> Your text is
+        never used to train any model. If the service is unreachable, Recordy
+        falls back to an on-device summariser. Speech recognition may use Apple&apos;s
+        server-based service as described in Section 1.2; that path processes
+        audio for transcription and does not send it to our AI summary service.
       </p>
       <p>We keep what you send to AI features to fix problems and improve the app. We never sell it.</p>
 
       <h2>4. Data Sharing</h2>
       <p>
-        We never sell, rent, or trade your data. Two services receive anything at
-        all:
+        We never sell, rent, or trade your data. These services receive data in
+        the flows described here:
       </p>
       <ul>
         <li>
-          <strong>Mixpanel</strong> (United States) receives anonymous usage
-          events — which screens you open, which features you use, and an
-          anonymous device identifier used only to tell one install from another.
-          There is no account and no name, email, or phone number.{" "}
-          <strong>
-            Today these events also include the names you give your folders and
-            tags.
-          </strong>{" "}
-          We are changing the app to send a length instead of the name; until
-          that update ships, treat a folder or tag name as something you have
-          shared with us.
+          <strong>Mixpanel</strong> (United States) receives pseudonymous usage
+          and technical diagnostic events, such as which features you use and
+          whether a transcription or subscription load succeeded. The app uses
+          a stable install identifier; there is no account and we do not send
+          your name, email, phone number, folder names, tags, recordings, or
+          transcript text to Mixpanel. You can turn analytics off in Settings
+          → Privacy.
+        </li>
+        <li>
+          <strong>Apple Speech</strong> may receive audio when the on-device
+          recognizer cannot complete and Recordy retries through Apple&apos;s
+          server-based speech recognition service (Section 1.2).
         </li>
         <li>
           <strong>Our AI service</strong> receives the text of a transcription,
@@ -125,8 +137,9 @@ export default function RecordyPrivacy() {
         </li>
       </ul>
       <p>
-        Your recordings themselves are never sent to either one, and neither
-        receives your transcriptions except as described in Section 3.
+        Audio is not sent to Mixpanel or our AI service. Transcript text is not
+        sent to Mixpanel and reaches our AI service only when you request a
+        summary.
       </p>
       <p>
         You may choose to export or share recordings using the iOS share sheet.
@@ -140,6 +153,11 @@ export default function RecordyPrivacy() {
         events described in Section 4 — and sends crash{" "}
         <em>classifications</em> (the exception type and termination reason,
         never call stacks or your content) to the same place.
+      </p>
+      <p>
+        Apple provides the Speech framework. Depending on on-device
+        availability, speech recognition can be processed on your device or by
+        Apple&apos;s server-based speech service, as described in Section 1.2.
       </p>
       <p>Recordy includes no third-party:</p>
       <ul>
@@ -191,12 +209,12 @@ export default function RecordyPrivacy() {
       <h2>9. International Users</h2>
       <p>
         Your recordings, transcriptions, and summaries are stored on your device
-        and optionally in your personal iCloud account. We do operate two small
-        servers: the AI service described in Section 3, which passes your
+        and optionally in your personal iCloud account. Apple may process audio
+        through its server-based Speech service when on-device recognition
+        cannot complete. Our AI service, described in Section 3, passes
         transcription text to Microsoft Azure OpenAI in the United States (West
-        US 3), and a configuration service that tells the app
-        whether an update is available. Analytics events are processed by
-        Mixpanel in the United States. If you are outside the United States,
+        US 3) only when you request a summary. Analytics events are processed
+        by Mixpanel in the United States. If you are outside the United States,
         asking for an AI summary moves that text across a border.
       </p>
 
