@@ -10,7 +10,7 @@ export default function QuillSignPrivacy() {
   return (
     <PolicyLayout appName="QuillSign" slug="quillsign" title="Privacy Policy">
       <p><strong>Effective Date:</strong>{" "}October 23, 2026</p>
-      <p><strong>Last Updated:</strong>{" "}November 12, 2026</p>
+      <p><strong>Last Updated:</strong>{" "}November 13, 2026</p>
 
       <p>
         Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) makes QuillSign, an app for filling in and signing
@@ -18,9 +18,9 @@ export default function QuillSignPrivacy() {
       </p>
       <p>
         <strong>In short:</strong>{" "}QuillSign processes your documents, signatures and form values on your device.
-        The App Store build never uploads them to us or an analytics provider. There is no QuillSign account.
-        The current 1.0 build sends no app usage analytics to Mixpanel because its analytics integration is not configured.
-        Sharing a document yourself is a separate, user-controlled action.
+        The App Store build sends pseudonymous usage analytics to Mixpanel, which stores data in the United States;
+        document content, signatures and form values are not included. There is no QuillSign account. Sharing a document
+        yourself is a separate, user-controlled action.
       </p>
 
       <h2>1. What stays on your device</h2>
@@ -77,21 +77,21 @@ export default function QuillSignPrivacy() {
       <h2>3. Usage analytics and local interaction records</h2>
       <h3>3.1 What the current build collects</h3>
       <p>
-        <strong>No app usage analytics are currently transmitted to Mixpanel.</strong>{" "}The current 1.0 build includes
-        a Mixpanel integration, but its project token is still a placeholder. In this release, analytics calls are
-        discarded rather than sent. Internal development builds print those events locally instead of sending them
-        through this integration.
+        The App Store build sends pseudonymous usage analytics to Mixpanel, whose project data is stored in the United
+        States. Internal development builds print events locally instead of sending them through this integration.
       </p>
       <p>
         The &quot;Sign with QuillSign&quot; action, Shortcuts actions and widget record small interaction notes on your device:
         event names, timestamps, the feature that produced them and the technical properties listed below. The app reads
-        those notes the next time it becomes active. They are not sent to Mixpanel while the integration is unconfigured.
-        Neither the action extension nor the widget contacts Mixpanel directly.
+        those notes the next time it becomes active and sends them to Mixpanel. The action extension and widget do not
+        contact Mixpanel directly.
       </p>
       <h3>3.2 What the included analytics hooks measure</h3>
       <p>
-        The following describes the app&apos;s instrumentation, not data currently being uploaded. If a release is
-        configured to enable this integration, Mixpanel is its analytics recipient and the hooks cover:
+        Events measure app opens and first-open status; onboarding; import, scan and export outcomes; editor, signature,
+        tool and template interactions; library searches; paywall, purchase, trial and restore outcomes; settings;
+        notifications; rating prompts; widgets; Shortcuts and action-extension handoffs. Event properties are limited
+        to technical values such as counts, booleans, fixed outcome categories, product identifiers and prices:
       </p>
       <ul>
         <li>
@@ -114,37 +114,41 @@ export default function QuillSignPrivacy() {
         </li>
         <li>
           Paywall source, display, dismissal and selected plan; unavailable products; purchase, cancellation, trial,
-          restore and entitlement outcomes; product identifier, price and currency; credits added and remaining;
-          and purchase/restore error descriptions. Import failures use fixed reasons, and export failures use error
-          domain and code, not file paths.
+          restore and entitlement outcomes; product identifier, price and currency; credits added and remaining; and
+          purchase/restore outcome reasons. Import failures use fixed reasons, and export failures use error domain and
+          code, not file paths.
         </li>
         <li>
           Date-format and sharing/copy preference changes; deep-link host and source; widget family; Shortcuts/control
           action type; notification permission and trial-reminder scheduling; and rating-prompt display or suppression,
-          trigger, reason and success count.
+          trigger, reason and success count. Deep-link host is limited to scan, files, doc, paywall, import, settings
+          and library; deep-link source is limited to extension_handoff, shortcuts and action_extension. A missing value
+          is recorded as &quot;none&quot; and any other value as &quot;other&quot;. Imported-file type is limited to pdf, jpg, jpeg, png,
+          heic, tif, tiff, bmp, gif, webp or &quot;other&quot;.
         </li>
       </ul>
       <p>
-        The integration uses a stored identifier derived from Apple&apos;s identifier for vendor, or a random UUID if
-        that identifier is unavailable, plus a session identifier. The vendor identifier can be the same for our apps
-        on one device; it is pseudonymous, not a promise of anonymity. Configured analytics would include device and
-        app language, app version and build number, platform, build environment, feature surface, first/last-seen
-        timestamps and Mixpanel&apos;s standard device, operating-system and SDK metadata. Mixpanel would also receive
-        the connection&apos;s IP address and could estimate coarse location such as city and country. It does not receive
-        these from the currently disabled integration.
+        QuillSign stores a stable pseudonymous identifier in its local preferences and sends it to Mixpanel as the
+        install&apos;s distinct identifier. It is derived from Apple&apos;s identifier for vendor, or a random UUID if that
+        identifier is unavailable. The vendor identifier can be the same for our apps on one device; it is pseudonymous,
+        not a promise of anonymity. Every event also carries a session_id, device_language, app_language, surface,
+        install_env and is_dev super property. The profile carries $first_seen, $last_seen, app_version and build_number.
+        First-open events also include install kind, Keychain status, platform and marker-write status. Mixpanel&apos;s
+        standard device, operating-system and SDK metadata may accompany events. Mixpanel receives the connection&apos;s IP
+        address and may estimate coarse location such as city and country.
       </p>
       <p>
         The app&apos;s privacy manifest declares device identifiers, product interactions, coarse location and purchase
-        history for analytics, marked as not linked to personal identity and not used for tracking. Those declarations
-        describe the included integration; they do not enable transmission. There is no in-app analytics opt-out switch
-        in this version; analytics transmission is already disabled.
+        history for analytics, marked as not linked to personal identity and not used for tracking. There is no in-app
+        analytics opt-out switch in this version.
       </p>
       <h3>3.3 What is never included in app analytics</h3>
       <p>
-        Analytics hooks do not attach document content, titles, file names, field values, text you type, template names
-        or bodies, PDF passwords, search text, or images of your signature or initials. Documents, signatures and form
-        values are never uploaded to an analytics provider. QuillSign does not track you across other companies&apos; apps
-        or websites, uses no advertising identifier, and shows no ads.
+        Analytics events never include document content or titles, file names, field values, text you type, template
+        names or bodies, PDF passwords, search text, or images of your signature or initials. Deep-link analytics send
+        only the allowlisted host and source values named above, and imported-file analytics send only an allowlisted
+        type. Documents, signatures and form values are never sent to Mixpanel. QuillSign does not track you across
+        other companies&apos; apps or websites, uses no advertising identifier, and shows no ads.
       </p>
 
       <h2>4. Purchases and notifications</h2>
@@ -184,8 +188,10 @@ export default function QuillSignPrivacy() {
         identifier, and we cannot access your Keychain. This is not document cloud sync.
       </p>
       <p>
-        The current build sends no Mixpanel app analytics for us to delete. For questions or privacy requests about
-        information you sent directly to us, contact the email below.
+        To request deletion of Mixpanel analytics associated with your install, email founder@heywrist.com and ask us
+        to delete that install&apos;s analytics. Include the app version and approximate dates you used it so we can locate
+        the records; do not email documents, signatures or form values. For questions or privacy requests about
+        information you sent directly to us, contact the same address.
       </p>
 
       <h2>8. Support and this website</h2>
