@@ -9,199 +9,137 @@ export const metadata: Metadata = {
 export default function HalfAwakePrivacy() {
   return (
     <PolicyLayout appName="Half Awake" slug="halfawake" title="Privacy Policy">
-      <p><strong>Effective Date:</strong> September 18, 2026</p>
-      <p><strong>Last Updated:</strong> September 18, 2026</p>
+      <p><strong>Effective Date:</strong>{" "}September 18, 2026</p>
+      <p><strong>Last Updated:</strong>{" "}November 23, 2026</p>
 
       <p>
-        Hey Wrist (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) built Half Awake as a
-        dream journal for iPhone and Apple Watch. You speak what you remember on waking; the
-        app turns it into text, gives it a title, a short summary and a few tags, and files it
-        under last night. This policy describes exactly what the app stores, what it sends
-        anywhere, and what it does not.
-      </p>
-      <p>
-        <strong>In short:</strong> your dreams &mdash; the audio, the transcripts, the titles
-        and the tags &mdash; are stored on your device and are never sent to us. We operate no
-        server that holds them, and there is no account to create. The app does send anonymous
-        product-usage counts to an analytics service, described in section 3, and those counts
-        never contain anything you said or wrote.
+        Hey Wrist built Half Awake as a voice dream journal for iPhone and Apple Watch.
+        This policy describes the app&apos;s local storage, transfers between your devices,
+        optional sharing and sync, and the analytics and diagnostics sent to Mixpanel.
       </p>
 
-      <h2>1. What Stays On Your Device</h2>
-
-      <h3>1.1 Recordings</h3>
+      <h2>Your dreams and recordings</h2>
       <p>
-        When you tap the capture control, Half Awake records audio to its own container on
-        your device. Recording happens only while the capture screen is open, and it stops on
-        its own after twenty seconds of silence. The file is written to the app&apos;s App
-        Group container, which is shared only between the Half Awake iPhone app, its Watch app
-        and its widgets. <strong>Recordings are never uploaded.</strong> The app contains no
-        code that transmits audio anywhere.
+        Half Awake stores dream audio, original words, titles, summaries and tags in its own app
+        containers on your devices. We operate no backend that stores those dreams and require no
+        account. The phone uses an App Group shared with its local extensions; the Watch has its
+        own separate on-device storage. An App Group identifier does not make one container span
+        physical devices.
       </p>
       <p>
-        If you turn &quot;Keep the recording&quot; off in Settings, the audio file is deleted
-        as soon as the entry is saved. If you leave it on, the file stays until you delete the
-        entry or use &quot;Delete everything&quot;.
-      </p>
-
-      <h3>1.2 Transcripts, titles, summaries and tags</h3>
-      <p>
-        Everything derived from what you said is stored in the app&apos;s own database on your
-        device. Nothing about an entry is transmitted to us at any point.
-      </p>
-
-      <h3>1.3 Speech to text</h3>
-      <p>
-        Your voice is turned into text by your own device. On iOS 26 and later Half Awake uses
-        the system&apos;s on-device speech analyser, which downloads a language model to your
-        phone once and then runs locally. On earlier versions it uses on-device speech
-        recognition with the on-device requirement switched on, and it{" "}
-        <strong>refuses to run at all</strong> when the language you have chosen has no
-        on-device model &mdash; in that case it tells you so and offers you the keyboard,
-        rather than sending your audio to a server to be understood.
+        The Watch sends completed recordings and dictated words to your phone using Apple&apos;s
+        WatchConnectivity queues. That is a transfer between your devices, not an upload to us.
+        Phone recordings are not sent to a speech server by the shipping app. Apple&apos;s on-device
+        SpeechAnalyzer and the legacy recognizer&apos;s required on-device mode process speech locally;
+        if no supported local engine can work, the app offers typing and preserves unfinished audio.
+        Downloading an Apple language model requires a network connection but does not upload your
+        recording or transcript. Titles/tags/summaries use on-device intelligence or bundled rules.
       </p>
       <p>
-        The one-time download of a language model is a request to Apple for the model itself.
-        It contains no audio and no text of yours.
+        Recording is initiated by the capture control. On the phone it finalizes on background or
+        interruption, and both recorders have quiet-stop and hard duration limits. Unfinished phone
+        captures have local draft sidecars so they can be reopened. With Keep the recording off,
+        ordinary source audio can be removed only after its journal entry is successfully saved,
+        not after a failed transcript or save. Recovered recordings are retained for safety even
+        when that setting is off.
       </p>
 
-      <h3>1.4 Titles, summaries and tags</h3>
-      <p>
-        Where your hardware provides it, Half Awake uses your device&apos;s own on-device
-        intelligence to write the title and summary and to suggest tags. Where it does not,
-        the app falls back to a keyword engine built into the app itself. Both run entirely on
-        your device. No third-party artificial-intelligence service is contacted, and no
-        transcript is sent off the device to be analysed. Settings &rarr; About names which of
-        the two produced the analysis on your device.
-      </p>
-
-      <h2>2. iCloud Sync (Optional, Off By Default)</h2>
-      <p>
-        If you turn &quot;Sync with iCloud&quot; on &mdash; a Half Awake Pro feature, disabled
-        unless you enable it &mdash; your entries are mirrored to <strong>your own private
-        iCloud database</strong> so your other devices can see them. That data lives in your
-        Apple Account, under Apple&apos;s terms, and is not accessible to us: we have no
-        credentials for it and no way to read it. Turning the setting off stops the mirroring.
-      </p>
-
-      <h2>3. What Is Collected</h2>
-
-      <h3>3.1 Anonymous usage analytics</h3>
-      <p>
-        Half Awake includes a third-party analytics SDK (Mixpanel). It records product-usage
-        events so we can tell which parts of the app earn their place: which screens are
-        opened, which features are used, when onboarding is completed, when a paywall is shown
-        or dismissed, and when a purchase, trial or restore happens.
-      </p>
-      <p>
-        These events are keyed to a random identifier derived from your device&apos;s vendor
-        identifier &mdash; an identifier that is specific to apps from this developer and is
-        reset when you delete the app. It is not your name, your email or your Apple Account.
-      </p>
-      <p>
-        <strong>Analytics never receive dream content.</strong> No transcript, no title, no
-        summary, no tag and no audio is ever included in an event. Where an event needs to
-        describe a dream it describes it numerically &mdash; for example a word count, or how
-        many tags were produced.
-      </p>
-
-      <h3>3.2 Purchases</h3>
-      <p>
-        Purchases are handled entirely by Apple. We never see your payment details. The app
-        records which product was bought so it can unlock the right features, and reports the
-        outcome to analytics as described above.
-      </p>
-
-      <h3>3.3 Development builds only</h3>
-      <p>
-        A bug-reporting SDK is compiled into internal development builds so testers can report
-        problems. It is <strong>not present in the version published on the App Store</strong>.
-      </p>
-
-      <h2>4. What Half Awake Never Asks For</h2>
+      <h2>Choices that can send content elsewhere</h2>
       <ul>
-        <li>No account, sign-in, sign-up, email address or password</li>
-        <li>No location, at any precision</li>
-        <li>No contacts, calendar or photos</li>
-        <li>No health or fitness data, and no HealthKit access</li>
-        <li>No advertising identifier, and no cross-app or cross-site tracking</li>
+        <li>
+          Optional Pro iCloud sync mirrors journal entries to your private Apple CloudKit database.
+          We have no access to that private database. Its configuration changes on app relaunch.
+          Audio files are not mirrored by this app&apos;s CloudKit model.
+        </li>
+        <li>
+          A journal export or share card is explicit user action through the system share sheet.
+          A card transfers its rendered image, including the visible title/date and optional text
+          excerpt, not the source recording or other entries. A destination you choose has its own
+          privacy terms. The app does not send messages or share anything without your action.
+        </li>
+        <li>Widgets you choose to install can display dream titles outside the locked journal.</li>
       </ul>
 
-      <h2>5. Permissions</h2>
+      <h2>Usage analytics and purchases</h2>
       <p>
-        <strong>Microphone.</strong> Asked for the first time you tap the capture control, so
-        the app can record what you say on waking. You can revoke it at any time in iOS
-        Settings &rarr; Privacy &amp; Security &rarr; Microphone; the app still works, and you
-        type the entry instead.
+        The Release app uses Mixpanel for product-usage and purchase-outcome analytics. Events use
+        a pseudonymous vendor-based device identifier, not an app account or your Apple Account.
+        They include screen/action names and numerical facts such as duration, word/tag counts,
+        whether audio exists, Watch origin and a lucid-dream flag. Literal dream audio, transcripts,
+        titles, summaries, tag text, search text and reminder text are not sent in those events.
       </p>
       <p>
-        <strong>Speech recognition.</strong> Asked for only on the older fallback path
-        described in section 1.3, and only where an on-device model exists.
+        Other event properties include onboarding pages, feature/settings names, permission results,
+        search character counts, journal/export/recap counts, recall streak milestones, share-card
+        options, transcription/analysis engine names, outcome and error codes, rating-prompt triggers,
+        and notification kind, scheduled time, repeat/count/delay settings and interaction outcomes.
+        Purchase events include product identifiers, price and currency where a paid purchase
+        completes, trial duration, purchase source, cancellation/error outcomes and entitlement tier.
       </p>
       <p>
-        <strong>Notifications.</strong> Optional. Used for the wake-window nudge and, for Pro
-        users, reality-check reminders and the wake-back-to-bed reminder. These are local
-        notifications scheduled on your device; nothing about them is sent anywhere. None of
-        them is an alarm clock.
+        Events also include session and installation identifiers, device/app language, app version
+        and build, and whether the installation is App Store, sandbox or development. First-open
+        events include new/reinstall/unknown classification, platform and Keychain status codes. Mixpanel
+        keeps a pseudonymous profile with first/last-seen timestamps and version/build information.
+        Its SDK adds device model, operating-system and SDK versions, screen size and network/carrier
+        information. Mixpanel receives the connection&apos;s IP address and can use it to derive an
+        approximate location; the app does not request GPS or location permission. These identifiers
+        and usage records are pseudonymous, not anonymous or a guarantee of &quot;no personal data&quot;.
+        Deleting Half Awake alone does not guarantee a new vendor identifier while other apps from
+        the same developer remain installed.
       </p>
       <p>
-        <strong>Face ID / Touch ID.</strong> Optional. Used only to unlock the journal on this
-        device. The biometric check is performed by iOS; the app is told yes or no and never
-        sees biometric data.
-      </p>
-
-      <h2>6. Children</h2>
-      <p>
-        Half Awake is rated 4+ and contains no objectionable content, but it is not directed at
-        children and we do not knowingly collect information from anyone under 13. Since the
-        app has no account and collects no personal identifiers, there is nothing to delete on
-        our side in any case.
-      </p>
-
-      <h2>7. Deleting Your Data</h2>
-      <p>
-        Everything is on your device, so you control it directly. In the app, open Settings
-        (the moon icon at the top right of the first screen), scroll to &quot;Your data&quot;
-        and tap <strong>&quot;Delete everything&quot;</strong>. That erases every entry and
-        every audio file and cannot be undone. Deleting the app removes the same data.
+        The shipping phone app also sends Apple&apos;s MetricKit crash, hang and app-exit diagnostics
+        to Mixpanel to diagnose reliability problems. These include exception/signal/termination
+        classification, source build and OS/device information, diagnostic time windows, TestFlight
+        status when available, hang duration and foreground/background exit counts. Crash reports
+        include up to ten crashed-thread frames as binary names and binary-relative offsets, stack
+        depth and the app binary UUID. They do not include recordings, dream text, memory contents,
+        registers, argument values or other threads&apos; frames.
       </p>
       <p>
-        If you had iCloud sync enabled, deleting entries in the app also removes them from your
-        own iCloud database.
-      </p>
-      <p>
-        To stop analytics entirely, delete the app; there is no server-side profile of you to
-        request or erase, because we hold no personal data about you.
+        Payments and biometric authentication are performed by Apple. We do not receive payment
+        details or biometric data. The app receives signed purchase status and an authentication
+        result. A development bug-reporting SDK is linked into the app but is initialized only in
+        Debug builds, not in the shipping Release app. The simulator-only server-speech lab is
+        compiled out of Release.
       </p>
 
-      <h2>8. Your Rights</h2>
+      <h2>Deletion and retained Watch files</h2>
       <p>
-        Depending on where you live you may have rights to access, correct, export or erase
-        personal data held about you. Half Awake is built so that those rights are exercised
-        directly on the device: the journal is yours, exportable to Markdown or JSON from
-        Settings, and erasable in one action. We hold no copy. If you believe we hold
-        information about you and you would like it removed, write to{" "}
-        <a href="mailto:founder@heywrist.com">founder@heywrist.com</a>.
+        Phone Settings → Delete journal entries deletes saved journal entries and readable unfinished
+        text after a successful journal deletion. It attempts to remove the deleted entries&apos; ordinary
+        audio files, but does not sweep all recordings: recovered, unidentified or protected sources
+        and files that cannot safely be read/deleted remain on the phone. Unfinished audio can be
+        rediscovered even after its draft text has been removed. To remove the app&apos;s remaining local
+        files, delete the iPhone app rather than merely offloading it.
       </p>
-
-      <h2>9. Changes To This Policy</h2>
       <p>
-        If this policy changes, the date at the top changes with it, and a material change will
-        be described in the app&apos;s release notes. Continuing to use Half Awake after a
-        change means you accept the updated policy.
+        Phone journal deletion does not cancel Watch transfers already queued or erase failed-transfer
+        source files retained on the Watch. Delete the Watch app separately to remove those local
+        copies. The current Watch app has no failed-transfer retry/deletion controls. Deleting synced
+        entries also requests deletion from your private CloudKit database; deleting an app does not
+        itself erase that cloud database. Exports, backups or images already saved/shared elsewhere
+        are outside the app&apos;s deletion control.
       </p>
-
-      <h2>10. Not Medical Advice</h2>
       <p>
-        Half Awake is a journal, for reflection rather than treatment. It records what you say
-        and counts what repeats. It does not interpret dreams, predict anything, or provide
-        medical, psychological or therapeutic advice. If your sleep or your dreams worry you,
-        please speak to a doctor.
+        Deleting journal entries or uninstalling does not erase analytics already sent to Mixpanel.
+        There is no in-app analytics opt-out switch in this version. A small first-open marker in
+        Apple&apos;s Keychain can survive uninstall and sync through iCloud Keychain when you enable it;
+        it contains no dream content and helps classify a later installation as a reinstall.
+        Depending on where you live, you may have rights to access, correct or erase pseudonymous
+        analytics data. Contact <a href="mailto:founder@heywrist.com">founder@heywrist.com</a> for these requests; do not send dream content.
       </p>
-
-      <h2>11. Contact</h2>
       <p>
-        Questions about this policy: <a href="mailto:founder@heywrist.com">founder@heywrist.com</a>.
+        An already-enabled journal lock stays in place while receipts load or after a subscription
+        expires. No contacts, location, HealthKit or advertising-identifier permission is required.
+        Microphone, legacy speech recognition, local notifications and biometric unlock are requested
+        only for their stated functions and can be changed in system settings.
+      </p>
+      <p>
+        For privacy questions or requests about pseudonymous analytics, contact <a href="mailto:founder@heywrist.com">founder@heywrist.com</a>.
+        Material changes to this policy will be reflected in its last-updated date.
+        The journal is for recall, not medical advice, diagnosis or dream interpretation.
       </p>
     </PolicyLayout>
   );
