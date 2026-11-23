@@ -66,7 +66,7 @@ export default function SonaPrivacy() {
       <h3>1.4 Information Sona Does NOT Access</h3>
       <ul>
         <li>Your name, email address, phone number, or any account credentials</li>
-        <li>Location data</li>
+        <li>Device location (GPS or Location Services)</li>
         <li>Contacts, calendar, or health data</li>
         <li>Browsing history or activity outside the app</li>
         <li>Advertising identifiers (we do not use IDFA)</li>

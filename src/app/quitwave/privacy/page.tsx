@@ -59,7 +59,7 @@ export default function QuitwavePrivacy() {
       <p>
         <strong>What these events never carry:</strong> the contents of your craving log, your
         &quot;why&quot; text, your quit date, your spending figure, your name, your email address,
-        your phone number, your contacts, your location, or any health information.
+        your phone number, your contacts, your device location (GPS or Location Services), or any health information.
       </p>
       <p>
         Mixpanel&apos;s privacy policy is at{" "}

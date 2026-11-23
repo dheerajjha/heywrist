@@ -97,7 +97,7 @@ export default function StreakyPrivacy() {
       <p>Streaky does not collect, access, or request:</p>
       <ul>
         <li>Your name, email address, or any personally identifiable information</li>
-        <li>Location data</li>
+        <li>Device location (GPS or Location Services)</li>
         <li>Contacts, photos, calendar, or microphone access</li>
         <li>Apple&apos;s Advertising Identifier (IDFA), and we do not use the App Tracking Transparency framework &mdash; we do not track you across other apps or websites</li>
         <li>Browsing history or usage data outside the app</li>

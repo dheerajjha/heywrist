@@ -85,7 +85,7 @@ export default function BillsoonPrivacy() {
         the event came from the phone or the Watch, and a per-session identifier.</li>
       </ul>
       <p><strong>What is never sent:</strong> the names of your subscriptions, their prices, their
-      dates, your notes, your payment-method labels, your totals, your contacts, your location, or
+      dates, your notes, your payment-method labels, your totals, your contacts, your device location (GPS or Location Services), or
       anything that identifies you personally.</p>
       <p>
         Mixpanel processes this on our behalf. See{" "}

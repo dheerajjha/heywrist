@@ -92,7 +92,7 @@ export default function NotesPrivacy() {
       <p>Dexter Notes does not collect or request:</p>
       <ul>
         <li>Your name or email address (beyond optional Gmail OAuth)</li>
-        <li>Location data</li>
+        <li>Device location (GPS or Location Services)</li>
         <li>Photos or camera access</li>
         <li>Health or fitness data</li>
         <li>Device identifiers for tracking purposes</li>

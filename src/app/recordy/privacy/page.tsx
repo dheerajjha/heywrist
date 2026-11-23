@@ -79,7 +79,7 @@ export default function RecordyPrivacy() {
       <p>Recordy does not collect, access, or request:</p>
       <ul>
         <li>Your name, email address, or any personally identifiable information</li>
-        <li>Location data</li>
+        <li>Device location (GPS or Location Services)</li>
         <li>Contacts, photos, or calendar data</li>
         <li>Health or fitness data</li>
         <li>Device identifiers for tracking purposes</li>
