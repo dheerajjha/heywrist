@@ -29,7 +29,7 @@ export default function ScreenawayTerms() {
       </p>
       <p className="text-sm text-slate-500 mb-10">
         <strong>Effective Date:</strong> April 2, 2026 &middot;{" "}
-        <strong>Last Updated:</strong> April 2, 2026
+        <strong>Last Updated:</strong> November 23, 2026
       </p>
 
       <article className="prose prose-invert prose-slate max-w-none prose-headings:text-white prose-a:text-indigo-400 hover:prose-a:text-indigo-300 prose-strong:text-white">
@@ -62,49 +62,42 @@ export default function ScreenawayTerms() {
 
         <h3>Free Tier</h3>
         <p>
-          Screenaway offers a free tier with basic screen time tracking, one
-          focus mode, and one watch complication. No payment is required.
+          Focus timers, personal field notes and weekly reports are free. Basic
+          Shield controls include one recurring schedule and one app group.
         </p>
 
         <h3>Pro Subscription</h3>
-        <p>Screenaway Pro is available at the following price points:</p>
+        <p>These are the launch prices for the US storefront. Apple displays the price, local currency and applicable taxes for your storefront before purchase.</p>
         <ul>
           <li>
-            <strong>Weekly:</strong> $3.99/week
+            <strong>Monthly:</strong> $3.99/month
           </li>
           <li>
-            <strong>Monthly:</strong> $5.99/month
+            <strong>Annual:</strong> $24.99/year
           </li>
           <li>
-            <strong>Annual:</strong> $34.99/year
-          </li>
-          <li>
-            <strong>Lifetime:</strong> $59.99 (one-time purchase)
+            <strong>Lifetime:</strong> $34.99 (one-time purchase, no renewal)
           </li>
         </ul>
 
         <h3>Auto-Renewal</h3>
         <p>
-          Subscriptions (weekly, monthly, and annual) automatically renew unless
+          Monthly and annual subscriptions automatically renew unless
           canceled at least 24 hours before the end of the current billing
           period. Your Apple ID account will be charged for renewal within 24
-          hours prior to the end of the current period at the same price.
+          hours prior to the end of the current period at the applicable renewal price shown by Apple.
         </p>
 
         <h3>Free Trial</h3>
         <p>
-          The annual plan may include a 7-day free trial. If you cancel during
-          the trial period, you will not be charged. If you do not cancel, the
-          subscription will automatically convert to a paid subscription at the
-          end of the trial period.
+          Eligible Apple Accounts can try the annual plan for seven days. If not cancelled, the trial renews at the annual price Apple shows at checkout. To avoid the charge, cancel at least 24 hours before the trial ends. Monthly and lifetime have no trial.
         </p>
 
         <h3>Managing Subscriptions</h3>
         <p>
           You can manage or cancel your subscription at any time through your
           Apple ID settings: Settings &gt; [your name] &gt; Subscriptions.
-          Cancellation takes effect at the end of the current billing period.
-          No refunds are provided for partial billing periods.
+          You can also open Manage subscription in Screenaway Settings while subscribed. Apple handles billing and refund requests at <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a>. Deleting the app does not cancel a subscription.
         </p>
 
         <h3>Lifetime Purchase</h3>
@@ -114,18 +107,7 @@ export default function ScreenawayTerms() {
           the lifetime of the product, not the purchaser.
         </p>
 
-        <h3>Family Sharing</h3>
-        <p>
-          Screenaway Pro subscriptions and lifetime purchases may be shared with
-          up to five additional family members through Apple&rsquo;s Family Sharing,
-          subject to Apple&rsquo;s Family Sharing terms and conditions.
-        </p>
-
-        <h3>Student Discount</h3>
-        <p>
-          Screenaway Pro is free for verified students. Eligibility and
-          verification requirements may change at our discretion.
-        </p>
+        <p>Use Restore purchases in the app with the same Apple Account to restore eligible access. Purchases are also subject to Apple&rsquo;s <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">standard licensed application agreement</a>.</p>
 
         <h2>Accuracy Disclaimer</h2>
         <p>

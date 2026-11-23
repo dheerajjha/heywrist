@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "How does Screenaway track my screen time?",
-    a: "Screenaway uses Apple\u2019s DeviceActivity framework to monitor your screen time. This is the same system-level API that powers Apple\u2019s built-in Screen Time feature. All tracking happens on-device \u2014 no data is sent to any server.",
+    a: "Apple’s DeviceActivity framework prepares usage reports on your device. Screenaway does not send the contents of those reports to analytics. Our privacy policy explains the separate app-interaction analytics.",
   },
   {
     q: "How do I set up app blocking?",
-    a: "Go to the Blocking tab in the app and tap \u201cAdd Schedule.\u201d Select the apps or categories you want to block, set the time window, and enable the schedule. Screenaway uses Apple\u2019s FamilyControls framework to enforce blocks at the system level. You\u2019ll need to grant Screen Time permission when prompted.",
+    a: "Open Shield, tap Add, choose the apps or categories, and set the times and days. Screenaway uses Apple’s Screen Time permission to apply the rule. One recurring schedule is included without Pro.",
   },
   {
     q: "How do I set up the Apple Watch app?",
@@ -28,8 +28,8 @@ const faqs = [
     a: "You can cancel anytime through your iPhone: go to Settings \u2192 [your name] \u2192 Subscriptions \u2192 Screenaway \u2192 Cancel Subscription. You\u2019ll continue to have Pro access until the end of your current billing period.",
   },
   {
-    q: "Is Screenaway free for students?",
-    a: "Yes! Screenaway Pro is free for verified students. Open the app, go to Settings \u2192 Subscription, and tap \u201cStudent Discount\u201d to verify your student status.",
+    q: "How do I restore my plan?",
+    a: "Use the same Apple Account as the original purchase. Open You → Upgrade to Pro → Restore purchases. Lifetime is a one-time purchase; only monthly and annual plans renew.",
   },
   {
     q: "My screen time data doesn\u2019t seem accurate. What should I do?",

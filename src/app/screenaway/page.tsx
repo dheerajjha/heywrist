@@ -130,7 +130,7 @@ const features = [
       </svg>
     ),
     title: "Exercise to Unlock",
-    desc: "Do pushups to earn screen time. On-device Vision AI counts your reps \u2014 no data leaves your phone.",
+    desc: "Try an exercise break. Apple Vision processes camera frames on your device.",
     color: "from-pink-500 to-pink-600",
   },
 ];
@@ -154,14 +154,10 @@ const steps = [
 ];
 
 const proFeatures = [
-  "Unlimited focus modes",
-  "All watch complications",
-  "Deep focus mode",
-  "Digital detox challenges",
-  "Ambient sounds library",
-  "Share cards & stats",
-  "Exercise to unlock",
-  "Priority support",
+  "28-day screen-time heatmap",
+  "Notification and category reports",
+  "Additional Shield schedules and app groups",
+  "Strict and Locked Shield options",
 ];
 
 export default function ScreenawayHome() {
@@ -397,7 +393,7 @@ export default function ScreenawayHome() {
                       d="m4.5 12.75 6 6 9-13.5"
                     />
                   </svg>
-                  1 focus mode
+                  Focus timers and private field notes
                 </li>
                 <li className="flex items-start gap-2">
                   <svg
@@ -413,7 +409,7 @@ export default function ScreenawayHome() {
                       d="m4.5 12.75 6 6 9-13.5"
                     />
                   </svg>
-                  1 watch complication
+                  Weekly insights, one schedule and one app group
                 </li>
               </ul>
             </div>
@@ -421,7 +417,7 @@ export default function ScreenawayHome() {
             {/* Pro */}
             <div className="relative rounded-2xl border border-indigo-500/50 bg-gradient-to-b from-indigo-500/10 to-slate-900/50 p-8">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-4 py-1 text-xs font-semibold">
-                Most Popular
+                Annual plan
               </div>
               <h3 className="text-xl font-semibold">Pro</h3>
               <p className="mt-1 text-sm text-slate-400">
@@ -429,20 +425,17 @@ export default function ScreenawayHome() {
               </p>
               <div className="mt-6">
                 <p className="text-4xl font-bold">
-                  $5.99
+                  $24.99
                   <span className="text-base font-normal text-slate-500">
-                    /month
+                    /year (US)
                   </span>
                 </p>
                 <div className="mt-2 flex flex-wrap gap-2 text-xs text-slate-400">
                   <span className="rounded-full border border-white/10 px-2 py-0.5">
-                    $3.99/week
+                    $3.99/month
                   </span>
                   <span className="rounded-full border border-white/10 px-2 py-0.5">
-                    $34.99/year
-                  </span>
-                  <span className="rounded-full border border-white/10 px-2 py-0.5">
-                    $59.99 lifetime
+                    $34.99 lifetime
                   </span>
                 </div>
               </div>
@@ -467,7 +460,7 @@ export default function ScreenawayHome() {
                 ))}
               </ul>
               <p className="mt-6 text-center text-xs text-emerald-400 font-medium">
-                Free for students
+                Eligible annual subscribers get a seven-day trial. Local prices appear in the App Store.
               </p>
             </div>
           </div>
@@ -481,8 +474,7 @@ export default function ScreenawayHome() {
             Ready to take back your time?
           </h2>
           <p className="mt-4 text-lg text-slate-400">
-            Join thousands of people building healthier digital habits with
-            Screenaway.
+            Make a little time for what you meant to do.
           </p>
           <div className="mt-10">
             <div className="w-full"><WaitlistForm source="screenaway" /><p className="mt-3 text-xs text-slate-500">🍳 Cooking · join the list to get notified when it ships.</p></div>
