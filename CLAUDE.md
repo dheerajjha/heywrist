@@ -15,3 +15,4 @@ The website for the heywrist apps: a landing page per app, plus its privacy poli
 - **Production data:** `/api/waitlist` and `/api/analytics/view` write to a production MongoDB (`MONGODB_URI`, `MONGODB_DB`), storing waitlist emails and page views keyed by IP address. Don't send test data to the deployed site.
 - **Commands:** `npm run dev`, `npm run build`, `npm run lint`. There are no tests.
 - **Deploys:** a push to `main` deploys to production on Vercel, so every push is a release of every app's legal pages.
+- `/typeroster` is the native Mac font manager. Its Help menu and store record use `/typeroster/support` and `/typeroster/privacy`; its sample font credits are on `/typeroster/terms`.
